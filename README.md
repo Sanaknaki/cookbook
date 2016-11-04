@@ -1,4 +1,4 @@
-![alt tag](http://imgur.com/8B1ZxHJ)
+![alt tag](http://i.imgur.com/8B1ZxHJ.png)
 </br>
 The Cookbook Of All Cookbooks
 
