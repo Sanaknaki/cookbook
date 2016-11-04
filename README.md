@@ -1,6 +1,5 @@
 ![alt tag](http://i.imgur.com/8B1ZxHJ.png)
 </br>
-The Cookbook Of All Cookbooks
 
 <strong>Cooked up by :</strong>
 ```java
