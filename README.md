@@ -5,7 +5,7 @@
 ```java
 String Ali_Sanaknaki = "http://github.com/sanaknaki";
 String Unaiz_Rehmani = "http://github.com/unaizrehmani";
-String Chaitanya_Parek = "http://github.com/";
+String Chaitanya_Parek = "http://github.com/chaitanyaparekh7";
 String Natesh_Kukreja = "http://github.com/NateshKukreja";
 ```
 
