@@ -17,30 +17,11 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".CTSelect"
-            
-            >
-
-        </activity>
-
-        <activity
-            android:name=".FindRecipe"
-
-            >
-
-        </activity>
-
-        <activity
-            android:name=".ExcludeIngredients"
-
-            >
-
-        </activity>
-
-        <activity android:name=".Recipe" >
-
-        </activity>
+        <activity android:name=".CTSelect"></activity>
+        <activity android:name=".FindRecipe"></activity>
+        <activity android:name=".ExcludeIngredients"></activity>
+        <activity android:name=".Recipe" ></activity>
+        <activity android:name = ".RecipeInfo"></activity>
 
     </application>
 
