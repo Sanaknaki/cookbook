@@ -22,7 +22,7 @@
         <activity android:name=".ExcludeIngredients"></activity>
         <activity android:name=".Recipe" ></activity>
         <activity android:name = ".RecipeInfo"></activity>
-
+        <activity android:name=".Directions"></activity>
     </application>
 
 </manifest>
