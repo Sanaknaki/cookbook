@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         Button advanceToFindRecipe = (Button) findViewById(R.id.findRecipeButton);
         advanceToFindRecipe.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
-                Intent intent = new Intent(MainActivity.this,FindRecipe.class);
+                Intent intent = new Intent(MainActivity.this,CTSelect.class);
                 startActivity(intent);
             }
         });
