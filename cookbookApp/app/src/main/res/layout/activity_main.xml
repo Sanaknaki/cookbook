@@ -31,8 +31,11 @@
             android:id="@+id/title"
             android:gravity="center"
             android:textAppearance="@android:style/TextAppearance.DialogWindowTitle"
+            android:text="COOKBOOK"
+            android:typeface="normal"
+            android:fontFamily="serif-monospace"
             android:textSize="50sp"
-            android:text="COOKBOOK" />
+            android:textStyle="normal|bold"/>
 
     </LinearLayout>
 
@@ -46,14 +49,24 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_alignParentTop="true"
-            android:id="@+id/findRecipeButton" />
+            android:id="@+id/findRecipeButton"
+            android:background="@drawable/black_button"
+            android:typeface="normal"
+            android:fontFamily="serif-monospace"
+            android:textSize="25sp"
+            android:textStyle="normal|bold" />
 
         <Button
             android:text="Edit Recipes"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_centerInParent="true"
-            android:id="@+id/editRecipeButton" />
+            android:id="@+id/editRecipeButton"
+            android:background="@drawable/black_button"
+            android:typeface="normal"
+            android:fontFamily="serif-monospace"
+            android:textSize="25sp"
+            android:textStyle="normal|bold"/>
 
         <Button
             android:text="Edit Ingredients"
@@ -61,7 +74,12 @@
             android:layout_height="80dp"
             android:layout_centerInParent="true"
             android:layout_alignParentBottom="true"
-            android:id="@+id/editIngredientButton" />
+            android:id="@+id/editIngredientButton"
+            android:background="@drawable/black_button"
+            android:typeface="normal"
+            android:fontFamily="serif-monospace"
+            android:textSize="25sp"
+            android:textStyle="normal|bold"/>
     </RelativeLayout>
 
 </RelativeLayout>

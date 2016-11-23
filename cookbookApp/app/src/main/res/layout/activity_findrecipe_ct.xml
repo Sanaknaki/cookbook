@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fridge"
     android:layout_weight="1">
 
     <TextView
@@ -52,7 +53,14 @@
         android:layout_height="match_parent"
         android:id="@+id/finishCategoryType"
         android:layout_weight="3"
-        android:backgroundTint="@color/colorAccent"
+        android:background="@drawable/black_button"
+        android:typeface="normal"
+        android:fontFamily="serif-monospace"
+        android:textStyle="normal|bold"
         android:layout_gravity="center" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="8dp" />
 
 </LinearLayout>

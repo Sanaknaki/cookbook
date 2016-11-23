@@ -22,5 +22,14 @@ public class Recipe extends AppCompatActivity{
                 startActivity(intent);
             }
         });
+
+        Button advanceToFindRecipe = (Button) findViewById(R.id.backToMain);
+        advanceToFindRecipe.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                Intent intent = new Intent(Recipe.this,MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+            }
+        });
     }
 }

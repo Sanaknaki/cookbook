@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fridge"
     android:layout_weight="1">
 
     <TextView
@@ -42,79 +43,179 @@
                     android:text="Chicken Noodle Soup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/chickenNoodleSoup" />
+                    android:id="@+id/chickenNoodleSoup"
+                    android:background="@drawable/black_button"
+                    android:typeface="normal"
+                    android:fontFamily="serif-monospace"
+                    android:textStyle="normal|bold" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
 
                 <Button
                     android:text="Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button12" />
+                    android:id="@+id/button12"
+                    android:background="@drawable/black_button"
+                    android:typeface="normal"
+                    android:fontFamily="serif-monospace"
+                    android:textStyle="normal|bold" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
 
                 <Button
                     android:text="Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button11" />
+                    android:id="@+id/button11"
+                    android:background="@drawable/black_button"
+                    android:typeface="normal"
+                    android:fontFamily="serif-monospace"
+                    android:textStyle="normal|bold" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
 
                 <Button
                     android:text="Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button10" />
+                    android:id="@+id/button10"
+                    android:background="@drawable/black_button"
+                    android:typeface="normal"
+                    android:fontFamily="serif-monospace"
+                    android:textStyle="normal|bold" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
 
                 <Button
                     android:text="Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button9" />
+                    android:id="@+id/button9"
+                    android:background="@drawable/black_button"
+                    android:typeface="normal"
+                    android:fontFamily="serif-monospace"
+                    android:textStyle="normal|bold" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
 
                 <Button
                     android:text="Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button8" />
+                    android:id="@+id/button8"
+                    android:background="@drawable/black_button"
+                    android:typeface="normal"
+                    android:fontFamily="serif-monospace"
+                    android:textStyle="normal|bold" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
 
                 <Button
                     android:text="Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button7" />
+                    android:id="@+id/button7"
+                    android:background="@drawable/black_button"
+                    android:typeface="normal"
+                    android:fontFamily="serif-monospace"
+                    android:textStyle="normal|bold" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
 
                 <Button
                     android:text="Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button6" />
+                    android:id="@+id/button6"
+                    android:background="@drawable/black_button"
+                    android:typeface="normal"
+                    android:fontFamily="serif-monospace"
+                    android:textStyle="normal|bold" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
 
                 <Button
                     android:text="Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button5" />
+                    android:id="@+id/button5"
+                    android:background="@drawable/black_button"
+                    android:typeface="normal"
+                    android:fontFamily="serif-monospace"
+                    android:textStyle="normal|bold" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
 
                 <Button
                     android:text="Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button4" />
+                    android:id="@+id/button4"
+                    android:background="@drawable/black_button"
+                    android:typeface="normal"
+                    android:fontFamily="serif-monospace"
+                    android:textStyle="normal|bold" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
 
                 <Button
                     android:text="Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button3" />
+                    android:id="@+id/button3"
+                    android:background="@drawable/black_button"
+                    android:typeface="normal"
+                    android:fontFamily="serif-monospace"
+                    android:textStyle="normal|bold" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
 
                 <Button
                     android:text="Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button2" />
+                    android:id="@+id/button2"
+                    android:background="@drawable/black_button"
+                    android:typeface="normal"
+                    android:fontFamily="serif-monospace"
+                    android:textStyle="normal|bold" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
 
                 <Button
                     android:text="Apple Pie"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button" />
+                    android:id="@+id/button"
+                    android:background="@drawable/black_button"
+                    android:typeface="normal"
+                    android:fontFamily="serif-monospace"
+                    android:textStyle="normal|bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -128,10 +229,17 @@
 
     <Button
         android:text="Done"
-        android:layout_width="143dp"
-        android:layout_height="55dp"
-        android:id="@+id/backToCategory"
-        android:backgroundTint="@color/colorAccent"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:id="@+id/backToMain"
+        android:background="@drawable/black_button"
+        android:typeface="normal"
+        android:fontFamily="serif-monospace"
+        android:textStyle="normal|bold"
         android:layout_gravity="center" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="8dp" />
 
 </LinearLayout>
