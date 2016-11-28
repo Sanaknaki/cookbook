@@ -51,7 +51,16 @@ public class RecipeResult extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Recipe currentRecipe = recipes.get(i);
 
+                Intent intent = new Intent(RecipeResult.this,singleRecipeScreen.class);
+
+                Bundle b = new Bundle();
+                b.putSerializable("currentRecipe",currentRecipe);
+
+                intent.putExtras(b);
+
+                startActivity(intent);
             }
         });
     }
