@@ -1,7 +1,9 @@
 package com.example.unaizrehmani.finalcookbook;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -50,5 +52,16 @@ public class singleRecipeScreen extends AppCompatActivity {
         myList.setAdapter(myAdapter);
         //TextView prepTime = (TextView) findViewById(R.id.getPrepTextView);
         //prepTime.setText(recipe.get_prepTime());
+    }
+
+    public void clickDirectionsButton(View view){
+
+        Intent intent = new Intent(singleRecipeScreen.this,SingleRecipeDirections.class);
+
+        Bundle b = new Bundle();
+        b.putSerializable("directions",recipe.getRecipeDirections());
+
+        intent.putExtras(b);
+        startActivity(intent);
     }
 }

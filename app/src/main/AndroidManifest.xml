@@ -20,7 +20,8 @@
         <activity android:name=".EditRecipes" />
         <activity android:name=".excludeRecipe" />
         <activity android:name=".RecipeResult" />
-        <activity android:name=".singleRecipeScreen"></activity>
+        <activity android:name=".singleRecipeScreen" />
+        <activity android:name=".SingleRecipeDirections"></activity>
     </application>
 
 </manifest>

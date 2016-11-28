@@ -106,7 +106,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="3b9c51f8a370df079e1f3da3917724a7e3d6e7ff">
+        sha1="080f7ed231a4769335e2ec40fe4647f80998addb">
         <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_6bff841db63a0fba58bd1b81bd466c3ffb82d18c/classes.dex" />
     </item>
     <item
