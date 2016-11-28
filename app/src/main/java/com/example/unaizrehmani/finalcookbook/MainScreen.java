@@ -839,7 +839,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         burgerDirections.add("Warm the bun and add burger and lettuce.");
         burgerDirections.add("Eat it.");
         Recipe burger = new Recipe("Burger", "Lunch", "American",
-                coffeeIngredients, coffeeDirections);
+                burgerIngredients, burgerDirections);
         _cookBookRecipes.add(burger);
 
         ArrayList<Ingredient> meatStewIngredients = new ArrayList<Ingredient>();

@@ -12,6 +12,10 @@ public class Recipe implements Serializable{
     private String _recipeName;
     private String _recipeCategory;
     private String _recipeType;
+    private int _prepTime;
+    private int _cookTime;
+    private int _calories;
+
 
     public Recipe(String newName, String newCategory, String newType){
         _recipeName = newName;
@@ -21,12 +25,17 @@ public class Recipe implements Serializable{
 
 
     public Recipe(String newName, String newCategory, String newType,
-                  ArrayList<Ingredient> newIngredients, ArrayList<String> newDirections){
+                  ArrayList<Ingredient> newIngredients, ArrayList<String> newDirections,
+                  int newPrepTime, int newCookTime, int newCalories){
+
         _recipeName = newName;
         _recipeIngredients = newIngredients;
         _recipeDirections = newDirections;
         _recipeType = newType;
         _recipeCategory = newCategory;
+        _prepTime = newPrepTime;
+        _cookTime = newCookTime;
+        _calories = newCalories;
 
         //Collections.sort(_recipeIngredients);
         Collections.sort(_recipeDirections);
@@ -106,5 +115,27 @@ public class Recipe implements Serializable{
         _recipeType = newRecipeType;
     }
 
+    public int get_prepTime() {
+        return _prepTime;
+    }
 
+    public void set_prepTime(int _prepTime) {
+        this._prepTime = _prepTime;
+    }
+
+    public int get_cookTime() {
+        return _cookTime;
+    }
+
+    public void set_cookTime(int _cookTime) {
+        this._cookTime = _cookTime;
+    }
+
+    public int get_calories() {
+        return _calories;
+    }
+
+    public void set_calories(int _calories) {
+        this._calories = _calories;
+    }
 }
