@@ -263,7 +263,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         chickenNoodleSoupDirections.add("After 10 minutes, remove and serve with soy sauce.");
 
         Recipe chickenNoodleSoup = new Recipe("Chicken Noodle Soup", "Lunch", "American",
-                chickenNoodleSoupIngredients, chickenNoodleSoupDirections);
+                chickenNoodleSoupIngredients, chickenNoodleSoupDirections, 5, 30, 150);
 
         _cookBookRecipes.add(chickenNoodleSoup);
 
@@ -283,7 +283,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         bltDirections.add("Add beef, salt, tomatoes and eat it.");
 
         Recipe blt = new Recipe("BLT", "Lunch", "American",
-                bltIngredients, bltDirections);
+                bltIngredients, bltDirections,5, 30, 150);
 
         _cookBookRecipes.add(blt);
 
@@ -301,7 +301,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         swedishMeatballPastaDirections.add("Add together with pasta sauce and simmer");
         swedishMeatballPastaDirections.add("Eat it.");
         Recipe swedishMeatball = new Recipe("Meatball Pasta", "Dinner", "Italian",
-                swedishMeatballPastaIngredients, swedishMeatballPastaDirections);
+                swedishMeatballPastaIngredients, swedishMeatballPastaDirections,5, 30, 150);
         _cookBookRecipes.add(swedishMeatball);
 
         ArrayList<Ingredient> grilledCheeseIngredients = new ArrayList<Ingredient>();
@@ -314,7 +314,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         grilledCheeseDirections.add("Add sandwich to pan");
         grilledCheeseDirections.add("Eat it.");
         Recipe grilledCheese = new Recipe("Grilled Cheese", "Lunch", "American",
-                grilledCheeseIngredients, grilledCheeseDirections);
+                grilledCheeseIngredients, grilledCheeseDirections,5, 30, 150);
         _cookBookRecipes.add(grilledCheese);
 
         ArrayList<Ingredient> pastaIngredients = new ArrayList<Ingredient>();
@@ -327,7 +327,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         pastaDirections.add("Remove water and add Pasta Sauce and Cheese; simmer");
         pastaDirections.add("Eat it.");
         Recipe pasta = new Recipe("Pasta", "Lunch", "Italian",
-                pastaIngredients, pastaDirections);
+                pastaIngredients, pastaDirections,5, 30, 150);
         _cookBookRecipes.add(pasta);
 
         ArrayList<Ingredient> saladIngredients = new ArrayList<Ingredient>();
@@ -340,7 +340,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         saladDirections.add("Add salt and pepper to lettuce and tomatoes");
         saladDirections.add("Eat it.");
         Recipe salad = new Recipe("Salad", "Lunch", "American",
-                saladIngredients, saladDirections);
+                saladIngredients, saladDirections,5, 30, 150);
         _cookBookRecipes.add(salad);
 
         ArrayList<Ingredient> potatoSaladIngredients = new ArrayList<Ingredient>();
@@ -354,7 +354,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         potatoSaladDirections.add("Add salt and pepper to lettuce, tomatoes and potato");
         potatoSaladDirections.add("Eat it.");
         Recipe potatoSalad = new Recipe("Potato Salad", "Lunch", "American",
-                potatoSaladIngredients, potatoSaladDirections);
+                potatoSaladIngredients, potatoSaladDirections,5, 30, 150);
         _cookBookRecipes.add(potatoSalad);
 
         ArrayList<Ingredient> grilledChickenIngredients = new ArrayList<Ingredient>();
@@ -367,7 +367,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         grilledChickenDirections.add("Add salt and pepper to lettuce, tomatoes and potato");
         grilledChickenDirections.add("Eat it.");
         Recipe grilledChicken = new Recipe("Grilled Chicken", "Dinner", "American",
-                grilledChickenIngredients, grilledChickenDirections);
+                grilledChickenIngredients, grilledChickenDirections,5, 30, 150);
         _cookBookRecipes.add(grilledChicken);
 
         ArrayList<Ingredient> burritoIngredients = new ArrayList<Ingredient>();
@@ -384,7 +384,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         burritoDirections.add("Roll it.");
         burritoDirections.add("Eat it.");
         Recipe burrito = new Recipe("Burrito", "Dinner", "Mexican",
-                burritoIngredients, burritoDirections);
+                burritoIngredients, burritoDirections,5, 30, 150);
         _cookBookRecipes.add(burrito);
 
         ArrayList<Ingredient> chickenBakeIngredients = new ArrayList<Ingredient>();
@@ -399,7 +399,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         chickenBakeDirections.add("Cook it.");
         chickenBakeDirections.add("Eat it.");
         Recipe chickenBake = new Recipe("Chicken Bake", "Dinner", "American",
-                chickenBakeIngredients, chickenBakeDirections);
+                chickenBakeIngredients, chickenBakeDirections,5, 30, 150);
         _cookBookRecipes.add(chickenBake);
 
         ArrayList<Ingredient> omletteIngredients = new ArrayList<Ingredient>();
@@ -413,7 +413,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         omletteDirections.add("Add eggs to pan and add cheese");
         omletteDirections.add("Eat it.");
         Recipe omlette = new Recipe("Omlette", "Breakfast", "American",
-                omletteIngredients, omletteDirections);
+                omletteIngredients, omletteDirections,5, 30, 150);
         _cookBookRecipes.add(omlette);
 
         ArrayList<Ingredient> nachosIngredients = new ArrayList<Ingredient>();
@@ -425,7 +425,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         nachosDirections.add("Take out and add salsa");
         nachosDirections.add("Eat it.");
         Recipe nachos = new Recipe("Nachos", "Snack", "Mexican",
-                nachosIngredients, nachosDirections);
+                nachosIngredients, nachosDirections,5, 30, 150);
         _cookBookRecipes.add(nachos);
 
         ArrayList<Ingredient> fruitSaladIngredients = new ArrayList<Ingredient>();
@@ -438,7 +438,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         fruitSaladDirections.add("Cut all fruits; mix them");
         fruitSaladDirections.add("Eat it.");
         Recipe fruitSalad = new Recipe("Fruit Salad", "Breakfast", "American",
-                fruitSaladIngredients, fruitSaladDirections);
+                fruitSaladIngredients, fruitSaladDirections,5, 30, 150);
         _cookBookRecipes.add(fruitSalad);
 
         ArrayList<Ingredient> smoothieIngredients = new ArrayList<Ingredient>();
@@ -453,7 +453,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         smoothieDirections.add("Add to blender with milk");
         smoothieDirections.add("Eat it.");
         Recipe smoothie = new Recipe("Smoothie", "Breakfast", "American",
-                smoothieIngredients, smoothieDirections);
+                smoothieIngredients, smoothieDirections,5, 30, 150);
         _cookBookRecipes.add(smoothie);
 
         ArrayList<Ingredient> wedgesIngredients = new ArrayList<Ingredient>();
@@ -466,7 +466,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         wedgesDirections.add("Add oil into pan and add potatoes; cook.");
         wedgesDirections.add("Eat it.");
         Recipe wedges = new Recipe("Wedges", "Snack", "American",
-                wedgesIngredients, wedgesDirections);
+                wedgesIngredients, wedgesDirections,5, 30, 150);
         _cookBookRecipes.add(wedges);
 
         ArrayList<Ingredient> garlicBreadIngredients = new ArrayList<Ingredient>();
@@ -480,7 +480,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         garlicBreadDirections.add("Cook it.");
         garlicBreadDirections.add("Eat it.");
         Recipe garlicBread = new Recipe("Garlic Bread", "Snack", "American",
-                garlicBreadIngredients, garlicBreadDirections);
+                garlicBreadIngredients, garlicBreadDirections,5, 30, 150);
         _cookBookRecipes.add(garlicBread);
 
         ArrayList<Ingredient> pizzaIngredients = new ArrayList<Ingredient>();
@@ -496,7 +496,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         pizzaDirections.add("Cook it.");
         pizzaDirections.add("Eat it.");
         Recipe pizza = new Recipe("Pizza", "Dinner", "American",
-                pizzaIngredients, pizzaDirections);
+                pizzaIngredients, pizzaDirections,5, 30, 150);
         _cookBookRecipes.add(pizza);
 
         ArrayList<Ingredient> cerealIngredients = new ArrayList<Ingredient>();
@@ -507,7 +507,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         cerealDirections.add("Add milk");
         cerealDirections.add("Eat it.");
         Recipe cereal = new Recipe("Cereal", "Breakfast", "American",
-                cerealIngredients, cerealDirections);
+                cerealIngredients, cerealDirections,5, 30, 150);
         _cookBookRecipes.add(cereal);
 
         ArrayList<Ingredient> smoresIngredients = new ArrayList<Ingredient>();
@@ -520,7 +520,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         smoresDirections.add("Add Marshmallow");
         smoresDirections.add("Eat it.");
         Recipe smores = new Recipe("Smores", "Snack", "American",
-                smoresIngredients, smoresDirections);
+                smoresIngredients, smoresDirections,5, 30, 150);
         _cookBookRecipes.add(smores);
 
         ArrayList<Ingredient> pestoChickenIngredients = new ArrayList<Ingredient>();
@@ -533,7 +533,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         pestoChickenDirections.add("Cook it.");
         pestoChickenDirections.add("Eat it.");
         Recipe pestoChicken = new Recipe("Chicken", "Lunch", "Italian",
-                pestoChickenIngredients, pestoChickenDirections);
+                pestoChickenIngredients, pestoChickenDirections,5, 30, 150);
         _cookBookRecipes.add(pestoChicken);
 
         ArrayList<Ingredient> steakIngredients = new ArrayList<Ingredient>();
@@ -549,7 +549,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         steakDirections.add("Add butter, herbs, garlic and thimes; apply over steak");
         steakDirections.add("Eat it.");
         Recipe steak = new Recipe("Steak", "Dinner", "American",
-                steakIngredients, steakDirections);
+                steakIngredients, steakDirections,5, 30, 150);
         _cookBookRecipes.add(steak);
 
         ArrayList<Ingredient> cakeIngredients = new ArrayList<Ingredient>();
@@ -563,7 +563,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         cakeDirections.add("Cook in an oven");
         cakeDirections.add("Eat it.");
         Recipe cake = new Recipe("Cake", "Snack", "American",
-                cakeIngredients, cakeDirections);
+                cakeIngredients, cakeDirections,5, 30, 150);
         _cookBookRecipes.add(cake);
 
         ArrayList<Ingredient> tunaSandwichIngredients = new ArrayList<Ingredient>();
@@ -575,7 +575,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         tunaSandwichDirections.add("Drain tuna and add to bread");
         tunaSandwichDirections.add("Eat it.");
         Recipe tunaSandwich = new Recipe("Tuna sandwich", "Lunch", "American",
-                tunaSandwichIngredients, tunaSandwichDirections);
+                tunaSandwichIngredients, tunaSandwichDirections,5, 30, 150);
         _cookBookRecipes.add(tunaSandwich);
 
         ArrayList<Ingredient> waffleIngredients = new ArrayList<Ingredient>();
@@ -589,7 +589,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         waffleDirections.add("Add wet batter");
         waffleDirections.add("Eat it.");
         Recipe waffle = new Recipe("Waffles", "Breakfast", "American",
-                waffleIngredients, waffleDirections);
+                waffleIngredients, waffleDirections,5, 30, 150);
         _cookBookRecipes.add(waffle);
 
         ArrayList<Ingredient> potatoBakeIngredients = new ArrayList<Ingredient>();
@@ -602,7 +602,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         potatoBakeDirections.add("microwave");
         potatoBakeDirections.add("Eat it.");
         Recipe potatoBake = new Recipe("Potato Bake", "Snack", "American",
-                potatoBakeIngredients, potatoBakeDirections);
+                potatoBakeIngredients, potatoBakeDirections,5, 30, 150);
         _cookBookRecipes.add(potatoBake);
 
         ArrayList<Ingredient> quesadillaIngredients = new ArrayList<Ingredient>();
@@ -616,7 +616,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         quesadillaDirections.add("Add meat to Tortilla with sauce and cheese; cook.");
         quesadillaDirections.add("Eat it.");
         Recipe quesadilla = new Recipe("Quesadilla", "Lunch", "American",
-                quesadillaIngredients, quesadillaDirections);
+                quesadillaIngredients, quesadillaDirections,5, 30, 150);
         _cookBookRecipes.add(quesadilla);
 
         ArrayList<Ingredient> fishBakeIngredients = new ArrayList<Ingredient>();
@@ -630,7 +630,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         fishBakeDirections.add("Bake in oven");
         fishBakeDirections.add("Eat it.");
         Recipe fishBake = new Recipe("Fish Bake", "Dinner", "American",
-                fishBakeIngredients, fishBakeDirections);
+                fishBakeIngredients, fishBakeDirections,5, 30, 150);
         _cookBookRecipes.add(fishBake);
 
         ArrayList<Ingredient> riceBeansIngredients = new ArrayList<Ingredient>();
@@ -645,7 +645,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         riceBeansDirections.add("Cook rice; combine with beans.");
         riceBeansDirections.add("Eat it.");
         Recipe riceBeans = new Recipe("Rice and Beans", "Dinner", "American",
-                riceBeansIngredients, riceBeansDirections);
+                riceBeansIngredients, riceBeansDirections,5, 30, 150);
         _cookBookRecipes.add(riceBeans);
 
         ArrayList<Ingredient> breakBurrIngredients = new ArrayList<Ingredient>();
@@ -660,7 +660,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         breakBurrDirections.add("Cook add cooked ingredients.");
         breakBurrDirections.add("Eat it.");
         Recipe breakBurr = new Recipe("Breakfast Burritos", "Breakfast", "Mexican",
-                breakBurrIngredients, breakBurrDirections);
+                breakBurrIngredients, breakBurrDirections,5, 30, 150);
         _cookBookRecipes.add(breakBurr);
 
         ArrayList<Ingredient> burritoBowlIngredients = new ArrayList<Ingredient>();
@@ -679,7 +679,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         burritoBowlDirections.add("Cover base with rice, add sauce and cooked ingredients");
         burritoBowlDirections.add("Eat it.");
         Recipe burritoBowl = new Recipe("Burrito Bowl", "Dinner", "Mexican",
-                burritoBowlIngredients, burritoBowlDirections);
+                burritoBowlIngredients, burritoBowlDirections,5, 30, 150);
         _cookBookRecipes.add(burritoBowl);
 
         ArrayList<Ingredient> stirFryIngredients = new ArrayList<Ingredient>();
@@ -694,7 +694,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         stirFryDirections.add("Apply sesame seeds");
         stirFryDirections.add("Eat it.");
         Recipe stirFry = new Recipe("Stir Fry", "Dinner", "Asian",
-                stirFryIngredients, stirFryDirections);
+                stirFryIngredients, stirFryDirections,5, 30, 150);
         _cookBookRecipes.add(stirFry);
 
         ArrayList<Ingredient> gingerTeaIngredients = new ArrayList<Ingredient>();
@@ -705,7 +705,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         gingerTeaDirections.add("Add ginger");
         gingerTeaDirections.add("Eat it.");
         Recipe gingerTea = new Recipe("Ginger Tea", "Snack", "Asian",
-                gingerTeaIngredients, gingerTeaDirections);
+                gingerTeaIngredients, gingerTeaDirections,5, 30, 150);
         _cookBookRecipes.add(gingerTea);
 
         ArrayList<Ingredient> chipsIngredients = new ArrayList<Ingredient>();
@@ -713,7 +713,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         ArrayList<String> chipsDirections = new ArrayList<String>();
         gingerTeaDirections.add("Eat it.");
         Recipe chips = new Recipe("Chips", "Snack", "American",
-                chipsIngredients, chipsDirections);
+                chipsIngredients, chipsDirections,5, 30, 150);
         _cookBookRecipes.add(chips);
 
         ArrayList<Ingredient> cookiesIngredients = new ArrayList<Ingredient>();
@@ -721,7 +721,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         ArrayList<String> cookiesDirections = new ArrayList<String>();
         cookiesDirections.add("Eat it.");
         Recipe cookies = new Recipe("Chips", "Snack", "American",
-                cookiesIngredients, cookiesDirections);
+                cookiesIngredients, cookiesDirections,5, 30, 150);
         _cookBookRecipes.add(cookies);
 
         ArrayList<Ingredient> macCheeseIngredients = new ArrayList<Ingredient>();
@@ -735,7 +735,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         macCheeseDirections.add("Add to pan and spread breadcumbs ontop; cook.");
         macCheeseDirections.add("Eat it.");
         Recipe macCheese = new Recipe("Macaroni and Cheese", "Lunch", "American",
-                macCheeseIngredients, macCheeseDirections);
+                macCheeseIngredients, macCheeseDirections,5, 30, 150);
         _cookBookRecipes.add(macCheese);
 
         ArrayList<Ingredient> hotDogIngredients = new ArrayList<Ingredient>();
@@ -749,7 +749,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         hotDogDirections.add("Add preferred condiments.");
         macCheeseDirections.add("Eat it.");
         Recipe hotDog = new Recipe("Hotdog", "Lunch", "American",
-                hotDogIngredients, hotDogDirections);
+                hotDogIngredients, hotDogDirections,5, 30, 150);
         _cookBookRecipes.add(hotDog);
 
         ArrayList<Ingredient> beefSoupIngredients = new ArrayList<Ingredient>();
@@ -762,7 +762,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         beefSoupDirections.add("Add all ingredients to a pot and cook until done.");
         beefSoupDirections.add("Eat it.");
         Recipe beefSoup = new Recipe("Beef Soup", "Dinner", "American",
-                beefSoupIngredients, beefSoupDirections);
+                beefSoupIngredients, beefSoupDirections,5, 30, 150);
         _cookBookRecipes.add(beefSoup);
 
         ArrayList<Ingredient> beltIngredients = new ArrayList<Ingredient>();
@@ -777,7 +777,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         beltDirections.add("Add all ingredients to bagel.");
         beltDirections.add("Eat it.");
         Recipe belt = new Recipe("Bagel Belt", "Breakfast", "American",
-                beltIngredients, beltDirections);
+                beltIngredients, beltDirections,5, 30, 150);
         _cookBookRecipes.add(belt);
 
         ArrayList<Ingredient> riceBeefIngredients = new ArrayList<Ingredient>();
@@ -789,7 +789,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         riceBeefDirections.add("Cook rice and beef; add salt and pepper and combine");
         riceBeefDirections.add("Eat it.");
         Recipe riceBeef = new Recipe("Rice and Beef", "Breakfast", "American",
-                riceBeefIngredients, riceBeefDirections);
+                riceBeefIngredients, riceBeefDirections,5, 30, 150);
         _cookBookRecipes.add(riceBeef);
 
         ArrayList<Ingredient> eggplantChipsIngredients = new ArrayList<Ingredient>();
@@ -801,7 +801,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         eggplantChipsDirections.add("Cut eggplant and apply seasoning; bake.");
         eggplantChipsDirections.add("Eat it.");
         Recipe eggplantChips = new Recipe("Eggplant Chips", "Snack", "American",
-                eggplantChipsIngredients, eggplantChipsDirections);
+                eggplantChipsIngredients, eggplantChipsDirections,5, 30, 150);
         _cookBookRecipes.add(eggplantChips);
 
         ArrayList<Ingredient> turkeyChickenIngredients = new ArrayList<Ingredient>();
@@ -814,7 +814,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         turkeyChickenDirections.add("Take whole chicken and apply seasoning; cook.");
         turkeyChickenDirections.add("Eat it.");
         Recipe turkeyChicken = new Recipe("Whole Chicken", "Dinner", "American",
-                turkeyChickenIngredients, turkeyChickenDirections);
+                turkeyChickenIngredients, turkeyChickenDirections,5, 30, 150);
         _cookBookRecipes.add(turkeyChicken);
 
         ArrayList<Ingredient> coffeeIngredients = new ArrayList<Ingredient>();
@@ -826,7 +826,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         turkeyChickenDirections.add("Roast coffee; apply necessary extras.");
         turkeyChickenDirections.add("Eat it.");
         Recipe coffee = new Recipe("Coffee", "Snack", "American",
-                coffeeIngredients, coffeeDirections);
+                coffeeIngredients, coffeeDirections,5, 30, 150);
         _cookBookRecipes.add(coffee);
 
         ArrayList<Ingredient> burgerIngredients = new ArrayList<Ingredient>();
@@ -839,7 +839,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         burgerDirections.add("Warm the bun and add burger and lettuce.");
         burgerDirections.add("Eat it.");
         Recipe burger = new Recipe("Burger", "Lunch", "American",
-                burgerIngredients, burgerDirections);
+                burgerIngredients, burgerDirections,5, 30, 150);
         _cookBookRecipes.add(burger);
 
         ArrayList<Ingredient> meatStewIngredients = new ArrayList<Ingredient>();
@@ -859,7 +859,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         meatStewDirections.add("Add all ingredients into a pan and boil.");
         meatStewDirections.add("Eat it.");
         Recipe meatStew = new Recipe("Meat Stew", "Lunch", "American",
-                meatStewIngredients, meatStewDirections);
+                meatStewIngredients, meatStewDirections,5, 30, 150);
         _cookBookRecipes.add(meatStew);
 
         ArrayList<Ingredient> nutsMixIngredients = new ArrayList<Ingredient>();
@@ -872,7 +872,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         nutsMixDirections.add("Mix all ingredients");
         nutsMixDirections.add("Eat it.");
         Recipe nutsMix = new Recipe("Trail Mix", "Snack", "American",
-                nutsMixIngredients, nutsMixDirections);
+                nutsMixIngredients, nutsMixDirections,5, 30, 150);
         _cookBookRecipes.add(nutsMix);
 
         ArrayList<Ingredient> hangoverCureIngredients = new ArrayList<Ingredient>();
@@ -885,7 +885,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         hangoverCureDirections.add("Mix all ingredients and blend");
         hangoverCureDirections.add("Eat it.");
         Recipe hangoverCure = new Recipe("Hangover Cure", "Breakfast", "American",
-                hangoverCureIngredients, hangoverCureDirections);
+                hangoverCureIngredients, hangoverCureDirections,5, 30, 150);
         _cookBookRecipes.add(hangoverCure);
 
         Collections.sort(_cookBookRecipes,new Comparator<Recipe>() {
