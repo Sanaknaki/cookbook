@@ -30,7 +30,10 @@
             android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".EditAllRecipes" />
         <activity android:name=".DeleteRecipe" />
-        <activity android:name=".AddRecipeDirections"></activity>
+        <activity
+            android:name=".AddRecipeDirections"
+            android:windowSoftInputMode="adjustPan"
+            ></activity>
     </application>
 
 </manifest>
