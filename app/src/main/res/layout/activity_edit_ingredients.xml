@@ -18,6 +18,15 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
+        <TextView
+            android:text="Cookbook Ingredients"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textView2"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -40,34 +49,38 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
-                <Button
-                    android:text="ADD"
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/addIngredientButton"
-                    android:layout_weight="1"
-                    android:onClick="clickAddIngredient" />
+                    android:layout_weight="1">
 
-                <Button
-                    android:text="DELETE"
+                    <Button
+                        android:text="ADD"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/addIngredientButton"
+                        android:onClick="clickAddIngredient" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/deleteIngredientButton"
-                    android:layout_weight="1"
-                    android:onClick="clickDeleteIngredient" />
+                    android:layout_weight="1">
+
+                    <Button
+                        android:text="DELETE"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/deleteIngredientButton"
+                        android:onClick="clickDeleteIngredient" />
+                </LinearLayout>
 
             </LinearLayout>
 
         </LinearLayout>
-
-        <TextView
-            android:text="Cookbook Ingredients"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/textView2"
-            android:layout_weight="3"
-            android:gravity="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <ListView
             android:layout_width="match_parent"

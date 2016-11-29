@@ -16,7 +16,7 @@ public class Ingredient implements Serializable{
     }
 
     public void set_IngredientName(String _IngredientName) {
-        this._IngredientName = _IngredientName;
+        this._IngredientName = _IngredientName.toUpperCase();
     }
 
     public boolean is_selected() {

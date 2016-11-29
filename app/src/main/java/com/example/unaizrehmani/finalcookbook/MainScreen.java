@@ -177,7 +177,6 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         _cookBookIngredients.add(new Ingredient ("Hotdog"));
         _cookBookIngredients.add(new Ingredient ("Hotdog bun"));
         _cookBookIngredients.add(new Ingredient ("Bacon"));
-        _cookBookIngredients.add(new Ingredient ("Parsley"));
         _cookBookIngredients.add(new Ingredient ("Flour"));
         _cookBookIngredients.add(new Ingredient ("Beans"));
         _cookBookIngredients.add(new Ingredient ("Mustard"));

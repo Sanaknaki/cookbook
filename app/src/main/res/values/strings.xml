@@ -4,16 +4,15 @@
     <string-array name="categories">
         <item>Breakfast</item>
         <item>Lunch</item>
-        <item>Snack</item>
         <item>Dinner</item>
+        <item>Snack</item>
     </string-array>
 
     <string-array name="types">
         <item>American</item>
         <item>Italian</item>
-        <item>Indian</item>
-        <item>Chinese</item>
-        <item>Thai</item>
+        <item>Asian</item>
+        <item>Mexican</item>
     </string-array>
 
 </resources>

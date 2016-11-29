@@ -16,7 +16,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".findRecipe" />
-        <activity android:name=".EditIngredients" />
+        <activity
+            android:name=".EditIngredients"
+            android:windowSoftInputMode="adjustPan"
+        />
         <activity android:name=".EditRecipes" />
         <activity android:name=".excludeRecipe" />
         <activity android:name=".RecipeResult" />
