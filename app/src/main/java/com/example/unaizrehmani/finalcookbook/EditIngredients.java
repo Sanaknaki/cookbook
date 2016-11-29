@@ -25,6 +25,8 @@ public class EditIngredients extends AppCompatActivity {
         setContentView(R.layout.activity_edit_ingredients);
 
         Bundle bundle = getIntent().getExtras();
+
+
         cookBook = (MainScreen) bundle.getSerializable("cookBook");
 
         cookBookIngredients = cookBook.get_cookBookIngredients();
@@ -44,7 +46,16 @@ public class EditIngredients extends AppCompatActivity {
         ingredientListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String ingredientToEdit = cookBookStringIngredients.get(i);
 
+                Intent intent = new Intent(EditIngredients.this,EditTextIngredient.class);
+
+                Bundle b = new Bundle();
+                b.putSerializable("ingredientToEdit",ingredientToEdit);
+                b.putSerializable("cookBook",cookBook);
+
+                intent.putExtras(b);
+                startActivity(intent);
             }
         });
     }

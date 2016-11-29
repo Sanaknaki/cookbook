@@ -21,7 +21,8 @@
         <activity android:name=".excludeRecipe" />
         <activity android:name=".RecipeResult" />
         <activity android:name=".singleRecipeScreen" />
-        <activity android:name=".SingleRecipeDirections"></activity>
+        <activity android:name=".SingleRecipeDirections" />
+        <activity android:name=".EditTextIngredient"></activity>
     </application>
 
 </manifest>

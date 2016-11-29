@@ -95,6 +95,10 @@ public class Recipe implements Serializable{
         _recipeIngredients.remove(index);
     }
 
+    public void removeRecipeIngredient(String ingredient){
+        _recipeIngredients.remove(new Ingredient(ingredient));
+    }
+
     public void removeDirectionIngredient(int index){
         _recipeDirections.remove(index);
     }
@@ -137,5 +141,13 @@ public class Recipe implements Serializable{
 
     public void set_calories(int _calories) {
         this._calories = _calories;
+    }
+
+    public boolean equals(Object object){
+        return _recipeName.equals(((Recipe)object).getRecipeName());
+    }
+
+    public String toString(){
+        return _recipeName;
     }
 }

@@ -3,6 +3,159 @@
 
     <item
         is-multidex="true"
+        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_f1d94346424165667f258ac33220591fed6af36b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_558b1c551b63c1e1e4b8b8e6579e8b96cfaa77ef/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_8b536c898b2efb9076dcb57510d5d11e35e8a43a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_018c449b61feb79d4aac261717c4877fbef71cc0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e92d17efa7e4ad9b1d4a9968010c28a3222d0fa1">
+        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_28533c1873cb0bb918c2737996a186201a6c51d4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a85c27fd80f640938a3224b313c9955e57537913">
+        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_6bff841db63a0fba58bd1b81bd466c3ffb82d18c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_a15dd7a6cf9072d45a0982dfbf895f0c9d1e2e30/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="f507954754f87f8d0a4b7f77e9194a45efaa7bd7">
+        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_836f7dceb24dacdea9ca43a2060656aa36e24a1d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_0fc6fecd6c0191ec4168c76a482ae517d66e73b1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_486f092cae3f4a893d6124c4ef780e60d9e43898/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_29c32d63183821398bea87a43d1b641344d1d392/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_32faed2a82b5d38576e749ab397597525a573b11/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_7eac8d2308780faf648f4198c874e2bd72e3d5da/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_fdf3d5b2003b78a17406b82a8632051cc47066e3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_cc65ad6271ea917f1e9f7342b49d2da30f82fefb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_3913aa75609e9d1ccd12bbc1bcd1014ee28acac2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_24866f4a9bd35cc55900b4fda0dd452e2bda3345/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -39,39 +192,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_f1d94346424165667f258ac33220591fed6af36b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
         sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
         <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_b851efc5dd3d6e744ba76a0399a17d864f7ef174/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_558b1c551b63c1e1e4b8b8e6579e8b96cfaa77ef/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_8b536c898b2efb9076dcb57510d5d11e35e8a43a/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -84,66 +210,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_018c449b61feb79d4aac261717c4877fbef71cc0/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="e92d17efa7e4ad9b1d4a9968010c28a3222d0fa1">
-        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_28533c1873cb0bb918c2737996a186201a6c51d4/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="080f7ed231a4769335e2ec40fe4647f80998addb">
-        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_6bff841db63a0fba58bd1b81bd466c3ffb82d18c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/unaizrehmani/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
         sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
         <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_379e3b997b017a0b14b44867a28e48338ceddf3b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_a15dd7a6cf9072d45a0982dfbf895f0c9d1e2e30/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="f507954754f87f8d0a4b7f77e9194a45efaa7bd7">
-        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_836f7dceb24dacdea9ca43a2060656aa36e24a1d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_0fc6fecd6c0191ec4168c76a482ae517d66e73b1/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -165,24 +237,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_486f092cae3f4a893d6124c4ef780e60d9e43898/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_29c32d63183821398bea87a43d1b641344d1d392/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -196,7 +250,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="074f51db1616602f888e86fc25cb2a88ed16ff06">
+        sha1="c25208b14630992ac11e7544b3b24d0bf381aab7">
         <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_c493b4ea5a59c7704c85d066b1e43e09a7211181/classes.dex" />
     </item>
     <item
@@ -207,15 +261,6 @@
         revision="24.0.2"
         sha1="867dad63c33388ff8c7644b236579355036d075f">
         <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_44e42ae5959a3a20eddd8113f368aac0c1a5c2eb/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_32faed2a82b5d38576e749ab397597525a573b11/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -237,15 +282,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_7eac8d2308780faf648f4198c874e2bd72e3d5da/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -255,48 +291,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_fdf3d5b2003b78a17406b82a8632051cc47066e3/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_cc65ad6271ea917f1e9f7342b49d2da30f82fefb/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
         <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_97bc26d8a80bec505a6cd78c4b40504a71fffe9e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_3913aa75609e9d1ccd12bbc1bcd1014ee28acac2/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_24866f4a9bd35cc55900b4fda0dd452e2bda3345/classes.dex" />
     </item>
 
 </items>
