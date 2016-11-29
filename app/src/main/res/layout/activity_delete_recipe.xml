@@ -10,4 +10,56 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.unaizrehmani.finalcookbook.DeleteRecipe">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="Delete Recipe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textView13"
+            android:layout_weight="3"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:ems="10"
+                android:id="@+id/editText"
+                android:layout_weight="1"
+                android:hint="Enter Name to Delete" />
+
+            <Button
+                android:text="Delete"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/deleteDARecipe"
+                android:layout_weight="3" />
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/deleteListView" />
+
+        <Button
+            android:text="Finished"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/finishedDeleting"
+            android:layout_weight="3" />
+
+    </LinearLayout>
+
 </RelativeLayout>

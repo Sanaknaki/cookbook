@@ -10,4 +10,25 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.unaizrehmani.finalcookbook.EditAllRecipes">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="Edit Recipe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textView8"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/getEditRecipeListView" />
+
+    </LinearLayout>
 </RelativeLayout>

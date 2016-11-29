@@ -27,11 +27,21 @@
         <activity android:name=".EditTextIngredient" />
         <activity
             android:name=".AddRecipe"
-            android:windowSoftInputMode="adjustPan"/>
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".EditAllRecipes" />
-        <activity android:name=".DeleteRecipe" />
+        <activity
+            android:name=".DeleteRecipe"
+            android:windowSoftInputMode="adjustPan"
+            />
         <activity
             android:name=".AddRecipeDirections"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".SingleEditRecipeClass"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".SingleEditRecipeDirectionClass" />
+        <activity
+            android:name=".ChangeSingleRecipeDirection"
             android:windowSoftInputMode="adjustPan"
             ></activity>
     </application>
