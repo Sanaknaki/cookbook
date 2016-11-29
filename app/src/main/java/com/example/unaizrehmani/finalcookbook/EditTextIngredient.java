@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class EditTextIngredient extends AppCompatActivity {
 
@@ -35,29 +36,39 @@ public class EditTextIngredient extends AppCompatActivity {
 
                 Bundle b = new Bundle();
 
-                String newIngredient = ((EditText) findViewById(R.id.newIngredientNameEditText)).getText().toString();
+                String newIngredient = ((EditText) findViewById(R.id.newIngredientNameEditText)).getText().toString().toUpperCase();
 
-                for(int i = 0; i<cookBook.get_cookBookRecipes().size(); i++){
+                if(newIngredient!= null && !newIngredient.equals("")){
+                    for(int i = 0; i<cookBook.get_cookBookRecipes().size(); i++){
 
-                    if(cookBook.get_cookBookRecipes().get(i).getRecipeIngredients().contains(new Ingredient(oldIngredient))){
-                        cookBook.get_cookBookRecipes().get(i).getRecipeIngredients().remove(new Ingredient(oldIngredient));
-                        cookBook.get_cookBookRecipes().get(i).addRecipeIngredient(new Ingredient(newIngredient));
+                        if(cookBook.get_cookBookRecipes().get(i).getRecipeIngredients().contains(new Ingredient(oldIngredient))){
+                            cookBook.get_cookBookRecipes().get(i).getRecipeIngredients().remove(new Ingredient(oldIngredient));
+                            cookBook.get_cookBookRecipes().get(i).addRecipeIngredient(new Ingredient(newIngredient));
+                        }
+
                     }
+
+                    for(int i = 0; i<cookBook.get_cookBookIngredients().size();i++){
+                        if(cookBook.get_cookBookIngredients().contains(new Ingredient(oldIngredient))){
+                            cookBook.get_cookBookIngredients().remove(new Ingredient(oldIngredient));
+                            cookBook.add_cookBookIngredient(newIngredient);
+                        }
+                    }
+
+                    Toast.makeText(getApplicationContext(), ("Changed all Names of "+oldIngredient+" to " + newIngredient), Toast.LENGTH_SHORT).show();
+
+                    b.putSerializable("cookBook",cookBook);
+
+                    intent.putExtras(b);
+
+                    startActivity(intent);
+
+                } else {
+
+                    Toast.makeText(getApplicationContext(), ("Must Enter Ingredient to Edit"), Toast.LENGTH_SHORT).show();
 
                 }
 
-                for(int i = 0; i<cookBook.get_cookBookIngredients().size();i++){
-                    if(cookBook.get_cookBookIngredients().contains(new Ingredient(oldIngredient))){
-                        cookBook.get_cookBookIngredients().remove(new Ingredient(oldIngredient));
-                        cookBook.add_cookBookIngredient(newIngredient);
-                    }
-                }
-
-                b.putSerializable("cookBook",cookBook);
-
-                intent.putExtras(b);
-
-                startActivity(intent);
 
                 //Toast.makeText(getApplicationContext(), ingredientChange, Toast.LENGTH_SHORT).show();
             }

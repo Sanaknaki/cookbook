@@ -26,7 +26,6 @@ public class EditIngredients extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
 
-
         cookBook = (MainScreen) bundle.getSerializable("cookBook");
 
         cookBookIngredients = cookBook.get_cookBookIngredients();

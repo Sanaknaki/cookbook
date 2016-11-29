@@ -7,7 +7,7 @@ public class Ingredient implements Serializable{
     private boolean _selected;
 
     public Ingredient(String _IngredientName) {
-        this._IngredientName = _IngredientName;
+        this._IngredientName = _IngredientName.toUpperCase();
         _selected = false;
     }
 
@@ -31,7 +31,7 @@ public class Ingredient implements Serializable{
         boolean result= false;
 
         if(object != null && object instanceof Ingredient){
-            result = (get_IngredientName().toLowerCase()).equals(((Ingredient)object).get_IngredientName().toLowerCase());
+            result = (get_IngredientName().toUpperCase()).equals(((Ingredient)object).get_IngredientName().toUpperCase());
         }
 
         return result;

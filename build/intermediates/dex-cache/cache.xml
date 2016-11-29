@@ -52,7 +52,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="a85c27fd80f640938a3224b313c9955e57537913">
+        sha1="ddbac735bee2cb78d319b5a9dd29f69ff898b2a9">
         <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_6bff841db63a0fba58bd1b81bd466c3ffb82d18c/classes.dex" />
     </item>
     <item
@@ -250,7 +250,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="c25208b14630992ac11e7544b3b24d0bf381aab7">
+        sha1="8e8a497c363ab1aaf344c3d5301eca956ca89665">
         <dex dex="/Users/unaizrehmani/Desktop/Android_Labs/FinalCookBook/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_c493b4ea5a59c7704c85d066b1e43e09a7211181/classes.dex" />
     </item>
     <item
