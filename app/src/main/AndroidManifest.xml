@@ -18,14 +18,19 @@
         <activity android:name=".findRecipe" />
         <activity
             android:name=".EditIngredients"
-            android:windowSoftInputMode="adjustPan"
-        />
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".EditRecipes" />
         <activity android:name=".excludeRecipe" />
         <activity android:name=".RecipeResult" />
         <activity android:name=".singleRecipeScreen" />
         <activity android:name=".SingleRecipeDirections" />
-        <activity android:name=".EditTextIngredient"></activity>
+        <activity android:name=".EditTextIngredient" />
+        <activity
+            android:name=".AddRecipe"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".EditAllRecipes" />
+        <activity android:name=".DeleteRecipe" />
+        <activity android:name=".AddRecipeDirections"></activity>
     </application>
 
 </manifest>

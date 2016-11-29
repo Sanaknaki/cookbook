@@ -10,4 +10,42 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.unaizrehmani.finalcookbook.EditRecipes">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+        android:text="Recipes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:gravity="center" />
+
+        <Button
+            android:text="ADD"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/addRecipeFinalButton"
+            android:layout_weight="1"
+            android:onClick="clickAddRecipe" />
+
+        <Button
+            android:text="EDIT"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/editRecipeFinalButton"
+            android:layout_weight="1"
+            android:onClick="clickEditRecipe" />
+
+        <Button
+            android:text="Delete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/deleteRecipeFinalButton"
+            android:layout_weight="1"
+            android:onClick="clickDeleteRecipe" />
+
+    </LinearLayout>
 </RelativeLayout>

@@ -18,7 +18,7 @@ public class Recipe implements Serializable{
 
 
     public Recipe(String newName, String newCategory, String newType){
-        _recipeName = newName;
+        _recipeName = newName.toUpperCase();
         _recipeType = newType;
         _recipeCategory = newCategory;
     }
@@ -28,7 +28,7 @@ public class Recipe implements Serializable{
                   ArrayList<Ingredient> newIngredients, ArrayList<String> newDirections,
                   int newPrepTime, int newCookTime, int newCalories){
 
-        _recipeName = newName;
+        _recipeName = newName.toUpperCase();
         _recipeIngredients = newIngredients;
         _recipeDirections = newDirections;
         _recipeType = newType;
@@ -52,7 +52,7 @@ public class Recipe implements Serializable{
     }
 
     public void setRecipeName(String newName){ //to be used when editing recipe name
-        _recipeName = newName;
+        _recipeName = newName.toUpperCase();
     }
 
     public ArrayList<Ingredient> getRecipeIngredients(){
