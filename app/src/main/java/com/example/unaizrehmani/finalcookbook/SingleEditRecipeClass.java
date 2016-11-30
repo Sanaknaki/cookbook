@@ -183,10 +183,10 @@ public class SingleEditRecipeClass extends AppCompatActivity {
 
     public void createAndSetSpinners(){
         ArrayAdapter<String> categoryAdapter = new ArrayAdapter<String>(SingleEditRecipeClass.this,android.R.layout.simple_list_item_1,
-                getResources().getStringArray(R.array.categories));
+                getResources().getStringArray(R.array.categoriesRecipe));
 
         ArrayAdapter<String> typeAdapter = new ArrayAdapter<String>(SingleEditRecipeClass.this,android.R.layout.simple_list_item_1,
-                getResources().getStringArray(R.array.types));
+                getResources().getStringArray(R.array.typesRecipe));
 
         categorySpinner = (Spinner) findViewById(R.id.getEditRecipeCategorySpinner);
 

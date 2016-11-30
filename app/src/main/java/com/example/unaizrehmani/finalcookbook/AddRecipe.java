@@ -37,10 +37,10 @@ public class AddRecipe extends AppCompatActivity {
         cookBook = (MainScreen) getIntent().getExtras().getSerializable("cookBook");
 
         ArrayAdapter<String> categoryAdapter = new ArrayAdapter<String>(AddRecipe.this,android.R.layout.simple_list_item_1,
-                getResources().getStringArray(R.array.categories));
+                getResources().getStringArray(R.array.categoriesRecipe));
 
         ArrayAdapter<String> typeAdapter = new ArrayAdapter<String>(AddRecipe.this,android.R.layout.simple_list_item_1,
-                getResources().getStringArray(R.array.types));
+                getResources().getStringArray(R.array.typesRecipe));
 
         categorySpinner = (Spinner) findViewById(R.id.getCreateRecipeCategorySpinner);
 
