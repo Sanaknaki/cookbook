@@ -87,7 +87,7 @@
                     android:textColorHint="@android:color/background_light"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:ems="10"
                     android:id="@+id/getCreatePrepEditView"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -102,7 +102,6 @@
                     android:textColorHint="@android:color/background_light"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="textPersonName"
                     android:ems="10"
                     android:id="@+id/getCreateCookEditView"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -110,14 +109,14 @@
                     android:hint="Enter Cook Time"
                     android:gravity="center"
                     android:textSize="10sp"
-                    android:textStyle="normal|bold" />
+                    android:textStyle="normal|bold"
+                    android:inputType="number" />
 
                 <EditText
                     android:textColor="@android:color/white"
                     android:textColorHint="@android:color/background_light"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="textPersonName"
                     android:ems="10"
                     android:id="@+id/getCreateCaloriesEditView"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -125,7 +124,8 @@
                     android:hint="Enter Total Calories"
                     android:gravity="center"
                     android:textSize="10sp"
-                    android:textStyle="normal|bold" />
+                    android:textStyle="normal|bold"
+                    android:inputType="number" />
 
             </LinearLayout>
         </LinearLayout>

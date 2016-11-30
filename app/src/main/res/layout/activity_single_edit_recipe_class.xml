@@ -87,42 +87,42 @@
                     android:textColor="@android:color/white"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="text"
                     android:ems="10"
                     android:id="@+id/getEditPrepEditView"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:layout_weight="1"
                     android:hint="Enter Prep Time in Minutes"
                     android:gravity="center"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    android:inputType="number" />
 
                 <EditText
                     android:textColor="@android:color/white"
                     android:textColorHint="@android:color/background_light"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="textPersonName"
                     android:ems="10"
                     android:id="@+id/getEditCookEditView"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:layout_weight="1"
                     android:hint="Enter Cook Time"
                     android:gravity="center"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    android:inputType="number" />
 
                 <EditText
                     android:textColor="@android:color/white"
                     android:textColorHint="@android:color/background_light"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="textPersonName"
                     android:ems="10"
                     android:id="@+id/getEditCaloriesEditView"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:layout_weight="1"
                     android:hint="Enter Total Calories"
                     android:gravity="center"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    android:inputType="number" />
 
             </LinearLayout>
         </LinearLayout>
