@@ -137,16 +137,31 @@ public class excludeRecipe extends AppCompatActivity {
 
         //Iterates through Cook Book recipes, first by isolating possible types and categories
         for(int i = 0; i<cookBook.get_cookBookRecipes().size(); i++){
-            if(type.equals(cookBook.get_cookBookRecipes().get(i).getRecipeType()) && category.equals(cookBook.get_cookBookRecipes().get(i).getRecipeCategory()))
-            {
 
-                /*
+             /*
                 Then determines if some or all of user-selected ingredients are in a recipe.
                 Then determines if none of the excluded ingredients are in that recipe.
 
                 If these conditions are satisifed, adds to result variable as a potential recipe.
                 */
 
+            if(type.equals("Any") && category.equals("Any")){
+                if(!Collections.disjoint(cookBook.get_cookBookRecipes().get(i).getRecipeIngredients(), include_ingredientList)
+                        && Collections.disjoint(cookBook.get_cookBookRecipes().get(i).getRecipeIngredients(),exclude_ingredientList)){
+                    result.add(cookBook.get_cookBookRecipes().get(i));
+                }
+            } else if (type.equals("Any") && category.equals(cookBook.get_cookBookRecipes().get(i).getRecipeCategory())){
+                if(!Collections.disjoint(cookBook.get_cookBookRecipes().get(i).getRecipeIngredients(), include_ingredientList)
+                        && Collections.disjoint(cookBook.get_cookBookRecipes().get(i).getRecipeIngredients(),exclude_ingredientList)){
+                    result.add(cookBook.get_cookBookRecipes().get(i));
+                }
+            } else if (type.equals(cookBook.get_cookBookRecipes().get(i).getRecipeType()) && category.equals("Any")){
+                if(!Collections.disjoint(cookBook.get_cookBookRecipes().get(i).getRecipeIngredients(), include_ingredientList)
+                        && Collections.disjoint(cookBook.get_cookBookRecipes().get(i).getRecipeIngredients(),exclude_ingredientList)){
+                    result.add(cookBook.get_cookBookRecipes().get(i));
+                }
+            } else if(type.equals(cookBook.get_cookBookRecipes().get(i).getRecipeType()) && category.equals(cookBook.get_cookBookRecipes().get(i).getRecipeCategory()))
+            {
                 if(!Collections.disjoint(cookBook.get_cookBookRecipes().get(i).getRecipeIngredients(), include_ingredientList)
                         && Collections.disjoint(cookBook.get_cookBookRecipes().get(i).getRecipeIngredients(),exclude_ingredientList)){
                     result.add(cookBook.get_cookBookRecipes().get(i));
