@@ -24,20 +24,6 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true" />
 
-        <TextView
-            android:text="Cookbook"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:id="@+id/appName"
-            android:fontFamily="monospace"
-            android:typeface="monospace"
-            android:textSize="50sp"
-            android:textStyle="normal|bold"
-            android:layout_below="@+id/appIcon"
-            android:layout_centerHorizontal="true"
-            android:textColor="@android:color/white" />
-
         <Button
             android:text="FIND RECIPE"
             android:background="@drawable/button_white"
@@ -47,10 +33,10 @@
             android:layout_weight="1"
             android:onClick="clickFindRecipes"
             android:textColor="@android:color/white"
-            android:layout_marginBottom="25dp"
-            android:layout_above="@+id/editIngredientsButton"
+            android:layout_below="@+id/appIcon"
             android:layout_alignLeft="@+id/editIngredientsButton"
-            android:layout_alignStart="@+id/editIngredientsButton" />
+            android:layout_alignStart="@+id/editIngredientsButton"
+            android:layout_marginTop="25dp" />
 
         <Button
             android:text="EDIT INGREDIENTS"
@@ -60,12 +46,11 @@
             android:id="@+id/editIngredientsButton"
             android:layout_weight="1"
             android:onClick="clickEditIngredients"
-            android:layout_marginBottom="25dp"
             android:textColor="@android:color/white"
-            android:layout_above="@+id/editRecipesButton"
+            android:layout_below="@+id/findRecipeButton"
             android:layout_alignLeft="@+id/editRecipesButton"
-            android:layout_alignStart="@+id/editRecipesButton" />
-
+            android:layout_alignStart="@+id/editRecipesButton"
+            android:layout_marginTop="25dp"/>
 
         <Button
             android:text="EDIT RECIPE"
@@ -76,7 +61,19 @@
             android:onClick="clickEditRecipes"
             android:textColor="@android:color/white"
             android:layout_width="150dp"
+            android:layout_below="@+id/editIngredientsButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"/>
+
+        <Button
+            android:text=" ? "
+            android:background="@drawable/button_white"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/helpButton"
+            android:textColor="@android:color/white"
             android:layout_alignParentBottom="true"
+            android:layout_marginTop="25dp"
             android:layout_centerHorizontal="true" />
 
     </RelativeLayout>
