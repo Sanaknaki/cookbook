@@ -1,21 +1,23 @@
 <resources>
     <string name="app_name">FinalCookBook</string>
 
-    
+
     <string-array name="categories">
+        <item>Any</item>
         <item>Breakfast</item>
         <item>Lunch</item>
         <item>Dinner</item>
         <item>Snack</item>
-        <item>Any</item>
+
     </string-array>
 
     <string-array name="types">
+        <item>Any</item>
         <item>American</item>
         <item>Italian</item>
         <item>Asian</item>
         <item>Mexican</item>
-        <item>Any</item>
+
     </string-array>
 
 </resources>
