@@ -20,7 +20,8 @@ public class MainScreen extends AppCompatActivity implements Serializable{
     //@param _cookBookRecipes : Contains all the Recipes in the Cook Book Database.
     private ArrayList<Ingredient> _cookBookIngredients = new ArrayList<Ingredient>();
     private ArrayList<Recipe> _cookBookRecipes = new ArrayList<Recipe>();
-
+    private ArrayList<String> typeList = new ArrayList<String>();
+    private ArrayList<String> categoryList = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +37,6 @@ public class MainScreen extends AppCompatActivity implements Serializable{
                 Otherwise, altered instances of CookBook in later activities returning to this class
                 will inform altered recipes and ingredients.
              */
-
             Bundle bundle = getIntent().getExtras();
             MainScreen mainScreen = (MainScreen) bundle.getSerializable("cookBook");
             _cookBookRecipes = mainScreen.get_cookBookRecipes();
@@ -51,6 +51,25 @@ public class MainScreen extends AppCompatActivity implements Serializable{
             populateCookBookRecipes();
         }
 
+        //if previously saved, populate category list with this.
+        try{
+            typeList = (ArrayList<String>) getIntent().getExtras().getSerializable("typeList");
+            categoryList = (ArrayList<String>) getIntent().getExtras().getSerializable("categoryList");
+        }catch (Exception e){
+
+            String[] tempTypes = getResources().getStringArray(R.array.types);
+            String[] tempCategories = getResources().getStringArray(R.array.categories);
+
+            for(int i = 0; i<tempTypes.length; i++){
+                typeList.add(tempTypes[i]);
+            }
+
+            for(int i = 0; i<tempCategories.length; i++){
+                categoryList.add(tempCategories[i]);
+            }
+
+        }
+
     }
 
     //Method used to direct user to findRecipe activity.
@@ -60,6 +79,8 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         Bundle bundle = new Bundle();
 
         bundle.putSerializable("cookBook",this);
+        bundle.putSerializable("typeList",typeList);
+        bundle.putSerializable("categoryList",categoryList);
 
         intent.putExtras(bundle);
 

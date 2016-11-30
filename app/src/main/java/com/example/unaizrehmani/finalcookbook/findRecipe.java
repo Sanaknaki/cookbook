@@ -32,19 +32,25 @@ public class findRecipe extends AppCompatActivity {
     //Stores 'Category' selection from user.
     private String chosenCategory;
 
+    private ArrayList<String> categoryList = new ArrayList<String>();
+    private ArrayList<String> typeList = new ArrayList<String>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_recipe);
 
         cookBook = (MainScreen) getIntent().getExtras().getSerializable("cookBook");
+        categoryList = (ArrayList<String>) getIntent().getExtras().getSerializable("categoryList");
+        typeList = (ArrayList<String>) getIntent().getExtras().getSerializable("typeList");
+
 
         //CREATE AND SET SPINNER FOR CATEGORY.
         ArrayAdapter<String> categoryAdapter = new ArrayAdapter<String>(findRecipe.this,android.R.layout.simple_list_item_1,
-                getResources().getStringArray(R.array.categories));
+                categoryList);
 
         ArrayAdapter<String> typeAdapter = new ArrayAdapter<String>(findRecipe.this,android.R.layout.simple_list_item_1,
-                getResources().getStringArray(R.array.types));
+                typeList);
 
         Spinner categorySpinner = (Spinner) findViewById(R.id.spinnerCategory);
 
@@ -151,6 +157,8 @@ public class findRecipe extends AppCompatActivity {
         bundle.putSerializable("chosenIngredients", chosenIngredients);
         bundle.putSerializable("chosenType", chosenType);
         bundle.putSerializable("chosenCategory", chosenCategory);
+        bundle.putSerializable("typeList",typeList);
+        bundle.putSerializable("categoryList",categoryList);
 
         intent.putExtras(bundle);
 

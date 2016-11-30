@@ -33,15 +33,27 @@ public class Recipe implements Serializable{
 
         _recipeName = newName.toUpperCase();
         _recipeIngredients = newIngredients;
-        _recipeDirections = newDirections;
+
         _recipeType = newType;
         _recipeCategory = newCategory;
         _prepTime = newPrepTime;
         _cookTime = newCookTime;
         _calories = newCalories;
 
+        for(int i = 0; i<newDirections.size(); i++){
+
+            try {
+                int a = Integer.valueOf(String.valueOf(newDirections.get(i).charAt(0)));
+                _recipeDirections.add(newDirections.get(i));
+
+            } catch (Exception e){
+                _recipeDirections.add((i+1) + ") " + newDirections.get(i));
+            }
+        }
+
+
         //Collections.sort(_recipeIngredients);
-        Collections.sort(_recipeDirections);
+        //Collections.sort(_recipeDirections);
         Collections.sort(_recipeIngredients,new Comparator<Ingredient>() {
             @Override
             public int compare(Ingredient s1, Ingredient s2) {
