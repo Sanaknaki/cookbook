@@ -22,6 +22,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textColor="@android:color/white"
             android:inputType="text"
             android:ems="10"
             android:id="@+id/getCreateRecipeNameEditView"
@@ -81,6 +82,7 @@
                 android:layout_weight="1">
 
                 <EditText
+                    android:textColor="@android:color/white"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="text"
@@ -90,9 +92,11 @@
                     android:layout_weight="1"
                     android:hint="Enter Prep Time in Minutes"
                     android:gravity="center"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    android:textStyle="normal|bold" />
 
                 <EditText
+                    android:textColor="@android:color/white"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="textPersonName"
@@ -102,9 +106,11 @@
                     android:layout_weight="1"
                     android:hint="Enter Cook Time"
                     android:gravity="center"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    android:textStyle="normal|bold" />
 
                 <EditText
+                    android:textColor="@android:color/white"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="textPersonName"
@@ -114,7 +120,8 @@
                     android:layout_weight="1"
                     android:hint="Enter Total Calories"
                     android:gravity="center"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    android:textStyle="normal|bold" />
 
             </LinearLayout>
         </LinearLayout>
