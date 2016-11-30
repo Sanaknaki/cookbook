@@ -42,7 +42,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/categoryTextView"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:gravity="center" />
 
                 <Spinner
                     android:layout_width="match_parent"
@@ -63,7 +64,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/typeTextView"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:gravity="center" />
 
                 <Spinner
                     android:layout_width="match_parent"
