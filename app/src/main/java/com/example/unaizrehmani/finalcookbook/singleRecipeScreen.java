@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 public class singleRecipeScreen extends AppCompatActivity {
 
+    //Retrieves the recipe informing the layout from previous activity. Other variables are auxillary.
     private Recipe recipe;
     private ArrayList<Ingredient> recipeIngredients = new ArrayList<Ingredient>();
     private ArrayList<String> recipeStringIngredients = new ArrayList<String>();
@@ -28,7 +29,7 @@ public class singleRecipeScreen extends AppCompatActivity {
             recipeStringIngredients.add(recipeIngredients.get(i).get_IngredientName());
         }
 
-
+        //Sets the text of recipe info for all options.
         TextView recipeName = (TextView) findViewById(R.id.recipeNamePopUpTextView);
         recipeName.setText(recipe.getRecipeName());
 
@@ -47,13 +48,14 @@ public class singleRecipeScreen extends AppCompatActivity {
         TextView type = (TextView) findViewById(R.id.getTypeTextView);
         type.setText(recipe.getRecipeType());
 
+        //Populates listview with the ingredients used in the respective recipe.
         ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(singleRecipeScreen.this,android.R.layout.simple_list_item_1,recipeStringIngredients);
         ListView myList = (ListView) findViewById(R.id.recipePopUpListView);
         myList.setAdapter(myAdapter);
-        //TextView prepTime = (TextView) findViewById(R.id.getPrepTextView);
-        //prepTime.setText(recipe.get_prepTime());
+
     }
 
+    //Used to view the directions of the recipe.
     public void clickDirectionsButton(View view){
 
         Intent intent = new Intent(singleRecipeScreen.this,SingleRecipeDirections.class);

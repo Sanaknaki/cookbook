@@ -97,7 +97,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="9d432419b1f2ff999d3570444bc2ab83d72a2872">
+        sha1="210cb4ae5297d87427451659556eb17d545867d9">
         <dex dex="/Users/unaizrehmani/Desktop/Fall 2016/SEGPROJECT/CookBookApp/CookBookApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b0b3611ab8d55707a984ec9ed2d41d5ced7d4d85/classes.dex" />
     </item>
     <item
@@ -106,7 +106,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="e65e2bb1a83cf3e0ac8a36ca64101abe89f4f65c">
+        sha1="f38f64118bc9f96abcf60412694c6d0509392344">
         <dex dex="/Users/unaizrehmani/Desktop/Fall 2016/SEGPROJECT/CookBookApp/CookBookApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_de7d1d245b8250f9d930932dd72e6fd55b814a5a/classes.dex" />
     </item>
     <item

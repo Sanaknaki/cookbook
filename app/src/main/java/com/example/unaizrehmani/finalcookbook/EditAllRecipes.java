@@ -7,10 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -33,21 +32,6 @@ public class EditAllRecipes extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.getEditRecipeListView);
         ArrayAdapter<Recipe> recipeArrayAdapter = new RecipeAdapter(EditAllRecipes.this,cookBook.get_cookBookRecipes());
         listView.setAdapter(recipeArrayAdapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Recipe currentRecipe = cookBook.get_cookBookRecipes().get(i);
-
-                Intent intent = new Intent(EditAllRecipes.this,SingleEditRecipeClass.class);
-
-                Bundle b = new Bundle();
-                b.putSerializable("currentRecipe",currentRecipe);
-                b.putSerializable("cookBook",cookBook);
-                intent.putExtras(b);
-
-                startActivity(intent);
-            }
-        });
     }
 
     private class RecipeAdapter extends ArrayAdapter<Recipe>{
@@ -68,13 +52,27 @@ public class EditAllRecipes extends AppCompatActivity {
 
             String currentIngredient = curIngredient.getRecipeName();
             //boolean selection = curIngredient.is_selected();
+            final int positionOfRecipe = position;
 
-            TextView ingredientText = (TextView) customView.findViewById(R.id.singleRecipeTextView);
-            ingredientText.setText(currentIngredient);
+            Button buttonText = (Button) customView.findViewById(R.id.button);
+            buttonText.setText(currentIngredient);
 
-            //CheckBox ingredientSelected = (CheckBox) customView.findViewById(R.id.singleIngredientSelection);
-            //ingredientSelected.setText("Include");
-            //Need to double check to ensure that boxes stay ticked.
+            buttonText.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Recipe currentRecipe = cookBook.get_cookBookRecipes().get(positionOfRecipe);
+
+                    Intent intent = new Intent(EditAllRecipes.this,SingleEditRecipeClass.class);
+
+                    Bundle b = new Bundle();
+
+                    b.putSerializable("currentRecipe",currentRecipe);
+                    b.putSerializable("cookBook",cookBook);
+                    intent.putExtras(b);
+
+                    startActivity(intent);
+                }
+            });
 
             return customView;
         }

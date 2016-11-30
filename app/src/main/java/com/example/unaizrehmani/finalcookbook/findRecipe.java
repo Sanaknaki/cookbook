@@ -16,16 +16,21 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import static com.example.unaizrehmani.finalcookbook.R.layout.single_ingredient;
+
 public class findRecipe extends AppCompatActivity {
 
+    //Reference to original MainScreen instantiation
     private MainScreen cookBook;
 
-    private ArrayList<Ingredient> cookBookIngredients = new ArrayList<Ingredient>();
-    private ArrayList<Recipe> cookBookRecipes = new ArrayList<Recipe>();
+    //Used to keep track of Included Ingredients desired by the user.
+    private ArrayList<Ingredient> chosenIngredients = new ArrayList<Ingredient>();
 
-    ArrayList<Ingredient> chosenIngredients = new ArrayList<Ingredient>();
-    String chosenType;
-    String chosenCategory;
+    //Stores 'Type' selection from user.
+    private String chosenType;
+
+    //Stores 'Category' selection from user.
+    private String chosenCategory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +39,7 @@ public class findRecipe extends AppCompatActivity {
 
         cookBook = (MainScreen) getIntent().getExtras().getSerializable("cookBook");
 
-        cookBookIngredients = cookBook.get_cookBookIngredients();
-        cookBookRecipes = cookBook.get_cookBookRecipes();
-
         //CREATE AND SET SPINNER FOR CATEGORY.
-
         ArrayAdapter<String> categoryAdapter = new ArrayAdapter<String>(findRecipe.this,android.R.layout.simple_list_item_1,
                 getResources().getStringArray(R.array.categories));
 
@@ -67,42 +68,47 @@ public class findRecipe extends AppCompatActivity {
         TextView typeTextView = (TextView) findViewById(R.id.typeTextView);
         typeTextView.setText("TYPE");
 
-        populateIngredientListView();
+        populateIngredientListView(); //Create list View
     }
 
     public void populateIngredientListView(){
-        final ArrayAdapter<Ingredient> ingredientListAdapter = new IngredientAdapter(findRecipe.this,cookBookIngredients);
+
+        /*
+        Creates custom ListView by creating a Custom Adapter of type ingredients which utilizes a custom layout single_ingredient
+        to allow users to 'select' their preferred ingredients using textboxes.
+        */
+
+        final ArrayAdapter<Ingredient> ingredientListAdapter = new IngredientAdapter(findRecipe.this,cookBook.get_cookBookIngredients());
         ListView ingredientList = (ListView)findViewById(R.id.includeIngredientListView);
         ingredientList.setAdapter(ingredientListAdapter);
     }
 
     private class IngredientAdapter extends ArrayAdapter<Ingredient>{
 
-        private Context context;
-
         public IngredientAdapter(Context context, ArrayList<Ingredient> objects) {
-            super(context, R.layout.single_ingredient, objects);
-            this.context = context;
+            super(context, single_ingredient, objects);
         }
 
         //override this method.
         public View getView(int position, View convertView, ViewGroup parent){
-            View customView = (LayoutInflater.from(getContext())).inflate(R.layout.single_ingredient,parent,false);
+            View customView = (LayoutInflater.from(getContext())).inflate(single_ingredient,parent,false);
 
+            //Retrieves ingredient selected by user.
             final Ingredient curIngredient = getItem(position);
 
+            //Uses info of ingredient selected to set custom layout.
             String currentIngredient = curIngredient.get_IngredientName();
-            boolean selection = curIngredient.is_selected();
 
             TextView ingredientText = (TextView) customView.findViewById(R.id.singleIngredientName);
             ingredientText.setText(currentIngredient);
 
             CheckBox ingredientSelected = (CheckBox) customView.findViewById(R.id.singleIngredientSelection);
-            //ingredientSelected.setText("Include");
-            //Need to double check to ensure that boxes stay ticked.
 
             ingredientSelected.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+
+                    //If an ingredient is selected, this is reflected in the list view and populates array of desired
+                    //ingredients.
 
                     curIngredient.set_selected(isChecked);
 
@@ -115,6 +121,7 @@ public class findRecipe extends AppCompatActivity {
                 }
             });
 
+            //keeps track of selected ingredients.
             ingredientSelected.setChecked(curIngredient.is_selected());
             ingredientSelected.setTag(curIngredient);
 
@@ -123,19 +130,23 @@ public class findRecipe extends AppCompatActivity {
 
     }
 
+    //User click activates this method which sends user to Exclude Ingredients screen.
     public void clickNextExcludeIngredients(View view){
         Intent intent = new Intent(this, excludeRecipe.class);
 
+        //Retrieves choices.
         chosenType = ((Spinner) findViewById(R.id.spinnerType)).getSelectedItem().toString();
         chosenCategory = ((Spinner) findViewById(R.id.spinnerCategory)).getSelectedItem().toString();
 
         Bundle bundle = new Bundle();
 
-        //uncheck is selected for cookBook Ingredients
+        //Unselects select attribute for CookBook Ingredients
         for(int i =0 ; i<cookBook.get_cookBookIngredients().size(); i++){
             cookBook.get_cookBookIngredients().get(i).set_selected(false);
         }
 
+        //Sends Cook Book reference, chosen ingredients, chosen category and chosen Type to inform possible recipes
+        //in the next activity.
         bundle.putSerializable("cookBook",cookBook);
         bundle.putSerializable("chosenIngredients", chosenIngredients);
         bundle.putSerializable("chosenType", chosenType);

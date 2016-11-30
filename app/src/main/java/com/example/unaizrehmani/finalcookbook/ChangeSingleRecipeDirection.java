@@ -11,21 +11,23 @@ public class ChangeSingleRecipeDirection extends AppCompatActivity {
 
     private MainScreen cookBook;
     private int directionPosition;
-    private String toChange;
-    private int positionOfRecipe;
+    private String oldDirectionName;
+    private String oldName;
+    private Recipe currentRecipe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_single_recipe_direction);
 
-        toChange = (String)getIntent().getExtras().getSerializable("toChange");
+        oldDirectionName = (String)getIntent().getExtras().getSerializable("oldDirectionName");
         cookBook = (MainScreen)getIntent().getExtras().getSerializable("cookBook");
         directionPosition = (Integer)getIntent().getExtras().getSerializable("direction position");
-        positionOfRecipe = (Integer) getIntent().getExtras().getSerializable("recipe position");
+        currentRecipe = (Recipe) getIntent().getExtras().getSerializable("currentRecipe");
+        oldName = (String) getIntent().getExtras().getSerializable("oldName");
 
         final EditText myEditText = (EditText)findViewById(R.id.editTextChange);
-        myEditText.setText(toChange);
+        myEditText.setText(oldDirectionName);
 
         Button save = (Button)findViewById(R.id.saveRecipeDirectionButton);
         save.setOnClickListener(new View.OnClickListener() {
@@ -33,15 +35,16 @@ public class ChangeSingleRecipeDirection extends AppCompatActivity {
             public void onClick(View view) {
 
                 EditText myEditText = (EditText)findViewById(R.id.editTextChange);
+                String newDirectionName = myEditText.getText().toString();
 
-                String newString = myEditText.getText().toString();
-                cookBook.get_cookBookRecipes().get(positionOfRecipe).setRecipeDirections(directionPosition,newString);
+                currentRecipe.setRecipeDirections(directionPosition,newDirectionName);
 
                 Intent intent = new Intent(ChangeSingleRecipeDirection.this,SingleEditRecipeDirectionClass.class);
 
                 Bundle b = new Bundle();
                 b.putSerializable("cookBook",cookBook);
-                b.putSerializable("positionRecipe",positionOfRecipe);
+                b.putSerializable("currentRecipe",currentRecipe);
+                b.putSerializable("oldName",oldName);
 
                 intent.putExtras(b);
                 startActivity(intent);

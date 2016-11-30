@@ -19,36 +19,49 @@ import java.util.Collections;
 
 public class excludeRecipe extends AppCompatActivity {
 
+    //Reference to original MainScreen instantiation
     private MainScreen cookBook;
+
+    //Stored choices of included ingredients from previous activity.
     private ArrayList<Ingredient> includeIngredients = new ArrayList<Ingredient>();
+
+    //Only variable used in this activity, the rest are instantianted from intent of previous activity.
+    private ArrayList<Ingredient> excludeIngredients = new ArrayList<Ingredient>();
+
+    //Stored choices of user type and category from previous activity.
     private String type;
     private String category;
-    private ArrayList<Ingredient> excludeIngredients = new ArrayList<Ingredient>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exclude_recipe);
 
+        //Previous variables are retrieved here.
         cookBook = (MainScreen) getIntent().getExtras().getSerializable("cookBook");
         includeIngredients = (ArrayList<Ingredient>) getIntent().getExtras().getSerializable("chosenIngredients");
-
         type = (String)getIntent().getExtras().getSerializable("chosenType");
         category = (String)getIntent().getExtras().getSerializable("chosenCategory");
 
+        //Populates list view.
         populateIngredientListView();
+
+        //Sets onClick for getRecipes Button to go to next activity.
         Button getRecipes = (Button) findViewById(R.id.getRecipeResults);
         getRecipes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(excludeRecipe.this,RecipeResult.class);
+
+                //Potential recipe matches are retrieved used findRecipe method and passed in variable result.
                 ArrayList<Recipe> result = findRecipe(type,category,includeIngredients,excludeIngredients);
 
-                //uncheck ingredients in cookBook
+                //Deselects all ingredients in Cook Book.
                 for(int i =0 ; i<cookBook.get_cookBookIngredients().size(); i++){
                     cookBook.get_cookBookIngredients().get(i).set_selected(false);
                 }
 
+                //Passes results and reference to Cook Book.
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("result",result);
                 bundle.putSerializable("cookBook",cookBook);
@@ -59,6 +72,7 @@ public class excludeRecipe extends AppCompatActivity {
         });
     }
 
+    //Same adapter and listview implementation as previous classes.
     public void populateIngredientListView(){
         final ArrayAdapter<Ingredient> ingredientListAdapter = new IngredientAdapter(excludeRecipe.this,cookBook.get_cookBookIngredients());
         ListView ingredientList = (ListView)findViewById(R.id.excludeIngredientsListView);
@@ -81,7 +95,6 @@ public class excludeRecipe extends AppCompatActivity {
             final Ingredient curIngredient = getItem(position);
 
             String currentIngredient = curIngredient.get_IngredientName();
-            boolean selection = curIngredient.is_selected();
 
             TextView ingredientText = (TextView) customView.findViewById(R.id.singleIngredientName);
             ingredientText.setText(currentIngredient);
@@ -113,18 +126,26 @@ public class excludeRecipe extends AppCompatActivity {
     }
 
     public ArrayList<Recipe> findRecipe(String type, String category, ArrayList<Ingredient> include_ingredientList, ArrayList<Ingredient> exclude_ingredientList){
-        /*
+
+        //acts as fail-safe for Illegal arguments for finding recipe.
         if(type == null || category == null || include_ingredientList == null || exclude_ingredientList == null){
             throw new IllegalArgumentException("One or all of the arguments provided are null in findRecipe()");
-        }*/
+        }
 
+        //Stores possible matches in this variable.
         ArrayList<Recipe> result = new ArrayList<Recipe>();
 
+        //Iterates through Cook Book recipes, first by isolating possible types and categories
         for(int i = 0; i<cookBook.get_cookBookRecipes().size(); i++){
             if(type.equals(cookBook.get_cookBookRecipes().get(i).getRecipeType()) && category.equals(cookBook.get_cookBookRecipes().get(i).getRecipeCategory()))
             {
-                //ArrayList<String> recipeIngredientsString = ingredientToString(recipes.get(i).getIngredients());
-                //ArrayList<String> inFridgeString = ingredientToString(ingredientList);
+
+                /*
+                Then determines if some or all of user-selected ingredients are in a recipe.
+                Then determines if none of the excluded ingredients are in that recipe.
+
+                If these conditions are satisifed, adds to result variable as a potential recipe.
+                */
 
                 if(!Collections.disjoint(cookBook.get_cookBookRecipes().get(i).getRecipeIngredients(), include_ingredientList)
                         && Collections.disjoint(cookBook.get_cookBookRecipes().get(i).getRecipeIngredients(),exclude_ingredientList)){
@@ -134,6 +155,7 @@ public class excludeRecipe extends AppCompatActivity {
             }
         }
 
+        //Returns all possible recipes.
         return result;
     }
 

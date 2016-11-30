@@ -7,17 +7,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class RecipeResult extends AppCompatActivity {
-    MainScreen cookBook;
-    ArrayList<Recipe> recipes = new ArrayList<Recipe>();
+
+    //Reference of original instantiation and recipe results from previous activities to inform ths one.
+    private MainScreen cookBook;
+    private ArrayList<Recipe> recipes = new ArrayList<Recipe>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +29,7 @@ public class RecipeResult extends AppCompatActivity {
 
         populateListView();
 
+        //Set button to allow user to return to the home screen once satisfied with the choices.
         Button goHome = (Button) findViewById(R.id.homeScreenButton);
         goHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,27 +45,14 @@ public class RecipeResult extends AppCompatActivity {
         });
     }
 
+    //This custom listview displays recipes using buttons.
     public void populateListView(){
         ListView listView = (ListView) findViewById(R.id.finalRecipeResult);
         ArrayAdapter<Recipe> recipeArrayAdapter = new RecipeAdapter(getApplicationContext(),recipes);
         listView.setAdapter(recipeArrayAdapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Recipe currentRecipe = recipes.get(i);
-
-                Intent intent = new Intent(RecipeResult.this,singleRecipeScreen.class);
-
-                Bundle b = new Bundle();
-                b.putSerializable("currentRecipe",currentRecipe);
-
-                intent.putExtras(b);
-
-                startActivity(intent);
-            }
-        });
     }
 
+    //Used to instantiate Adapter in populateListView method
     private class RecipeAdapter extends ArrayAdapter<Recipe>{
 
 
@@ -75,21 +63,36 @@ public class RecipeResult extends AppCompatActivity {
             this.context = context;
         }
 
-        //override this method.
         public View getView(int position, View convertView, ViewGroup parent){
             View customView = (LayoutInflater.from(getContext())).inflate(R.layout.single_recipe,parent,false);
 
-            final Recipe curIngredient = getItem(position);
+            final Recipe curRecipe = getItem(position);
 
-            String currentIngredient = curIngredient.getRecipeName();
-            //boolean selection = curIngredient.is_selected();
+            String currentIngredient = curRecipe.getRecipeName();
 
-            TextView ingredientText = (TextView) customView.findViewById(R.id.singleRecipeTextView);
-            ingredientText.setText(currentIngredient);
+            final int pos = position;
 
-            //CheckBox ingredientSelected = (CheckBox) customView.findViewById(R.id.singleIngredientSelection);
-            //ingredientSelected.setText("Include");
-            //Need to double check to ensure that boxes stay ticked.
+            //Sets the text of the button to the name of the recipe.
+            Button recipeButton = (Button) customView.findViewById(R.id.button);
+            recipeButton.setText(currentIngredient);
+
+            //Sets a click listener which links information of that recipe to the next activity.
+            recipeButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Recipe currentRecipe = recipes.get(pos);
+
+                    Intent intent = new Intent(RecipeResult.this,singleRecipeScreen.class);
+
+                    //Recipe info is passed based on button clicked.
+                    Bundle b = new Bundle();
+                    b.putSerializable("currentRecipe",currentRecipe);
+
+                    intent.putExtras(b);
+
+                    startActivity(intent);
+                }
+            });
 
             return customView;
         }

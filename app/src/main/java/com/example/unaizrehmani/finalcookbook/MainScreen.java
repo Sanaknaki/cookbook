@@ -12,10 +12,14 @@ import java.util.Comparator;
 
 public class MainScreen extends AppCompatActivity implements Serializable{
 
-    //Ingredients and Recipes.
 
-    ArrayList<Ingredient> _cookBookIngredients = new ArrayList<Ingredient>();
-    ArrayList<Recipe> _cookBookRecipes = new ArrayList<Recipe>();
+    //Singleton Class Design. Modifies and passes reference to MainScreen called CookBook between Each Activity.
+
+
+    //@param _cookBookIngredients : Contains all the Ingredients in the Cook Book Database.
+    //@param _cookBookRecipes : Contains all the Recipes in the Cook Book Database.
+    private ArrayList<Ingredient> _cookBookIngredients = new ArrayList<Ingredient>();
+    private ArrayList<Recipe> _cookBookRecipes = new ArrayList<Recipe>();
 
 
     @Override
@@ -23,21 +27,33 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
 
-        //If instantiated first time.
-        Bundle bundle = getIntent().getExtras();
-
         try {
+            /*
+                If instantiates the first time, serializable keyword will instantiate CookBook and
+                it will catch the exception and populate the Cook Book Database with default pre-set
+                ingredients and recipes.
+
+                Otherwise, altered instances of CookBook in later activities returning to this class
+                will inform altered recipes and ingredients.
+             */
+
+            Bundle bundle = getIntent().getExtras();
             MainScreen mainScreen = (MainScreen) bundle.getSerializable("cookBook");
             _cookBookRecipes = mainScreen.get_cookBookRecipes();
             _cookBookIngredients = mainScreen.get_cookBookIngredients();
 
         } catch(Exception e){
+
+            //@method populateCookBookIngredients() : adds default ingredients to _cookBookIngredients
             populateCookBookIngredients();
+
+            //@method populateCookBookRecipes() : adds default recipes to _cookBookIngredients
             populateCookBookRecipes();
         }
 
     }
 
+    //Method used to direct user to findRecipe activity.
     public void clickFindRecipes(View view){
         Intent intent = new Intent(this,findRecipe.class);
 
@@ -50,6 +66,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         startActivity(intent);
     }
 
+    //Method used to direct user to EditIngredients Activity
     public void clickEditIngredients(View view){
         Intent intent = new Intent(this,EditIngredients.class);
 
@@ -62,6 +79,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         startActivity(intent);
     }
 
+    //Method used to direct user to EditRecipes Activity
     public void clickEditRecipes(View view){
         Intent intent = new Intent(this,EditRecipes.class);
 
@@ -74,22 +92,17 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         startActivity(intent);
     }
 
+    //Returns Array of Cook Book Ingredients
     public ArrayList<Ingredient> get_cookBookIngredients() {
         return _cookBookIngredients;
     }
 
-    public void set_cookBookIngredients(ArrayList<Ingredient> _cookBookIngredients) {
-        this._cookBookIngredients = _cookBookIngredients;
-    }
-
+    //Returns Array of Cook Book Recipes
     public ArrayList<Recipe> get_cookBookRecipes() {
         return _cookBookRecipes;
     }
 
-    public void set_cookBookRecipes(ArrayList<Recipe> _cookBookRecipes) {
-        this._cookBookRecipes = _cookBookRecipes;
-    }
-
+    //Adds a Cook Book Ingredient using string argument then sorts by name.
     public void add_cookBookIngredient(String ingredient){
 
         if(!_cookBookIngredients.contains(new Ingredient(ingredient))) {
@@ -104,6 +117,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         }
     }
 
+    //Deletes a Cook Book Ingredient using string argument
     public void delete_cookBookIngredient(String ingredient){
         if(_cookBookIngredients.contains(new Ingredient(ingredient))){
             _cookBookIngredients.remove(new Ingredient(ingredient));
@@ -112,6 +126,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         }
     }
 
+    //Adds a Cook Book recipe with Recipe object argument then sorts by name.
     public void add_cookBookRecipe(Recipe recipe){
         _cookBookRecipes.add(recipe);
 
@@ -123,6 +138,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         });
     }
 
+    //Deletes a Recipe in Cook Book Recipe array given a recipe name
     public void delete_cookBookRecipe(String recipeName){
         for(int i = 0; i<_cookBookRecipes.size(); i++){
             if(_cookBookRecipes.get(i).getRecipeName().equals(recipeName)){
@@ -131,8 +147,8 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         }
     }
 
+    //Populate's some default ingredients for cookbook.
     private void populateCookBookIngredients(){
-        //Let's populate some default ingredients for cookbook.
 
         //Populates Ingredients objects.
         _cookBookIngredients.add(new Ingredient ("Chicken"));
@@ -245,7 +261,6 @@ public class MainScreen extends AppCompatActivity implements Serializable{
 
     //Default Recipes entered here and sorted.
     private void populateCookBookRecipes(){
-        //let's populate some default recipes here for cookbook.
         //********************CHICKEN NOODLE SOUP
         ArrayList<Ingredient> chickenNoodleSoupIngredients = new ArrayList<Ingredient>();
         chickenNoodleSoupIngredients.add(new Ingredient("Chicken"));

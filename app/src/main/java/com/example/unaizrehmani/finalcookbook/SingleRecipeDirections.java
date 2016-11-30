@@ -16,8 +16,10 @@ public class SingleRecipeDirections extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_recipe_directions);
 
+        //Directions instantiated from previous activity.
         directions = (ArrayList<String>) getIntent().getExtras().getSerializable("directions");
 
+        //Populates listview.
         ListView myListView = (ListView) findViewById(R.id.getDirectionsListView);
         ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(SingleRecipeDirections.this,android.R.layout.simple_list_item_1,directions);
         myListView.setAdapter(myAdapter);

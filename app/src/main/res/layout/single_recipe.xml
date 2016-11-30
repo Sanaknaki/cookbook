@@ -4,13 +4,11 @@
     android:layout_height="match_parent"
     android:weightSum="1">
 
-    <TextView
-        android:text="TextView"
+    <Button
+        android:text="Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/singleRecipeTextView"
-        android:gravity="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:layout_weight="0.07"
-        android:textColor="@android:drawable/screen_background_dark" />
+        android:id="@+id/button"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp" />
 </LinearLayout>

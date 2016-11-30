@@ -140,6 +140,7 @@ public class AddRecipe extends AppCompatActivity {
 
                 Intent intent = new Intent(AddRecipe.this,AddRecipeDirections.class);
                 Bundle bundle = new Bundle();
+
                 bundle.putSerializable("cookBook",cookBook);
                 bundle.putSerializable("recipeName",recipeName);
                 bundle.putSerializable("chosenCategory",chosenCategory);

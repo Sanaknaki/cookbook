@@ -12,7 +12,8 @@ import android.widget.ListView;
 public class SingleEditRecipeDirectionClass extends AppCompatActivity {
 
     private MainScreen cookBook;
-    private int positionOfRecipe;
+    private Recipe currentRecipe;
+    private String oldName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +21,8 @@ public class SingleEditRecipeDirectionClass extends AppCompatActivity {
         setContentView(R.layout.activity_single_edit_recipe_direction_class);
 
         cookBook = (MainScreen) getIntent().getExtras().getSerializable("cookBook");
-        positionOfRecipe = (Integer) getIntent().getExtras().getSerializable("positionRecipe");
+        currentRecipe = (Recipe) getIntent().getExtras().getSerializable("currentRecipe");
+        oldName = (String) getIntent().getExtras().getSerializable("oldName");
 
         populateListView();
 
@@ -32,6 +34,10 @@ public class SingleEditRecipeDirectionClass extends AppCompatActivity {
                 Intent intent = new Intent(SingleEditRecipeDirectionClass.this,MainScreen.class);
 
                 Bundle b = new Bundle();
+
+                cookBook.get_cookBookRecipes().remove(new Recipe(oldName));
+
+                cookBook.add_cookBookRecipe(currentRecipe);
 
                 b.putSerializable("cookBook",cookBook);
 
@@ -47,7 +53,7 @@ public class SingleEditRecipeDirectionClass extends AppCompatActivity {
         ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(
                 SingleEditRecipeDirectionClass.this,
                 android.R.layout.simple_list_item_1,
-                cookBook.get_cookBookRecipes().get(positionOfRecipe).getRecipeDirections());
+                currentRecipe.getRecipeDirections());
 
         ListView myListView = (ListView) findViewById(R.id.getEditDirectionListView);
 
@@ -55,14 +61,15 @@ public class SingleEditRecipeDirectionClass extends AppCompatActivity {
         myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String toChange = (String)adapterView.getItemAtPosition(i);
+                String oldDirectionName = (String)adapterView.getItemAtPosition(i);
 
                 Intent intent= new Intent(SingleEditRecipeDirectionClass.this,ChangeSingleRecipeDirection.class);
                 Bundle b = new Bundle();
-                b.putSerializable("toChange",toChange);
+                b.putSerializable("oldDirectionName",oldDirectionName);
                 b.putSerializable("cookBook",cookBook);
                 b.putSerializable("direction position",i);
-                b.putSerializable("recipe position", positionOfRecipe);
+                b.putSerializable("currentRecipe",currentRecipe);
+                b.putSerializable("oldName",oldName);
 
                 intent.putExtras(b);
                 startActivity(intent);
