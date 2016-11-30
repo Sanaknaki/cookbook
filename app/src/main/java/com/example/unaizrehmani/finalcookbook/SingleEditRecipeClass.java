@@ -20,6 +20,7 @@ import java.util.ArrayList;
 
 public class SingleEditRecipeClass extends AppCompatActivity {
 
+    //Variables for class.
     private Recipe currentRecipe;
     private MainScreen cookBook;
     ArrayList<Ingredient> chosenAddIngredients = new ArrayList<Ingredient>();
