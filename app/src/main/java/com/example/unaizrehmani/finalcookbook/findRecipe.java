@@ -44,13 +44,15 @@ public class findRecipe extends AppCompatActivity {
         categoryList = (ArrayList<String>) getIntent().getExtras().getSerializable("categoryList");
         typeList = (ArrayList<String>) getIntent().getExtras().getSerializable("typeList");
 
+        String[] tempCategoryArray = categoryList.toArray(new String[categoryList.size()]);
+        String[] tempTypeArray = typeList.toArray(new String[typeList.size()]);
 
         //CREATE AND SET SPINNER FOR CATEGORY.
         ArrayAdapter<String> categoryAdapter = new ArrayAdapter<String>(findRecipe.this,android.R.layout.simple_list_item_1,
-                categoryList);
+                tempCategoryArray);
 
         ArrayAdapter<String> typeAdapter = new ArrayAdapter<String>(findRecipe.this,android.R.layout.simple_list_item_1,
-                typeList);
+                tempTypeArray);
 
         Spinner categorySpinner = (Spinner) findViewById(R.id.spinnerCategory);
 
