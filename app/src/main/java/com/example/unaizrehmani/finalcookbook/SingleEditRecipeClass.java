@@ -203,7 +203,7 @@ public class SingleEditRecipeClass extends AppCompatActivity {
         chosenCategory = categorySpinner.getSelectedItem().toString();
 
         //Set both Spinners to what Recipe initially had
-        String[] categoryArray  = getResources().getStringArray(R.array.categories);
+        String[] categoryArray  = getResources().getStringArray(R.array.categoriesRecipe);
         int indexCategory = 0;
 
         for(int i = 0; i<categoryArray.length; i++ ){
@@ -215,7 +215,7 @@ public class SingleEditRecipeClass extends AppCompatActivity {
 
         ((Spinner)findViewById(R.id.getEditRecipeCategorySpinner)).setSelection(indexCategory);
 
-        String[] typesArray  = getResources().getStringArray(R.array.types);
+        String[] typesArray  = getResources().getStringArray(R.array.typesRecipe);
         int indexType = 0;
 
         for(int i = 0; i<typesArray.length; i++ ){
