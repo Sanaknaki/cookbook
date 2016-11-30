@@ -32,9 +32,11 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 tools:text="Ingredient Name"
+                android:textColor="@android:color/white"
                 android:textAppearance="@style/TextAppearance.AppCompat" />
 
             <EditText
+                android:textColor="@android:color/white"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textPersonName"
