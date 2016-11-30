@@ -36,6 +36,8 @@ public class AddRecipe extends AppCompatActivity {
 
         cookBook = (MainScreen) getIntent().getExtras().getSerializable("cookBook");
 
+        //String[] temp = getResources().getStringArray(R.array.categories);
+
         ArrayAdapter<String> categoryAdapter = new ArrayAdapter<String>(AddRecipe.this,android.R.layout.simple_list_item_1,
                 getResources().getStringArray(R.array.categoriesRecipe));
 

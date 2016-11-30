@@ -145,7 +145,18 @@ public class excludeRecipe extends AppCompatActivity {
                 If these conditions are satisifed, adds to result variable as a potential recipe.
                 */
 
-            if(type.equals("Any") && category.equals("Any")){
+            if(include_ingredientList.size() == 0 && exclude_ingredientList.size() == 0){
+
+                result.add(cookBook.get_cookBookRecipes().get(i));
+
+            } else if (include_ingredientList.size() == 0 && exclude_ingredientList.size() > 0){
+
+                if(Collections.disjoint(cookBook.get_cookBookRecipes().get(i).getRecipeIngredients(),exclude_ingredientList)){
+                    result.add(cookBook.get_cookBookRecipes().get(i));
+                }
+
+            }
+            else if(type.equals("Any") && category.equals("Any")){
                 if(!Collections.disjoint(cookBook.get_cookBookRecipes().get(i).getRecipeIngredients(), include_ingredientList)
                         && Collections.disjoint(cookBook.get_cookBookRecipes().get(i).getRecipeIngredients(),exclude_ingredientList)){
                     result.add(cookBook.get_cookBookRecipes().get(i));
