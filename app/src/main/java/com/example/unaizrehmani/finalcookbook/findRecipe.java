@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import static com.example.unaizrehmani.finalcookbook.R.layout.single_ingredient;
+import static com.example.unaizrehmani.finalcookbook.R.layout.single_ingredient_black;
 
 public class findRecipe extends AppCompatActivity {
 
@@ -86,12 +86,12 @@ public class findRecipe extends AppCompatActivity {
     private class IngredientAdapter extends ArrayAdapter<Ingredient>{
 
         public IngredientAdapter(Context context, ArrayList<Ingredient> objects) {
-            super(context, single_ingredient, objects);
+            super(context, single_ingredient_black, objects);
         }
 
         //override this method.
         public View getView(int position, View convertView, ViewGroup parent){
-            View customView = (LayoutInflater.from(getContext())).inflate(single_ingredient,parent,false);
+            View customView = (LayoutInflater.from(getContext())).inflate(single_ingredient_black,parent,false);
 
             //Retrieves ingredient selected by user.
             final Ingredient curIngredient = getItem(position);
@@ -99,10 +99,10 @@ public class findRecipe extends AppCompatActivity {
             //Uses info of ingredient selected to set custom layout.
             String currentIngredient = curIngredient.get_IngredientName();
 
-            TextView ingredientText = (TextView) customView.findViewById(R.id.singleIngredientName);
+            TextView ingredientText = (TextView) customView.findViewById(R.id.singleIngredientName_black);
             ingredientText.setText(currentIngredient);
 
-            CheckBox ingredientSelected = (CheckBox) customView.findViewById(R.id.singleIngredientSelection);
+            CheckBox ingredientSelected = (CheckBox) customView.findViewById(R.id.singleIngredientSelection_black);
 
             ingredientSelected.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){

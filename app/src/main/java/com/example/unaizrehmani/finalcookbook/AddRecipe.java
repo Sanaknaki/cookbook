@@ -70,23 +70,23 @@ public class AddRecipe extends AppCompatActivity {
         private Context context;
 
         public IngredientAdapter(Context context, ArrayList<Ingredient> objects) {
-            super(context, R.layout.single_ingredient, objects);
+            super(context, R.layout.single_ingredient_white, objects);
             this.context = context;
         }
 
         //override this method.
         public View getView(int position, View convertView, ViewGroup parent){
-            View customView = (LayoutInflater.from(getContext())).inflate(R.layout.single_ingredient,parent,false);
+            View customView = (LayoutInflater.from(getContext())).inflate(R.layout.single_ingredient_white,parent,false);
 
             final Ingredient curIngredient = getItem(position);
 
             String currentIngredient = curIngredient.get_IngredientName();
             boolean selection = curIngredient.is_selected();
 
-            TextView ingredientText = (TextView) customView.findViewById(R.id.singleIngredientName);
+            TextView ingredientText = (TextView) customView.findViewById(R.id.singleIngredientName_white);
             ingredientText.setText(currentIngredient);
 
-            CheckBox ingredientSelected = (CheckBox) customView.findViewById(R.id.singleIngredientSelection);
+            CheckBox ingredientSelected = (CheckBox) customView.findViewById(R.id.singleIngredientSelection_white);
             //ingredientSelected.setText("Include");
             //Need to double check to ensure that boxes stay ticked.
 
@@ -124,7 +124,7 @@ public class AddRecipe extends AppCompatActivity {
         chosenCategory = categorySpinner.getSelectedItem().toString();
 
         //all fields must be satisfied;
-        if(recipeName!=null && cookTime!=null
+        if(recipeName!=null && !recipeName.equals("") && cookTime!=null
                 && prepTime!=null && caloriesTime!=null
                 && chosenType!=null && chosenCategory!=null
                 && chosenAddIngredients.size() > 0){

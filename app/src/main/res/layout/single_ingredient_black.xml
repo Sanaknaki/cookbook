@@ -12,7 +12,7 @@
             android:text="TextView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/singleIngredientName"
+            android:id="@+id/singleIngredientName_black"
             android:layout_weight="1"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:gravity="center|end"
@@ -23,7 +23,7 @@
         <CheckBox
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/singleIngredientSelection"
+            android:id="@+id/singleIngredientSelection_black"
             android:layout_weight="1"
             android:buttonTint="@android:color/black" />
 

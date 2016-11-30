@@ -84,22 +84,22 @@ public class excludeRecipe extends AppCompatActivity {
         private Context context;
 
         public IngredientAdapter(Context context, ArrayList<Ingredient> objects) {
-            super(context, R.layout.single_ingredient, objects);
+            super(context, R.layout.single_ingredient_black, objects);
             this.context = context;
         }
 
         //override this method.
         public View getView(int position, View convertView, ViewGroup parent){
-            View customView = (LayoutInflater.from(getContext())).inflate(R.layout.single_ingredient,parent,false);
+            View customView = (LayoutInflater.from(getContext())).inflate(R.layout.single_ingredient_black,parent,false);
 
             final Ingredient curIngredient = getItem(position);
 
             String currentIngredient = curIngredient.get_IngredientName();
 
-            TextView ingredientText = (TextView) customView.findViewById(R.id.singleIngredientName);
+            TextView ingredientText = (TextView) customView.findViewById(R.id.singleIngredientName_black);
             ingredientText.setText(currentIngredient);
 
-            CheckBox ingredientSelected = (CheckBox) customView.findViewById(R.id.singleIngredientSelection);
+            CheckBox ingredientSelected = (CheckBox) customView.findViewById(R.id.singleIngredientSelection_black);
 
             //Need to double check to ensure that boxes stay ticked.
 
