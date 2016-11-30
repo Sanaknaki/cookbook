@@ -15,13 +15,16 @@
             android:id="@+id/singleIngredientName"
             android:layout_weight="1"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:gravity="center|end" />
+            android:gravity="center|end"
+            android:textColor="@android:color/white"
+            android:textAlignment="textEnd" />
 
         <CheckBox
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/singleIngredientSelection"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:buttonTint="@android:color/white" />
 
     </LinearLayout>
 </LinearLayout>

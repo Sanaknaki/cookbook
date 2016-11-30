@@ -41,31 +41,36 @@
                     android:text="Prep Time"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/prepTimeTextView" />
+                    android:id="@+id/prepTimeTextView"
+                    android:textAlignment="center" />
 
                 <TextView
                     android:text="Cook Time"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/cookTimeTextView" />
+                    android:id="@+id/cookTimeTextView"
+                    android:textAlignment="center" />
 
                 <TextView
                     android:text="Calories"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/caloriesTextView" />
+                    android:id="@+id/caloriesTextView"
+                    android:textAlignment="center" />
 
                 <TextView
                     android:text="Category"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/categoryPopUpTextView" />
+                    android:id="@+id/categoryPopUpTextView"
+                    android:textAlignment="center" />
 
                 <TextView
                     android:text="Type"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/typePopUpTextView" />
+                    android:id="@+id/typePopUpTextView"
+                    android:textAlignment="center" />
             </LinearLayout>
 
             <LinearLayout
@@ -78,31 +83,36 @@
                     android:text="TextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/getPrepTextView" />
+                    android:id="@+id/getPrepTextView"
+                    android:textAlignment="center" />
 
                 <TextView
                     android:text="TextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/getCookTextView" />
+                    android:id="@+id/getCookTextView"
+                    android:textAlignment="center" />
 
                 <TextView
                     android:text="TextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/getCaloriesTextView" />
+                    android:id="@+id/getCaloriesTextView"
+                    android:textAlignment="center" />
 
                 <TextView
                     android:text="TextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/getCategoryTextView" />
+                    android:id="@+id/getCategoryTextView"
+                    android:textAlignment="center" />
 
                 <TextView
                     android:text="TextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/getTypeTextView" />
+                    android:id="@+id/getTypeTextView"
+                    android:textAlignment="center" />
             </LinearLayout>
         </LinearLayout>
 
