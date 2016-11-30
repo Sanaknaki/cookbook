@@ -48,7 +48,9 @@
                     android:layout_height="match_parent"
                     android:id="@+id/textView12"
                     android:layout_weight="1"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                    android:textColor="@android:color/white"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textStyle="normal|bold" />
 
                 <TextView
                     android:text="Cook Time"
@@ -56,7 +58,9 @@
                     android:layout_height="match_parent"
                     android:id="@+id/textView11"
                     android:layout_weight="1"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                    android:textColor="@android:color/white"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textStyle="normal|bold" />
 
                 <TextView
                     android:text="Calories"
@@ -64,7 +68,9 @@
                     android:layout_height="match_parent"
                     android:id="@+id/textView10"
                     android:layout_weight="1"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                    android:textColor="@android:color/white"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textStyle="normal|bold" />
 
             </LinearLayout>
 
@@ -131,7 +137,9 @@
                     android:layout_height="match_parent"
                     android:id="@+id/getCreateRecipeCategory"
                     android:layout_weight="1"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                    android:textColor="@android:color/white"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textStyle="normal|bold" />
 
                 <Spinner
                     android:layout_width="match_parent"
@@ -152,7 +160,9 @@
                     android:layout_height="match_parent"
                     android:id="@+id/textView7"
                     android:layout_weight="1"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                    android:textColor="@android:color/white"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textStyle="normal|bold" />
 
                 <Spinner
                     android:layout_width="match_parent"
@@ -173,8 +183,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="4"
+                android:textColor="@android:color/white"
                 android:gravity="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textStyle="normal|bold" />
 
             <ListView
                 android:layout_width="match_parent"
