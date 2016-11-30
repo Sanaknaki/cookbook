@@ -19,7 +19,7 @@
             android:text="The Kitchen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView17"
+            android:id="@+id/kitchenTitle"
             android:fontFamily="monospace"
             android:typeface="monospace"
             android:textSize="40sp"
@@ -36,9 +36,9 @@
             android:id="@+id/addRecipeFinalButton"
             android:layout_weight="1"
             android:onClick="clickAddRecipe"
-            android:layout_marginBottom="25dp"
             android:textColor="@android:color/white"
-            android:layout_above="@+id/editRecipeFinalButton"
+            android:layout_marginTop="60dp"
+            android:layout_below="@+id/kitchenTitle"
             android:layout_alignLeft="@+id/editRecipeFinalButton"
             android:layout_alignStart="@+id/editRecipeFinalButton" />
 
@@ -50,9 +50,9 @@
             android:id="@+id/editRecipeFinalButton"
             android:layout_weight="1"
             android:onClick="clickEditRecipe"
-            android:layout_marginBottom="25dp"
             android:textColor="@android:color/white"
-            android:layout_above="@+id/deleteRecipeFinalButton"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/addRecipeFinalButton"
             android:layout_alignLeft="@+id/deleteRecipeFinalButton"
             android:layout_alignStart="@+id/deleteRecipeFinalButton" />
 
@@ -65,9 +65,22 @@
             android:layout_weight="1"
             android:onClick="clickDeleteRecipe"
             android:textColor="@android:color/white"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_below="@+id/editRecipeFinalButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp" />
 
+        <Button
+            android:text="EDIT DISH STYLE"
+            android:background="@drawable/button_white"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:id="@+id/editCategoryType"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="14dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/deleteRecipeFinalButton"
+            android:layout_alignStart="@+id/deleteRecipeFinalButton" />
     </RelativeLayout>
 
 </RelativeLayout>
