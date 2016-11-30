@@ -14,6 +14,8 @@ import java.util.ArrayList;
 
 public class AddRecipeDirections extends AppCompatActivity {
 
+    //These are the comments in AddRecipeDirections
+
     private MainScreen cookBook;
     private String recipeName;
     private String chosenCategory;
