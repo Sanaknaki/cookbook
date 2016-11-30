@@ -21,6 +21,7 @@ import java.util.ArrayList;
 public class SingleEditRecipeClass extends AppCompatActivity {
 
     //Variables for class.
+    //Test commit
     private Recipe currentRecipe;
     private MainScreen cookBook;
     ArrayList<Ingredient> chosenAddIngredients = new ArrayList<Ingredient>();
