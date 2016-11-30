@@ -20,6 +20,8 @@ import java.util.ArrayList;
 
 public class AddRecipe extends AppCompatActivity {
 
+    //Check comments on add recipe class.
+
     private MainScreen cookBook;
     ArrayList<Ingredient> chosenAddIngredients = new ArrayList<Ingredient>();
     String chosenType;
