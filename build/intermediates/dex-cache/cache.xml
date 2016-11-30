@@ -2,157 +2,139 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_334d907c8205ea42123abb21c248cb381c2c2a93/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_42142874964ea694211b53e317eb8a61cd3c3393/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_e936f744274f4217c5979823b71936099fde796d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_41e8826770edac71027fef8924c1fa0aaf31ed0e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.2"
         sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_30a0267aeb419287f5a0887f495fc969718dfb22/classes.dex" />
+        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.2.1_30a0267aeb419287f5a0887f495fc969718dfb22.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.2"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_dd10d0418374bcde78205772b5ef49ce31e1736f/classes.dex" />
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.2.1_41e8826770edac71027fef8924c1fa0aaf31ed0e.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_d01f68dcc647e65c65856d6ec61eb6ece39bdaec/classes.dex" />
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-24.2.1_42142874964ea694211b53e317eb8a61cd3c3393.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.2"
-        sha1="a0cacf92afc3bfb3bb2cc194e71976741186c91c">
-        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_4e7a0c3d4ddffc5cac28731efded6599414541dd/classes.dex" />
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-24.2.1_e936f744274f4217c5979823b71936099fde796d.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_7e4688e5a3da09e824c504c19673962932d1279d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_9485413936bdc5c194b1196f05e728ad20143e05/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_f39c76db27fb9e3cf8452966dae6976066d24c8d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="f3feac31256d400fd2859ea40281d422c5bf8ed5">
-        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_03c73c597bb2982765cd7ec266ac02c115d3fec9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.2"
         sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_d3e8b923966a26d5c24067ed391e9a435bd6691f/classes.dex" />
+        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_d3e8b923966a26d5c24067ed391e9a435bd6691f.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.2"
-        sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_bb4bed7492a412dfcfcdc611d0da4623ad5aa20e/classes.dex" />
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.2.1_d01f68dcc647e65c65856d6ec61eb6ece39bdaec.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.2"
-        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_0cab9e06e32be9637056aaa6a3f02d9ce7d27c1e/classes.dex" />
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_334d907c8205ea42123abb21c248cb381c2c2a93.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.2"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_e07e481d30b15c6dc04f980bb65ff239cb16bebb/classes.dex" />
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-24.2.1_7e4688e5a3da09e824c504c19673962932d1279d.jar" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
+        jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-24.2.1_dd10d0418374bcde78205772b5ef49ce31e1736f.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/AliSanaknaki/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="24.0.2"
         sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
-        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_83f22d92be19ce04015e83365d93b19e330c9cec/classes.dex" />
+        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/pre-dexed/debug/support-annotations-24.2.1_83f22d92be19ce04015e83365d93b19e330c9cec.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_bb4bed7492a412dfcfcdc611d0da4623ad5aa20e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-24.2.1_9485413936bdc5c194b1196f05e728ad20143e05.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_e07e481d30b15c6dc04f980bb65ff239cb16bebb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.2.1_f39c76db27fb9e3cf8452966dae6976066d24c8d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/Users/AliSanaknaki/Desktop/classes/SEG2105/cookbook/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_0cab9e06e32be9637056aaa6a3f02d9ce7d27c1e.jar" />
     </item>
 
 </items>

@@ -186,10 +186,12 @@
 
         <Button
             android:text="Create"
+            android:background="@drawable/button_white"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/createRecipeButton"
             android:layout_weight="5"
+            android:textColor="@android:color/white"
             android:onClick="clickAddRecipeDirections" />
     </LinearLayout>
 

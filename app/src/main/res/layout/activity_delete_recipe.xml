@@ -42,9 +42,11 @@
 
             <Button
                 android:text="Delete"
+                android:background="@drawable/button_white"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/deleteDARecipe"
+                android:textColor="@android:color/white"
                 android:layout_weight="3" />
         </LinearLayout>
 
@@ -55,10 +57,12 @@
             android:id="@+id/deleteListView" />
 
         <Button
-            android:text="Finished"
+            android:text="Finish"
+            android:background="@drawable/button_white"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/finishedDeleting"
+            android:textColor="@android:color/white"
             android:layout_weight="3" />
 
     </LinearLayout>

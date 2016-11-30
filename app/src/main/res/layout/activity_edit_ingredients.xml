@@ -58,9 +58,11 @@
 
                     <Button
                         android:text="ADD"
+                        android:background="@drawable/button_white"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:id="@+id/addIngredientButton"
+                        android:textColor="@android:color/white"
                         android:onClick="clickAddIngredient" />
 
                 </LinearLayout>
@@ -73,9 +75,11 @@
 
                     <Button
                         android:text="DELETE"
+                        android:background="@drawable/button_white"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:id="@+id/deleteIngredientButton"
+                        android:textColor="@android:color/white"
                         android:onClick="clickDeleteIngredient" />
                 </LinearLayout>
 
@@ -90,11 +94,13 @@
             android:layout_weight="2" />
 
         <Button
-            android:text="Finished"
+            android:text="Finish"
+            android:background="@drawable/button_white"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/finishedAddingButton"
             android:layout_weight="3"
+            android:textColor="@android:color/white"
             android:onClick="clickFinishedEditIngredient" />
     </LinearLayout>
 
