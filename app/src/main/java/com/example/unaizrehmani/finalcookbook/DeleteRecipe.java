@@ -65,13 +65,13 @@ public class DeleteRecipe extends AppCompatActivity {
         private Context context;
 
         public RecipeAdapter(Context context, ArrayList<Recipe> objects) {
-            super(context, R.layout.single_recipe, objects);
+            super(context, R.layout.single_recipe_white, objects);
             this.context = context;
         }
 
         //override this method.
         public View getView(int position, View convertView, ViewGroup parent){
-            View customView = (LayoutInflater.from(getContext())).inflate(R.layout.single_recipe,parent,false);
+            View customView = (LayoutInflater.from(getContext())).inflate(R.layout.single_recipe_white,parent,false);
 
             final Recipe curIngredient = getItem(position);
 
@@ -80,7 +80,7 @@ public class DeleteRecipe extends AppCompatActivity {
 
             final int pos = position;
 
-            Button ingredientText = (Button) customView.findViewById(R.id.button);
+            Button ingredientText = (Button) customView.findViewById(R.id.button_designWhite);
             ingredientText.setText(currentIngredient);
 
             ingredientText.setOnClickListener(new View.OnClickListener() {

@@ -40,13 +40,13 @@ public class EditAllRecipes extends AppCompatActivity {
         private Context context;
 
         public RecipeAdapter(Context context, ArrayList<Recipe> objects) {
-            super(context, R.layout.single_recipe, objects);
+            super(context, R.layout.single_recipe_white, objects);
             this.context = context;
         }
 
         //override this method.
         public View getView(int position, View convertView, ViewGroup parent){
-            View customView = (LayoutInflater.from(getContext())).inflate(R.layout.single_recipe,parent,false);
+            View customView = (LayoutInflater.from(getContext())).inflate(R.layout.single_recipe_white,parent,false);
 
             final Recipe curIngredient = getItem(position);
 
@@ -54,7 +54,7 @@ public class EditAllRecipes extends AppCompatActivity {
             //boolean selection = curIngredient.is_selected();
             final int positionOfRecipe = position;
 
-            Button buttonText = (Button) customView.findViewById(R.id.button);
+            Button buttonText = (Button) customView.findViewById(R.id.button_designWhite);
             buttonText.setText(currentIngredient);
 
             buttonText.setOnClickListener(new View.OnClickListener() {

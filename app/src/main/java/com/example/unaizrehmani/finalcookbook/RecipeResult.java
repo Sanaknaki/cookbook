@@ -59,12 +59,12 @@ public class RecipeResult extends AppCompatActivity {
         private Context context;
 
         public RecipeAdapter(Context context, ArrayList<Recipe> objects) {
-            super(context, R.layout.single_recipe, objects);
+            super(context, R.layout.single_recipe_black, objects);
             this.context = context;
         }
 
         public View getView(int position, View convertView, ViewGroup parent){
-            View customView = (LayoutInflater.from(getContext())).inflate(R.layout.single_recipe,parent,false);
+            View customView = (LayoutInflater.from(getContext())).inflate(R.layout.single_recipe_black,parent,false);
 
             final Recipe curRecipe = getItem(position);
 
@@ -73,7 +73,7 @@ public class RecipeResult extends AppCompatActivity {
             final int pos = position;
 
             //Sets the text of the button to the name of the recipe.
-            Button recipeButton = (Button) customView.findViewById(R.id.button);
+            Button recipeButton = (Button) customView.findViewById(R.id.button_designBlack);
             recipeButton.setText(currentIngredient);
 
             //Sets a click listener which links information of that recipe to the next activity.
