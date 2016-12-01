@@ -16,10 +16,9 @@ public class EditIngredients extends AppCompatActivity {
 
     private MainScreen cookBook;
 
-    ArrayList<Ingredient> cookBookIngredients = new ArrayList<Ingredient>();
-    ArrayList<String> cookBookStringIngredients = new ArrayList<String>();
     private ArrayList<String> typeList = new ArrayList<String>();
     private ArrayList<String> categoryList = new ArrayList<String>();
+    private ArrayList<String> cookBookStringIngredients = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +31,8 @@ public class EditIngredients extends AppCompatActivity {
         typeList = (ArrayList<String>) getIntent().getExtras().getSerializable("typeList");
         categoryList = (ArrayList<String>) getIntent().getExtras().getSerializable("categoryList");
 
-        cookBookIngredients = cookBook.get_cookBookIngredients();
-
-        for(int i = 0; i<cookBookIngredients.size(); i++){
-            cookBookStringIngredients.add(cookBookIngredients.get(i).get_IngredientName());
+        for(int i = 0; i<cookBook.get_cookBookIngredients().size(); i++){
+            cookBookStringIngredients.add(cookBook.get_cookBookIngredients().get(i).get_IngredientName());
         }
 
         populateListView();
@@ -56,6 +53,8 @@ public class EditIngredients extends AppCompatActivity {
                 Bundle b = new Bundle();
                 b.putSerializable("ingredientToEdit",ingredientToEdit);
                 b.putSerializable("cookBook",cookBook);
+                b.putSerializable("typeList",typeList);
+                b.putSerializable("categoryList",categoryList);
 
                 intent.putExtras(b);
                 startActivity(intent);
@@ -69,7 +68,7 @@ public class EditIngredients extends AppCompatActivity {
         String userInputString = userInput.getText().toString();
         userInput.setText("");
 
-        if(!cookBookIngredients.contains(new Ingredient(userInputString))) {
+        if(!cookBook.get_cookBookIngredients().contains(new Ingredient(userInputString))) {
 
             if(userInputString != null && !userInputString.equals("")){
                 cookBook.add_cookBookIngredient(userInputString);
@@ -94,7 +93,7 @@ public class EditIngredients extends AppCompatActivity {
         userInput.setText("");
 
         if(userInputString!= null && !userInputString.equals("")){
-            if(cookBookIngredients.contains(new Ingredient(userInputString))){
+            if(cookBook.get_cookBookIngredients().contains(new Ingredient(userInputString))){
                 cookBook.delete_cookBookIngredient(userInputString);
 
                 for(int i = 0; i<cookBook.get_cookBookRecipes().size(); i++){
@@ -130,12 +129,11 @@ public class EditIngredients extends AppCompatActivity {
     }
 
     public void updateCookBookIngredients(){
-        cookBookIngredients = cookBook.get_cookBookIngredients();
 
         cookBookStringIngredients = new ArrayList<String>();
 
-        for(int i = 0; i<cookBookIngredients.size(); i++){
-            cookBookStringIngredients.add(cookBookIngredients.get(i).get_IngredientName());
+        for(int i = 0; i<cookBook.get_cookBookIngredients().size(); i++){
+            cookBookStringIngredients.add(cookBook.get_cookBookIngredients().get(i).get_IngredientName());
         }
 
         populateListView();

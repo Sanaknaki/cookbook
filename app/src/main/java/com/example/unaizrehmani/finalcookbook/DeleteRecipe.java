@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -51,12 +50,6 @@ public class DeleteRecipe extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.deleteListView);
         ArrayAdapter<Recipe> recipeArrayAdapter = new RecipeAdapter(DeleteRecipe.this,cookBook.get_cookBookRecipes());
         listView.setAdapter(recipeArrayAdapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-            }
-        });
     }
 
     private class RecipeAdapter extends ArrayAdapter<Recipe>{

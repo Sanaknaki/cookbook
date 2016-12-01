@@ -3,7 +3,6 @@
 
 
     <string-array name="categories">
-        <item>Any</item>
         <item>Breakfast</item>
         <item>Lunch</item>
         <item>Dinner</item>
@@ -12,23 +11,6 @@
     </string-array>
 
     <string-array name="types">
-        <item>Any</item>
-        <item>American</item>
-        <item>Italian</item>
-        <item>Asian</item>
-        <item>Mexican</item>
-
-    </string-array>
-
-    <string-array name="categoriesRecipe">
-        <item>Breakfast</item>
-        <item>Lunch</item>
-        <item>Dinner</item>
-        <item>Snack</item>
-
-    </string-array>
-
-    <string-array name="typesRecipe">
         <item>American</item>
         <item>Italian</item>
         <item>Asian</item>

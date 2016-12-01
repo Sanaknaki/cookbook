@@ -87,11 +87,6 @@ public class Recipe implements Serializable{
         return _recipeDirections;
     }
 
-    public void setRecipeDirections(ArrayList<String> newDirections){ //to be used when editing recipe directions
-        _recipeDirections = newDirections;
-        Collections.sort(_recipeDirections);
-    }
-
     public void setRecipeDirections(int position, String newDirection){ //to be used when editing recipe directions
         _recipeDirections.remove(position);
         _recipeDirections.add(position,newDirection);

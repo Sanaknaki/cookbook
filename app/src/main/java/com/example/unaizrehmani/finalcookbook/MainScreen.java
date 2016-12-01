@@ -45,10 +45,15 @@ public class MainScreen extends AppCompatActivity implements Serializable{
             _cookBookRecipes = mainScreen.get_cookBookRecipes();
             _cookBookIngredients = mainScreen.get_cookBookIngredients();
 
+            Toast.makeText(getApplicationContext(), "Successfully loaded cookBook reference", Toast.LENGTH_SHORT).show();
+
+
             typeList = (ArrayList<String>) getIntent().getExtras().getSerializable("typeList");
             categoryList = (ArrayList<String>) getIntent().getExtras().getSerializable("categoryList");
             Collections.sort(categoryList);
             Collections.sort(typeList);
+
+            Toast.makeText(getApplicationContext(), "Successfully loaded typeList and categoryList", Toast.LENGTH_SHORT).show();
 
 
         } catch(Exception e){
@@ -104,6 +109,8 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         Bundle bundle = new Bundle();
 
         bundle.putSerializable("cookBook",this);
+        bundle.putSerializable("typeList",typeList);
+        bundle.putSerializable("categoryList",categoryList);
 
         intent.putExtras(bundle);
 
@@ -173,11 +180,8 @@ public class MainScreen extends AppCompatActivity implements Serializable{
 
     //Deletes a Recipe in Cook Book Recipe array given a recipe name
     public void delete_cookBookRecipe(String recipeName){
-        for(int i = 0; i<_cookBookRecipes.size(); i++){
-            if(_cookBookRecipes.get(i).getRecipeName().equals(recipeName)){
-                _cookBookRecipes.remove(i);
-            }
-        }
+
+        _cookBookRecipes.remove(new Recipe(recipeName));
     }
 
     //Populate's some default ingredients for cookbook.
