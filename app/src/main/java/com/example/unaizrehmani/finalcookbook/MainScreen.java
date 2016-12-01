@@ -52,6 +52,15 @@ public class MainScreen extends AppCompatActivity implements Serializable{
             Collections.sort(categoryList);
             Collections.sort(typeList);
 
+            if(typeList.contains("Any")) {
+                typeList.remove("Any");
+            }
+
+
+            if(categoryList.contains("Any")) {
+                categoryList.remove("Any");
+            }
+
             //Toast.makeText(getApplicationContext(), "Successfully loaded typeList and categoryList", Toast.LENGTH_SHORT).show();
 
 
@@ -84,6 +93,16 @@ public class MainScreen extends AppCompatActivity implements Serializable{
     }
 
     public void clickAbout(View view){
+
+        if(typeList.contains("Any")) {
+            typeList.remove("Any");
+        }
+
+
+        if(categoryList.contains("Any")) {
+            categoryList.remove("Any");
+        }
+
         Intent intent = new Intent (MainScreen.this,AboutScreen.class);
 
         Bundle bundle = new Bundle();
@@ -118,6 +137,15 @@ public class MainScreen extends AppCompatActivity implements Serializable{
 
         Bundle bundle = new Bundle();
 
+        if(typeList.contains("Any")) {
+            typeList.remove("Any");
+        }
+
+
+        if(categoryList.contains("Any")) {
+            categoryList.remove("Any");
+        }
+
         if(!typeList.contains("Any")) {
             typeList.add(0,"Any");
         }
@@ -140,6 +168,15 @@ public class MainScreen extends AppCompatActivity implements Serializable{
     public void clickEditIngredients(View view){
         Intent intent = new Intent(this,EditIngredients.class);
 
+        if(typeList.contains("Any")) {
+            typeList.remove("Any");
+        }
+
+
+        if(categoryList.contains("Any")) {
+            categoryList.remove("Any");
+        }
+
         Bundle bundle = new Bundle();
 
         bundle.putSerializable("cookBook",this);
@@ -156,6 +193,15 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         Intent intent = new Intent(this,EditRecipes.class);
 
         Bundle bundle = new Bundle();
+
+        if(typeList.contains("Any")) {
+            typeList.remove("Any");
+        }
+
+
+        if(categoryList.contains("Any")) {
+            categoryList.remove("Any");
+        }
 
         bundle.putSerializable("cookBook",this);
         bundle.putSerializable("typeList",typeList);
