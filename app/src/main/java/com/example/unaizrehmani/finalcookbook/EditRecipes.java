@@ -50,6 +50,18 @@ public class EditRecipes extends AppCompatActivity {
         Intent intent = new Intent(EditRecipes.this,DeleteRecipe.class);
         Bundle b = new Bundle();
         b.putSerializable("cookBook",cookBook);
+        b.putSerializable("typeList",typeList);
+        b.putSerializable("categoryList",categoryList);
+        intent.putExtras(b);
+        startActivity(intent);
+    }
+
+    public void clickEditCategoryType(View view){
+        Intent intent = new Intent(EditRecipes.this,EditCategoryType.class);
+        Bundle b = new Bundle();
+        b.putSerializable("cookBook",cookBook);
+        b.putSerializable("typeList",typeList);
+        b.putSerializable("categoryList",categoryList);
         intent.putExtras(b);
         startActivity(intent);
     }

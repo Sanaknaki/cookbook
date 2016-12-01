@@ -22,7 +22,6 @@ public class EditIngredients extends AppCompatActivity {
 
     private ArrayList<String> typeList = new ArrayList<String>();
     private ArrayList<String> categoryList = new ArrayList<String>();
-    private ArrayList<String> cookBookStringIngredients = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +36,6 @@ public class EditIngredients extends AppCompatActivity {
         cookBook = (MainScreen) bundle.getSerializable("cookBook");
         typeList = (ArrayList<String>) getIntent().getExtras().getSerializable("typeList");
         categoryList = (ArrayList<String>) getIntent().getExtras().getSerializable("categoryList");
-
-        for(int i = 0; i<cookBook.get_cookBookIngredients().size(); i++){
-            cookBookStringIngredients.add(cookBook.get_cookBookIngredients().get(i).get_IngredientName());
-        }
 
         populateListView();
 
@@ -102,6 +97,7 @@ public class EditIngredients extends AppCompatActivity {
         }
 
     }
+
     public void clickAddIngredient(View view){
         EditText userInput = (EditText) findViewById(R.id.addIngredientInput);
 

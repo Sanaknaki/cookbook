@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -17,6 +18,8 @@ public class DeleteRecipe extends AppCompatActivity {
 
     private MainScreen cookBook;
     ArrayList<String> cookBookStringRecipes;
+    private ArrayList<String> typeList = new ArrayList<String>();
+    private ArrayList<String> categoryList = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,8 @@ public class DeleteRecipe extends AppCompatActivity {
         setContentView(R.layout.activity_delete_recipe);
 
         cookBook = (MainScreen) getIntent().getExtras().getSerializable("cookBook");
+        typeList = (ArrayList<String>) getIntent().getExtras().getSerializable("typeList");
+        categoryList = (ArrayList<String>) getIntent().getExtras().getSerializable("categoryList");
 
         cookBookStringRecipes = new ArrayList<String>();
 
@@ -40,6 +45,8 @@ public class DeleteRecipe extends AppCompatActivity {
                 Intent intent = new Intent (DeleteRecipe.this,MainScreen.class);
                 Bundle b = new Bundle();
                 b.putSerializable("cookBook",cookBook);
+                b.putSerializable("typeList",typeList);
+                b.putSerializable("categoryList",categoryList);
                 intent.putExtras(b);
                 startActivity(intent);
             }
@@ -80,7 +87,7 @@ public class DeleteRecipe extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     Recipe currentRecipe = cookBook.get_cookBookRecipes().get(pos);
-
+                    Toast.makeText(getApplicationContext(), "Deleted: " + currentRecipe.getRecipeName(), Toast.LENGTH_SHORT).show();
                     cookBook.delete_cookBookRecipe(currentRecipe.getRecipeName());
                     populateListView();
                 }

@@ -80,7 +80,8 @@
             android:layout_marginBottom="14dp"
             android:layout_alignParentBottom="true"
             android:layout_alignLeft="@+id/deleteRecipeFinalButton"
-            android:layout_alignStart="@+id/deleteRecipeFinalButton" />
+            android:layout_alignStart="@+id/deleteRecipeFinalButton"
+            android:onClick="clickEditCategoryType" />
     </RelativeLayout>
 
 </RelativeLayout>

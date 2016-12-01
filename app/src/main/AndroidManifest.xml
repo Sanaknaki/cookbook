@@ -31,8 +31,7 @@
         <activity android:name=".EditAllRecipes" />
         <activity
             android:name=".DeleteRecipe"
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".AddRecipeDirections"
             android:windowSoftInputMode="adjustPan" />
@@ -42,8 +41,12 @@
         <activity android:name=".SingleEditRecipeDirectionClass" />
         <activity
             android:name=".ChangeSingleRecipeDirection"
-            android:windowSoftInputMode="adjustPan"
-            ></activity>
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".EditCategoryType"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".EditType" />
+        <activity android:name=".EditCategoryName"></activity>
     </application>
 
 </manifest>

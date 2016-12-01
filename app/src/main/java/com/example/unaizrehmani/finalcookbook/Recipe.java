@@ -22,8 +22,8 @@ public class Recipe implements Serializable{
 
     public Recipe(String newName, String newCategory, String newType){
         _recipeName = newName.toUpperCase();
-        _recipeType = newType;
-        _recipeCategory = newCategory;
+        _recipeType = newType.toUpperCase();
+        _recipeCategory = newCategory.toUpperCase();
     }
 
 
@@ -34,8 +34,8 @@ public class Recipe implements Serializable{
         _recipeName = newName.toUpperCase();
         _recipeIngredients = newIngredients;
 
-        _recipeType = newType;
-        _recipeCategory = newCategory;
+        _recipeType = newType.toUpperCase();
+        _recipeCategory = newCategory.toUpperCase();
         _prepTime = newPrepTime;
         _cookTime = newCookTime;
         _calories = newCalories;
@@ -127,11 +127,11 @@ public class Recipe implements Serializable{
     }
 
     public void setRecipeCategory(String newCategory){
-        _recipeCategory = newCategory;
+        _recipeCategory = newCategory.toUpperCase();
     }
 
     public void setRecipeType(String newRecipeType){
-        _recipeType = newRecipeType;
+        _recipeType = newRecipeType.toUpperCase();
     }
 
     public int get_prepTime() {

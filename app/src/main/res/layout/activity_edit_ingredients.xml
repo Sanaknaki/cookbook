@@ -60,7 +60,7 @@
                     android:layout_height="match_parent"
                     android:id="@+id/addIngredientButton"
                     android:textColor="@android:color/white"
-                    android:onClick="clickAddIngredient"
+                    android:onClick="clickAddIngredient (EditIngredients)"
                     android:layout_weight="1" />
 
                 <Button
