@@ -13,7 +13,6 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -48,6 +47,9 @@ public class excludeRecipe extends AppCompatActivity {
         category = (String)getIntent().getExtras().getSerializable("chosenCategory");
         categoryList = (ArrayList<String>) getIntent().getExtras().getSerializable("categoryList");
         typeList = (ArrayList<String>) getIntent().getExtras().getSerializable("typeList");
+
+        //Toast.makeText(getApplicationContext(), "Type: " + type, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "Category : " + category, Toast.LENGTH_SHORT).show();
 
         //Populates list view.
         populateIngredientListView();
@@ -136,9 +138,11 @@ public class excludeRecipe extends AppCompatActivity {
     public ArrayList<Recipe> findRecipe(String type, String category, ArrayList<Ingredient> include_ingredientList, ArrayList<Ingredient> exclude_ingredientList){
 
         //acts as fail-safe for Illegal arguments for finding recipe.
-        if(type == null || category == null || include_ingredientList == null || exclude_ingredientList == null){
+        if(type == null && !type.equals("") || category == null && !category.equals("") || include_ingredientList == null || exclude_ingredientList == null){
             throw new IllegalArgumentException("One or all of the arguments provided are null in findRecipe()");
         }
+
+
 
         //Stores possible matches in this variable.
         ArrayList<Recipe> result = new ArrayList<Recipe>();
@@ -146,228 +150,108 @@ public class excludeRecipe extends AppCompatActivity {
         //Iterates through Cook Book recipes, first by isolating possible types and categories
         for(int i = 0; i<cookBook.get_cookBookRecipes().size(); i++) {
 
-             /*
-                Then determines if some or all of user-selected ingredients are in a recipe.
-                Then determines if none of the excluded ingredients are in that recipe.
+            Recipe r = cookBook.get_cookBookRecipes().get(i);
+            String recipeType = r.getRecipeType();
+            String recipeCategory = r.getRecipeCategory();
+            ArrayList<Ingredient> recipeIngredients = cookBook.get_cookBookRecipes().get(i).getRecipeIngredients();
 
-                If these conditions are satisifed, adds to result variable as a potential recipe.
-                */
+            //Toast.makeText(getApplicationContext(),"recipe type"+ r.getRecipeType(), Toast.LENGTH_SHORT).show();
 
-            Recipe recipe = cookBook.get_cookBookRecipes().get(i);
+            if(include_ingredientList.size()==0 && exclude_ingredientList.size()==0){
+                //If user selected no include ingredients and no exclude ingredients,
 
-            //Cut down by type
-            if(include_ingredientList.size() == 0
-                    && exclude_ingredientList.size() == 0
-                    && category.equals(recipe.getRecipeCategory())
-                    && type.equals(recipe.getRecipeType())){
+                //Search by categories.
+                if(category.equals(recipeCategory) && type.equals(recipeType)){
 
-                result.add(recipe);
+                    result.add(r);
 
-            } else if (include_ingredientList.size() == 0
-                    && exclude_ingredientList.size() != 0
-                    && (recipe.getRecipeCategory().equals(category))
-                    && (recipe.getRecipeType().equals(type))){
+                }else if (category.equals(recipeCategory) && type.equals("Any")){
 
-                if(recipe.getRecipeCategory().equals("Any")){
+                    result.add(r);
 
-                } else{
+                }else if (category.equals("Any") && type.equals(recipeType)){
 
-                    if(recipe.getRecipeCategory().equals(category)){
-                        
-                    }
+                    result.add(r);
+
+                }else if (category.equals("Any") && type.equals("Any")){
+
+                    result.add(r);
 
                 }
-
-                if(Collections.disjoint(recipe.getRecipeIngredients(),exclude_ingredientList)){
-                    result.add(recipe);
-                }
-            }
-
-            if (type.equals(recipe.getRecipeType())) {
-
-                if (category.equals(recipe.getRecipeCategory())) {
-
-                    if(include_ingredientList.size()>0){
-
-                        if(!Collections.disjoint(recipe.getRecipeIngredients(), include_ingredientList)
-                                && Collections.disjoint(recipe.getRecipeIngredients(),exclude_ingredientList)){
-                            result.add(recipe);
-                        }
-
-                    } else {
-
-                        if(exclude_ingredientList.size()>0){
-
-                            if(Collections.disjoint(recipe.getRecipeIngredients(),exclude_ingredientList)){
-                                result.add(recipe);
-                            }
-
-                        } else {
-
-                            Toast.makeText(getApplicationContext(), "Did we make it here", Toast.LENGTH_SHORT).show();
-                            result.add(recipe);
-
-                        }
-
-                    }
-
-                }
-
-            } else if (type.equals("Any")) {
-
-                if (category.equals(recipe.getRecipeCategory())) {
-
-                    if(include_ingredientList.size()>0){
-
-                        if(!Collections.disjoint(recipe.getRecipeIngredients(), include_ingredientList)
-                                && Collections.disjoint(recipe.getRecipeIngredients(),exclude_ingredientList)) {
-                            result.add(recipe);
-                        }
-
-                    } else {
-
-                        if(exclude_ingredientList.size()>0){
-
-                            if(Collections.disjoint(recipe.getRecipeIngredients(),exclude_ingredientList)){
-                                result.add(recipe);
-                            }
-
-                        } else {
-
-                            result.add(recipe);
-
-                        }
-
-                    }
-
-                } else if (category.equals("Any")) {
-
-                    if(include_ingredientList.size()>0){
-
-                        if(!Collections.disjoint(recipe.getRecipeIngredients(), include_ingredientList)
-                                && Collections.disjoint(recipe.getRecipeIngredients(),exclude_ingredientList)) {
-                            result.add(recipe);
-                        }
-
-                    } else {
-
-                        if(exclude_ingredientList.size()>0){
-
-                            if(Collections.disjoint(recipe.getRecipeIngredients(),exclude_ingredientList)){
-                                result.add(recipe);
-                            }
-
-                        } else {
-
-                            result.add(recipe);
-
-                        }
-
-                    }
-
-                }
-            }
-        }
-
-
-
-
-            /*
-            if(include_ingredientList.size() == 0){
-
-                if(exclude_ingredientList.size() == 0){
-
-                    if(type.equals("Any") || category.equals("Any")){
-                        if(type.equals("Any") && category.equals("Any")){
-
-                            //No chosen ingredients. No chosen exclusion. Any type, any category. Populate all recipes.
-                            result.add(recipe);
-
-                        } else if(type.equals("Any") && category.equals(recipe.getRecipeCategory())) {
-
-                            //No chosen ingredients. No chosen exclusion. Only recipes with a category.
-                            result.add(recipe);
-
-                        } else if(type.equals(recipe.getRecipeType()) && recipe.equals("Any")){
-
-                            result.add(recipe);
-
-                        } else if(type.equals(recipe.getRecipeType()) && category.equals(recipe.getRecipeCategory())){
-
-                            result.add(recipe);
-
-                        }
-
-                    } else {
-
-                        //There are strict parameters on type and category but no inclusions or disclusions.
-                        if(type.equals(recipe.getRecipeCategory()) && type.equals(recipe.getRecipeType())){
-                            result.add(recipe);
-                        }
-
-                    }
-
-
-                } else{
-
-                }
-
-            } else {
-                if(type.equals("Any") || category.equals("Any")){
-                    if(type.equals("Any") && category.equals(cookBook.get_cookBookRecipes().get(i).getRecipeCategory())){
-
-                    } else if (type.equals(cookBook.get_cookBookRecipes().get(i).getRecipeType()) && category.equals("Any")){
-
-                    }
-                }else{
-
-                }
-            }
-
-
-            if(type.equals(cookBook.get_cookBookRecipes().get(i).getRecipeType())
-                    && category.equals(cookBook.get_cookBookRecipes().get(i).getRecipeCategory())
-                    && include_ingredientList.size() == 0 && exclude_ingredientList.size() == 0){
-
-                result.add(cookBook.get_cookBookRecipes().get(i));
 
             } else if (include_ingredientList.size() == 0 && exclude_ingredientList.size() > 0){
 
-                if(Collections.disjoint(cookBook.get_cookBookRecipes().get(i).getRecipeIngredients(),exclude_ingredientList)){
-                    result.add(cookBook.get_cookBookRecipes().get(i));
+                //no include preference but only exclude preferences.
+                //Search by categories.
+                if(category.equals(recipeCategory) && type.equals(recipeType)){
+
+                    //If the categories of a recipe and type match, and desired exclusions are not in recipe.
+                    if(Collections.disjoint(recipeIngredients,exclude_ingredientList)){
+                        result.add(r);
+                    }
+
+                }else if (category.equals(recipeCategory) && type.equals("Any")){
+
+                    if(Collections.disjoint(recipeIngredients,exclude_ingredientList)){
+                        result.add(r);
+                    }
+
+                }else if (category.equals("Any") && type.equals(recipeType)){
+
+                    if(Collections.disjoint(recipeIngredients,exclude_ingredientList)){
+                        result.add(r);
+                    }
+
+                }else if (category.equals("Any") && type.equals("Any")){
+
+                    if(Collections.disjoint(recipeIngredients,exclude_ingredientList)){
+                        result.add(r);
+                    }
                 }
 
-            } else if (include_ingredientList.size() == 0 && exclude_ingredientList.size() == 0){
 
-                result.add(cookBook.get_cookBookRecipes().get(i));
+            } else if (include_ingredientList.size() > 0){
 
-            } else if(type.equals("Any") && category.equals("Any")){
-                if(!Collections.disjoint(cookBook.get_cookBookRecipes().get(i).getRecipeIngredients(), include_ingredientList)
-                        && Collections.disjoint(cookBook.get_cookBookRecipes().get(i).getRecipeIngredients(),exclude_ingredientList)){
-                    result.add(cookBook.get_cookBookRecipes().get(i));
+                //if inclusions matter, we can use a formula which assess both inclusions and exclusions.
+
+                if(category.equals(recipeCategory) && type.equals(recipeType)){
+
+                    //If the categories of a recipe and type match, and desired exclusions are not in recipe.
+                    if(!Collections.disjoint(recipeIngredients,include_ingredientList)
+                            && Collections.disjoint(recipeIngredients,exclude_ingredientList)){
+                        result.add(r);
+                    }
+
+                }else if (category.equals(recipeCategory) && type.equals("Any")){
+
+                    if(!Collections.disjoint(recipeIngredients,include_ingredientList)
+                            && Collections.disjoint(recipeIngredients,exclude_ingredientList)){
+                        result.add(r);
+                    }
+
+                }else if (category.equals("Any") && type.equals(recipeType)){
+
+                    if(!Collections.disjoint(recipeIngredients,include_ingredientList)
+                            && Collections.disjoint(recipeIngredients,exclude_ingredientList)){
+                        result.add(r);
+                    }
+
+                }else if (category.equals("Any") && type.equals("Any")){
+
+                    if(!Collections.disjoint(recipeIngredients,include_ingredientList)
+                            && Collections.disjoint(recipeIngredients,exclude_ingredientList)){
+                        result.add(r);
+                    }
                 }
-            } else if (type.equals("Any") && category.equals(cookBook.get_cookBookRecipes().get(i).getRecipeCategory())){
-                if(!Collections.disjoint(cookBook.get_cookBookRecipes().get(i).getRecipeIngredients(), include_ingredientList)
-                        && Collections.disjoint(cookBook.get_cookBookRecipes().get(i).getRecipeIngredients(),exclude_ingredientList)){
-                    result.add(cookBook.get_cookBookRecipes().get(i));
-                }
-            } else if (type.equals(cookBook.get_cookBookRecipes().get(i).getRecipeType()) && category.equals("Any")){
-                if(!Collections.disjoint(cookBook.get_cookBookRecipes().get(i).getRecipeIngredients(), include_ingredientList)
-                        && Collections.disjoint(cookBook.get_cookBookRecipes().get(i).getRecipeIngredients(),exclude_ingredientList)){
-                    result.add(cookBook.get_cookBookRecipes().get(i));
-                }
-            } else if(type.equals(cookBook.get_cookBookRecipes().get(i).getRecipeType()) && category.equals(cookBook.get_cookBookRecipes().get(i).getRecipeCategory()))
-            {
-                if(!Collections.disjoint(cookBook.get_cookBookRecipes().get(i).getRecipeIngredients(), include_ingredientList)
-                        && Collections.disjoint(cookBook.get_cookBookRecipes().get(i).getRecipeIngredients(),exclude_ingredientList)){
-                    result.add(cookBook.get_cookBookRecipes().get(i));
-                }
+
 
             }
-        }*/
 
-        //Returns all possible recipes.
+        }
+            //Returns all possible recipes.
+
         return result;
+
     }
 
 }

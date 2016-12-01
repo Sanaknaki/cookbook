@@ -63,15 +63,15 @@ public class MainScreen extends AppCompatActivity implements Serializable{
             typeList = new ArrayList<String>();
             categoryList = new ArrayList<String>();
 
-            typeList.add("Breakfast");
-            typeList.add("Dinner");
-            typeList.add("Lunch");
-            typeList.add("Snack");
+            categoryList.add("Breakfast");
+            categoryList.add("Dinner");
+            categoryList.add("Lunch");
+            categoryList.add("Snack");
 
-            categoryList.add("American");
-            categoryList.add("Asian");
-            categoryList.add("Italian");
-            categoryList.add("Mexican");
+            typeList.add("American");
+            typeList.add("Asian");
+            typeList.add("Italian");
+            typeList.add("Mexican");
 
             //@method populateCookBookIngredients() : adds default ingredients to _cookBookIngredients
             populateCookBookIngredients();
