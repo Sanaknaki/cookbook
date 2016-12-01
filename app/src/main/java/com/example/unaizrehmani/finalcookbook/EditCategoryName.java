@@ -56,11 +56,11 @@ public class EditCategoryName extends AppCompatActivity {
                             //For each recipe, check if that recipes ingredients contains the old ingredient name.
                             if(cookBook.get_cookBookRecipes().get(i).getRecipeCategory().equals(oldCategory)){
 
-                                Toast.makeText(getApplicationContext(), cookBook.get_cookBookRecipes().get(i).getRecipeName() + " changed from " + cookBook.get_cookBookRecipes().get(i).getRecipeCategory(), Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(getApplicationContext(), cookBook.get_cookBookRecipes().get(i).getRecipeName() + " changed from " + cookBook.get_cookBookRecipes().get(i).getRecipeCategory(), Toast.LENGTH_SHORT).show();
 
                                 cookBook.get_cookBookRecipes().get(i).setRecipeCategory(newCategory);
 
-                                Toast.makeText(getApplicationContext(), " to: " + cookBook.get_cookBookRecipes().get(i).getRecipeCategory(), Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(getApplicationContext(), " to: " + cookBook.get_cookBookRecipes().get(i).getRecipeCategory(), Toast.LENGTH_SHORT).show();
 
                             }
                         }
