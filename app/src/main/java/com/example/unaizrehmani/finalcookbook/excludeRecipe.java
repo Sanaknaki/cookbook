@@ -61,6 +61,14 @@ public class excludeRecipe extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(excludeRecipe.this,RecipeResult.class);
 
+                if(typeList.contains("Any")){
+                    typeList.remove("Any");
+                }
+
+                if(categoryList.contains("Any")){
+                    categoryList.remove("Any");
+                }
+
                 //Potential recipe matches are retrieved used findRecipe method and passed in variable result.
                 ArrayList<Recipe> result = findRecipe(type,category,includeIngredients,excludeIngredients);
 

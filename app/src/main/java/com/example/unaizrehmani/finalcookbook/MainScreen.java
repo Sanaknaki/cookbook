@@ -84,14 +84,35 @@ public class MainScreen extends AppCompatActivity implements Serializable{
 
     }
 
+    public void clickHelp(View view){
+        Intent intent = new Intent (MainScreen.this,HelpScreen.class);
+
+        Bundle bundle = new Bundle();
+
+        bundle.putSerializable("cookBook",MainScreen.this);
+        bundle.putSerializable("typeList",typeList);
+        bundle.putSerializable("categoryList",categoryList);
+
+        intent.putExtras(bundle);
+
+        startActivity(intent);
+    }
+
+
     //Method used to direct user to findRecipe activity.
     public void clickFindRecipes(View view){
         Intent intent = new Intent(this,findRecipe.class);
 
         Bundle bundle = new Bundle();
 
-        typeList.add(0,"Any");
-        categoryList.add(0,"Any");
+        if(!typeList.contains("Any")) {
+            typeList.add(0,"Any");
+        }
+
+
+        if(!categoryList.contains("Any")) {
+            categoryList.add(0, "Any");
+        }
 
         bundle.putSerializable("cookBook",this);
         bundle.putSerializable("typeList",typeList);
