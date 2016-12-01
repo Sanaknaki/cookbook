@@ -119,7 +119,7 @@ public class EditType extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(),"Deleted Recipe: "+ cookBook.get_cookBookRecipes().get(i).getRecipeName(), Toast.LENGTH_SHORT).show();
 
                                 cookBook.get_cookBookRecipes().remove(i);
-
+                                i = i - 1;
                             }
                         }
 

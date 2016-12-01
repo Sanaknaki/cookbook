@@ -114,10 +114,11 @@ public class EditCategoryType extends AppCompatActivity {
 
                         //Should delete all recipes with this category.
                         for(int i = 0; i<cookBook.get_cookBookRecipes().size(); i++){
-                            if(cookBook.get_cookBookRecipes().get(i).getRecipeCategory().equals(userInputString)){
+                            if(cookBook.get_cookBookRecipes().get(i).getRecipeCategory().toUpperCase().equals(userInputString)){
                                 Toast.makeText(getApplicationContext(),"Deleted Recipe: "+ cookBook.get_cookBookRecipes().get(i).getRecipeName(), Toast.LENGTH_SHORT).show();
 
                                 cookBook.get_cookBookRecipes().remove(i);
+                                i=i-1;
                             }
                         }
 
