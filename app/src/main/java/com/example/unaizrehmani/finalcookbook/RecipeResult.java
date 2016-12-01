@@ -18,6 +18,8 @@ public class RecipeResult extends AppCompatActivity {
     //Reference of original instantiation and recipe results from previous activities to inform ths one.
     private MainScreen cookBook;
     private ArrayList<Recipe> recipes = new ArrayList<Recipe>();
+    private ArrayList<String> categoryList = new ArrayList<String>();
+    private ArrayList<String> typeList = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,8 @@ public class RecipeResult extends AppCompatActivity {
 
         cookBook = (MainScreen) getIntent().getExtras().getSerializable("cookBook");
         recipes = (ArrayList<Recipe>) getIntent().getExtras().getSerializable("result");
+        categoryList = (ArrayList<String>) getIntent().getExtras().getSerializable("categoryList");
+        typeList = (ArrayList<String>) getIntent().getExtras().getSerializable("typeList");
 
         populateListView();
 
@@ -38,6 +42,8 @@ public class RecipeResult extends AppCompatActivity {
 
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("cookBook",cookBook);
+                bundle.putSerializable("typeList",typeList);
+                bundle.putSerializable("categoryList",categoryList);
 
                 intent.putExtras(bundle);
                 startActivity(intent);

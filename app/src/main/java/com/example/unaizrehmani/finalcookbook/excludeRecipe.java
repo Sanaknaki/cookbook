@@ -32,6 +32,9 @@ public class excludeRecipe extends AppCompatActivity {
     private String type;
     private String category;
 
+    private ArrayList<String> categoryList = new ArrayList<String>();
+    private ArrayList<String> typeList = new ArrayList<String>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +45,8 @@ public class excludeRecipe extends AppCompatActivity {
         includeIngredients = (ArrayList<Ingredient>) getIntent().getExtras().getSerializable("chosenIngredients");
         type = (String)getIntent().getExtras().getSerializable("chosenType");
         category = (String)getIntent().getExtras().getSerializable("chosenCategory");
+        categoryList = (ArrayList<String>) getIntent().getExtras().getSerializable("categoryList");
+        typeList = (ArrayList<String>) getIntent().getExtras().getSerializable("typeList");
 
         //Populates list view.
         populateIngredientListView();
@@ -65,6 +70,8 @@ public class excludeRecipe extends AppCompatActivity {
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("result",result);
                 bundle.putSerializable("cookBook",cookBook);
+                bundle.putSerializable("typeList",typeList);
+                bundle.putSerializable("categoryList",categoryList);
 
                 intent.putExtras(bundle);
                 startActivity(intent);

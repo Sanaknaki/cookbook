@@ -44,6 +44,7 @@ public class findRecipe extends AppCompatActivity {
         categoryList = (ArrayList<String>) getIntent().getExtras().getSerializable("categoryList");
         typeList = (ArrayList<String>) getIntent().getExtras().getSerializable("typeList");
 
+
         String[] tempCategoryArray = categoryList.toArray(new String[categoryList.size()]);
         String[] tempTypeArray = typeList.toArray(new String[typeList.size()]);
 
