@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,6 +29,9 @@ public class EditIngredients extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_ingredients);
 
+        EditText userInput = (EditText) findViewById(R.id.addIngredientInput);
+        userInput.setTextColor(Color.WHITE);
+
         Bundle bundle = getIntent().getExtras();
 
         cookBook = (MainScreen) bundle.getSerializable("cookBook");
@@ -48,23 +50,7 @@ public class EditIngredients extends AppCompatActivity {
         ArrayAdapter<Ingredient> stringArrayAdapter = new IngredientAdapter(getApplicationContext(),cookBook.get_cookBookIngredients());
         final ListView ingredientListView = (ListView) findViewById(R.id.currentIngredientListView);
         ingredientListView.setAdapter(stringArrayAdapter);
-        ingredientListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String ingredientToEdit = cookBookStringIngredients.get(i);
 
-                Intent intent = new Intent(EditIngredients.this,EditTextIngredient.class);
-
-                Bundle b = new Bundle();
-                b.putSerializable("ingredientToEdit",ingredientToEdit);
-                b.putSerializable("cookBook",cookBook);
-                b.putSerializable("typeList",typeList);
-                b.putSerializable("categoryList",categoryList);
-
-                intent.putExtras(b);
-                startActivity(intent);
-            }
-        });
     }
 
     private class IngredientAdapter extends ArrayAdapter<Ingredient>{
@@ -80,6 +66,9 @@ public class EditIngredients extends AppCompatActivity {
         //override this method.
         public View getView(int position, View convertView, ViewGroup parent){
             View customView = (LayoutInflater.from(getContext())).inflate(R.layout.single_recipe_white,parent,false);
+
+            EditText userInput = (EditText) findViewById(R.id.addIngredientInput);
+            userInput.setTextColor(Color.WHITE);
 
             final Ingredient curIngredient = getItem(position);
 
@@ -143,7 +132,7 @@ public class EditIngredients extends AppCompatActivity {
         String userInputString = userInput.getText().toString();
         userInput.setText("");
 
-        if(userInputString!= null && !userInputString.equals("")){
+        if(userInputString!= null || !userInputString.equals("")){
             if(cookBook.get_cookBookIngredients().contains(new Ingredient(userInputString))){
                 cookBook.delete_cookBookIngredient(userInputString);
 
@@ -161,6 +150,37 @@ public class EditIngredients extends AppCompatActivity {
             }
         } else {
             Toast.makeText(getApplicationContext(),("Must Enter Ingredient to Delete"),Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    public void clickEditIngredient(View view){
+
+        String ingredientToEdit = ((EditText)findViewById(R.id.addIngredientInput)).getText().toString();
+
+        if(!ingredientToEdit.equals("") && ingredientToEdit!=null){
+
+
+            if(cookBook.get_cookBookIngredients().contains(new Ingredient(ingredientToEdit))){
+                Intent intent = new Intent(EditIngredients.this,EditTextIngredient.class);
+
+                Bundle b = new Bundle();
+                b.putSerializable("ingredientToEdit",ingredientToEdit);
+                b.putSerializable("cookBook",cookBook);
+                b.putSerializable("typeList",typeList);
+                b.putSerializable("categoryList",categoryList);
+
+                intent.putExtras(b);
+                startActivity(intent);
+
+            }else{
+                EditText userInput = (EditText) findViewById(R.id.addIngredientInput);
+                userInput.setText("");
+                Toast.makeText(getApplicationContext(), "No such Ingredient: " + ingredientToEdit, Toast.LENGTH_SHORT).show();
+            }
+
+        }else{
+            Toast.makeText(getApplicationContext(), "Type or click an Ingredient to Edit", Toast.LENGTH_SHORT).show();
         }
 
     }

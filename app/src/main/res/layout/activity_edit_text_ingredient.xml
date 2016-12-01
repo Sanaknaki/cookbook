@@ -37,9 +37,11 @@
 
             <EditText
                 android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textPersonName"
+                android:textSize="10sp"
                 android:ems="10"
                 android:id="@+id/newIngredientNameEditText"
                 android:layout_weight="1"

@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/textView2"
-            android:layout_weight="3"
+            android:layout_weight="5"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
@@ -33,58 +33,55 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="2.5">
+            android:layout_weight="4">
 
             <EditText
-                android:textColor="@android:color/white"
                 android:layout_width="match_parent"
+                android:textColorHint="@android:color/white"
                 android:layout_height="match_parent"
-                android:inputType="textPersonName"
+                android:inputType="text"
                 android:ems="10"
                 android:id="@+id/addIngredientInput"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:hint="Type Ingredient" />
+                android:gravity="center_vertical|center"
+                android:hint="Ingredient to Change" />
 
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:layout_marginBottom="10dp">
 
-                <LinearLayout
-                    android:orientation="vertical"
+                <Button
+                    android:text="ADD"
+                    android:background="@drawable/button_white"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:id="@+id/addIngredientButton"
+                    android:textColor="@android:color/white"
+                    android:onClick="clickAddIngredient"
+                    android:layout_weight="1" />
 
-                    <Button
-                        android:text="ADD"
-                        android:background="@drawable/button_white"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/addIngredientButton"
-                        android:textColor="@android:color/white"
-                        android:onClick="clickAddIngredient" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:orientation="vertical"
+                <Button
+                    android:text="Edit"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/button_white"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:id="@+id/button_editSingleIngredient"
+                    android:layout_weight="1"
+                    android:onClick="clickEditIngredient" />
 
-                    <Button
-                        android:text="DELETE"
-                        android:background="@drawable/button_white"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/deleteIngredientButton"
-                        android:textColor="@android:color/white"
-                        android:onClick="clickDeleteIngredient" />
-                </LinearLayout>
-
+                <Button
+                    android:text="Delete"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/button_white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/button_deleteSingleIngredient"
+                    android:layout_weight="1"
+                    android:onClick="clickDeleteIngredient" />
             </LinearLayout>
 
         </LinearLayout>
@@ -92,8 +89,11 @@
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textColor="@android:color/white"
             android:id="@+id/currentIngredientListView"
-            android:layout_weight="2" />
+            android:layout_weight="3"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" />
 
         <Button
             android:text="Finish"
@@ -101,7 +101,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/finishedAddingButton"
-            android:layout_weight="3"
+            android:layout_weight="5"
             android:textColor="@android:color/white"
             android:onClick="clickFinishedEditIngredient" />
     </LinearLayout>
