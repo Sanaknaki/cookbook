@@ -22,12 +22,14 @@ public class SingleEditRecipeClass extends AppCompatActivity {
 
     private Recipe currentRecipe;
     private MainScreen cookBook;
-    ArrayList<Ingredient> chosenAddIngredients = new ArrayList<Ingredient>();
-    String chosenType;
-    String chosenCategory;
-    Spinner typeSpinner;
-    Spinner categorySpinner;
-    String oldName;
+    private ArrayList<Ingredient> chosenAddIngredients = new ArrayList<Ingredient>();
+    private String chosenType;
+    private String chosenCategory;
+    private Spinner typeSpinner;
+    private Spinner categorySpinner;
+    private String oldName;
+    private ArrayList<String> typeList = new ArrayList<String>();
+    private ArrayList<String> categoryList = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,8 @@ public class SingleEditRecipeClass extends AppCompatActivity {
         cookBook = (MainScreen) getIntent().getExtras().getSerializable("cookBook");
         currentRecipe = (Recipe)getIntent().getExtras().getSerializable("currentRecipe");
         oldName = currentRecipe.getRecipeName();
+        typeList = (ArrayList<String>) getIntent().getExtras().getSerializable("typeList");
+        categoryList = (ArrayList<String>) getIntent().getExtras().getSerializable("categoryList");
 
         for(int i = 0; i<cookBook.get_cookBookIngredients().size(); i++){
             if(currentRecipe.getRecipeIngredients().contains(cookBook.get_cookBookIngredients().get(i))){
@@ -155,6 +159,8 @@ public class SingleEditRecipeClass extends AppCompatActivity {
                     bundle.putSerializable("currentRecipe",currentRecipe);
                     bundle.putSerializable("cookBook",cookBook);
                     bundle.putSerializable("oldName",oldName);
+                    bundle.putSerializable("typeList",typeList);
+                    bundle.putSerializable("categoryList",categoryList);
 
                     intent.putExtras(bundle);
                     startActivity(intent);
@@ -182,11 +188,15 @@ public class SingleEditRecipeClass extends AppCompatActivity {
     }
 
     public void createAndSetSpinners(){
+
+        String[] tempCategoryArray = categoryList.toArray(new String[categoryList.size()]);
+        String[] tempTypeArray = typeList.toArray(new String[typeList.size()]);
+
         ArrayAdapter<String> categoryAdapter = new ArrayAdapter<String>(SingleEditRecipeClass.this,android.R.layout.simple_list_item_1,
-                getResources().getStringArray(R.array.categoriesRecipe));
+                tempCategoryArray);
 
         ArrayAdapter<String> typeAdapter = new ArrayAdapter<String>(SingleEditRecipeClass.this,android.R.layout.simple_list_item_1,
-                getResources().getStringArray(R.array.typesRecipe));
+                tempTypeArray);
 
         categorySpinner = (Spinner) findViewById(R.id.getEditRecipeCategorySpinner);
 
@@ -203,7 +213,7 @@ public class SingleEditRecipeClass extends AppCompatActivity {
         chosenCategory = categorySpinner.getSelectedItem().toString();
 
         //Set both Spinners to what Recipe initially had
-        String[] categoryArray  = getResources().getStringArray(R.array.categoriesRecipe);
+        String[] categoryArray  = tempCategoryArray;
         int indexCategory = 0;
 
         for(int i = 0; i<categoryArray.length; i++ ){
@@ -215,7 +225,7 @@ public class SingleEditRecipeClass extends AppCompatActivity {
 
         ((Spinner)findViewById(R.id.getEditRecipeCategorySpinner)).setSelection(indexCategory);
 
-        String[] typesArray  = getResources().getStringArray(R.array.typesRecipe);
+        String[] typesArray  = tempTypeArray;
         int indexType = 0;
 
         for(int i = 0; i<typesArray.length; i++ ){

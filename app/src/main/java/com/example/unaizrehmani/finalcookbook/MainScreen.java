@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Toast;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -20,8 +21,8 @@ public class MainScreen extends AppCompatActivity implements Serializable{
     //@param _cookBookRecipes : Contains all the Recipes in the Cook Book Database.
     private ArrayList<Ingredient> _cookBookIngredients = new ArrayList<Ingredient>();
     private ArrayList<Recipe> _cookBookRecipes = new ArrayList<Recipe>();
-    private ArrayList<String> typeList = new ArrayList<String>();
-    private ArrayList<String> categoryList = new ArrayList<String>();
+    private ArrayList<String> typeList;
+    private ArrayList<String> categoryList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,8 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         setContentView(R.layout.activity_main_screen);
 
         try {
+            Toast.makeText(getApplicationContext(), "Load saved types and categories", Toast.LENGTH_SHORT).show();
+
             /*
                 If instantiates the first time, serializable keyword will instantiate CookBook and
                 it will catch the exception and populate the Cook Book Database with default pre-set
@@ -42,7 +45,28 @@ public class MainScreen extends AppCompatActivity implements Serializable{
             _cookBookRecipes = mainScreen.get_cookBookRecipes();
             _cookBookIngredients = mainScreen.get_cookBookIngredients();
 
+            typeList = (ArrayList<String>) getIntent().getExtras().getSerializable("typeList");
+            categoryList = (ArrayList<String>) getIntent().getExtras().getSerializable("categoryList");
+            Collections.sort(categoryList);
+            Collections.sort(typeList);
+
+
         } catch(Exception e){
+
+            Toast.makeText(getApplicationContext(), "Load default types and categories", Toast.LENGTH_SHORT).show();
+
+            typeList = new ArrayList<String>();
+            categoryList = new ArrayList<String>();
+
+            typeList.add("Breakfast");
+            typeList.add("Dinner");
+            typeList.add("Lunch");
+            typeList.add("Snack");
+
+            categoryList.add("American");
+            categoryList.add("Asian");
+            categoryList.add("Italian");
+            categoryList.add("Mexican");
 
             //@method populateCookBookIngredients() : adds default ingredients to _cookBookIngredients
             populateCookBookIngredients();
@@ -52,23 +76,6 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         }
 
         //if previously saved, populate category list with this.
-        try{
-            typeList = (ArrayList<String>) getIntent().getExtras().getSerializable("typeList");
-            categoryList = (ArrayList<String>) getIntent().getExtras().getSerializable("categoryList");
-        }catch (Exception e){
-
-            String[] tempTypes = getResources().getStringArray(R.array.types);
-            String[] tempCategories = getResources().getStringArray(R.array.categories);
-
-            for(int i = 0; i<tempTypes.length; i++){
-                typeList.add(tempTypes[i]);
-            }
-
-            for(int i = 0; i<tempCategories.length; i++){
-                categoryList.add(tempCategories[i]);
-            }
-
-        }
 
     }
 
@@ -77,6 +84,9 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         Intent intent = new Intent(this,findRecipe.class);
 
         Bundle bundle = new Bundle();
+
+        typeList.add(0,"Any");
+        categoryList.add(0,"Any");
 
         bundle.putSerializable("cookBook",this);
         bundle.putSerializable("typeList",typeList);

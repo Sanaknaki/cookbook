@@ -18,6 +18,8 @@ public class EditIngredients extends AppCompatActivity {
 
     ArrayList<Ingredient> cookBookIngredients = new ArrayList<Ingredient>();
     ArrayList<String> cookBookStringIngredients = new ArrayList<String>();
+    private ArrayList<String> typeList = new ArrayList<String>();
+    private ArrayList<String> categoryList = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +29,8 @@ public class EditIngredients extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
 
         cookBook = (MainScreen) bundle.getSerializable("cookBook");
-
+        typeList = (ArrayList<String>) getIntent().getExtras().getSerializable("typeList");
+        categoryList = (ArrayList<String>) getIntent().getExtras().getSerializable("categoryList");
 
         cookBookIngredients = cookBook.get_cookBookIngredients();
 
@@ -118,6 +121,8 @@ public class EditIngredients extends AppCompatActivity {
         Bundle bundle = new Bundle();
 
         bundle.putSerializable("cookBook",cookBook);
+        bundle.putSerializable("typeList",typeList);
+        bundle.putSerializable("categoryList",categoryList);
 
         intent.putExtras(bundle);
 

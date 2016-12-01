@@ -154,6 +154,9 @@ public class findRecipe extends AppCompatActivity {
             cookBook.get_cookBookIngredients().get(i).set_selected(false);
         }
 
+        typeList.remove("Any");
+        categoryList.remove("Any");
+
         //Sends Cook Book reference, chosen ingredients, chosen category and chosen Type to inform possible recipes
         //in the next activity.
         bundle.putSerializable("cookBook",cookBook);

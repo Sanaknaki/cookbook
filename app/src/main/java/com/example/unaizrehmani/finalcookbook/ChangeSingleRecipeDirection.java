@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.ArrayList;
+
 public class ChangeSingleRecipeDirection extends AppCompatActivity {
 
     private MainScreen cookBook;
@@ -14,6 +16,9 @@ public class ChangeSingleRecipeDirection extends AppCompatActivity {
     private String oldDirectionName;
     private String oldName;
     private Recipe currentRecipe;
+    private ArrayList<String> typeList = new ArrayList<String>();
+    private ArrayList<String> categoryList = new ArrayList<String>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +30,8 @@ public class ChangeSingleRecipeDirection extends AppCompatActivity {
         directionPosition = (Integer)getIntent().getExtras().getSerializable("direction position");
         currentRecipe = (Recipe) getIntent().getExtras().getSerializable("currentRecipe");
         oldName = (String) getIntent().getExtras().getSerializable("oldName");
+        typeList = (ArrayList<String>) getIntent().getExtras().getSerializable("typeList");
+        categoryList = (ArrayList<String>) getIntent().getExtras().getSerializable("categoryList");
 
         final EditText myEditText = (EditText)findViewById(R.id.editTextChange);
         myEditText.setText(oldDirectionName);
@@ -41,10 +48,16 @@ public class ChangeSingleRecipeDirection extends AppCompatActivity {
 
                 Intent intent = new Intent(ChangeSingleRecipeDirection.this,SingleEditRecipeDirectionClass.class);
 
+
+                //typeList.add("Change Single Recipe Direction.");
+                //categoryList.add("Change Single Recipe Direction.");
+
                 Bundle b = new Bundle();
                 b.putSerializable("cookBook",cookBook);
                 b.putSerializable("currentRecipe",currentRecipe);
                 b.putSerializable("oldName",oldName);
+                b.putSerializable("typeList",typeList);
+                b.putSerializable("categoryList",categoryList);
 
                 intent.putExtras(b);
                 startActivity(intent);

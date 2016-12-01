@@ -16,6 +16,8 @@ import java.util.ArrayList;
 public class EditAllRecipes extends AppCompatActivity {
 
     private MainScreen cookBook;
+    private ArrayList<String> typeList = new ArrayList<String>();
+    private ArrayList<String> categoryList = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,8 @@ public class EditAllRecipes extends AppCompatActivity {
         setContentView(R.layout.activity_edit_all_recipes);
 
         cookBook = (MainScreen) getIntent().getExtras().getSerializable("cookBook");
+        typeList = (ArrayList<String>) getIntent().getExtras().getSerializable("typeList");
+        categoryList = (ArrayList<String>) getIntent().getExtras().getSerializable("categoryList");
 
         populateListView();
 
@@ -68,6 +72,8 @@ public class EditAllRecipes extends AppCompatActivity {
 
                     b.putSerializable("currentRecipe",currentRecipe);
                     b.putSerializable("cookBook",cookBook);
+                    b.putSerializable("typeList",typeList);
+                    b.putSerializable("categoryList",categoryList);
                     intent.putExtras(b);
 
                     startActivity(intent);

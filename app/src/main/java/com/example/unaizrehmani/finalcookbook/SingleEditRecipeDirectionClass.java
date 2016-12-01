@@ -9,11 +9,15 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+
 public class SingleEditRecipeDirectionClass extends AppCompatActivity {
 
     private MainScreen cookBook;
     private Recipe currentRecipe;
     private String oldName;
+    private ArrayList<String> typeList = new ArrayList<String>();
+    private ArrayList<String> categoryList = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +27,8 @@ public class SingleEditRecipeDirectionClass extends AppCompatActivity {
         cookBook = (MainScreen) getIntent().getExtras().getSerializable("cookBook");
         currentRecipe = (Recipe) getIntent().getExtras().getSerializable("currentRecipe");
         oldName = (String) getIntent().getExtras().getSerializable("oldName");
+        typeList = (ArrayList<String>) getIntent().getExtras().getSerializable("typeList");
+        categoryList = (ArrayList<String>) getIntent().getExtras().getSerializable("categoryList");
 
         populateListView();
 
@@ -40,6 +46,8 @@ public class SingleEditRecipeDirectionClass extends AppCompatActivity {
                 cookBook.add_cookBookRecipe(currentRecipe);
 
                 b.putSerializable("cookBook",cookBook);
+                b.putSerializable("typeList",typeList);
+                b.putSerializable("categoryList",categoryList);
 
                 intent.putExtras(b);
 
@@ -70,6 +78,8 @@ public class SingleEditRecipeDirectionClass extends AppCompatActivity {
                 b.putSerializable("direction position",i);
                 b.putSerializable("currentRecipe",currentRecipe);
                 b.putSerializable("oldName",oldName);
+                b.putSerializable("typeList",typeList);
+                b.putSerializable("categoryList",categoryList);
 
                 intent.putExtras(b);
                 startActivity(intent);

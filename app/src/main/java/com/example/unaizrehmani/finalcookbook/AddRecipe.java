@@ -40,6 +40,7 @@ public class AddRecipe extends AppCompatActivity {
         typeList = (ArrayList<String>) getIntent().getExtras().getSerializable("typeList");
         categoryList = (ArrayList<String>) getIntent().getExtras().getSerializable("categoryList");
 
+
         String[] tempCategoryArray = categoryList.toArray(new String[categoryList.size()]);
         String[] tempTypeArray = typeList.toArray(new String[typeList.size()]);
 

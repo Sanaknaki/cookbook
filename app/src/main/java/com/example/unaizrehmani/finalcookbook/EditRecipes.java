@@ -25,6 +25,7 @@ public class EditRecipes extends AppCompatActivity {
     }
 
     public void clickAddRecipe(View view){
+
         Intent intent = new Intent(EditRecipes.this,AddRecipe.class);
         Bundle b = new Bundle();
         b.putSerializable("cookBook",cookBook);
@@ -35,6 +36,7 @@ public class EditRecipes extends AppCompatActivity {
     }
 
     public void clickEditRecipe(View view){
+
         Intent intent = new Intent(EditRecipes.this,EditAllRecipes.class);
         Bundle b = new Bundle();
         b.putSerializable("cookBook",cookBook);

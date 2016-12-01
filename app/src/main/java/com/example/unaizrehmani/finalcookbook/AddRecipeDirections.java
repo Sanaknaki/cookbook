@@ -45,8 +45,6 @@ public class AddRecipeDirections extends AppCompatActivity {
         typeList = (ArrayList<String>) getIntent().getExtras().getSerializable("typeList");
         categoryList = (ArrayList<String>) getIntent().getExtras().getSerializable("categoryList");
 
-        //categoryList.add("Add recipe works");
-        //typeList.add("Add recipe works");
 
         populateListView();
 
