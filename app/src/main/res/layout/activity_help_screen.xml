@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/main_bg"
     tools:context="com.example.unaizrehmani.finalcookbook.HelpScreen"
     >
 
@@ -19,16 +20,18 @@
 
         <TextView
             android:text="FINDING RECIPE"
+            android:textColor="@android:color/white"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/findingRecipe"
             android:layout_weight="7"
             android:gravity="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textStyle="normal|bold" />
 
         <TextView
             android:text="Select the ingredients you wish to have included and excluded in your recipe, select the type and category of the dish, and you will get a list of recipe results for your choosing!"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/findingRecipeInfo"
@@ -38,17 +41,19 @@
 
             <TextView
                 android:text="CREATING RECIPE"
+                android:textColor="@android:color/white"
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/creatingRecipe"
                 android:layout_weight="7"
                 android:gravity="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textStyle="normal|bold" />
 
             <TextView
                 android:text="To create a recipe, select from a list of ingredients the ones found in your new recipe, give it a name, select the category and type and input some cooking directions, save it and you're done!"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/creatingRecipeInfo"
@@ -57,17 +62,19 @@
 
         <TextView
             android:text="EDITING INFORMATION"
+            android:textColor="@android:color/white"
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/editingInfo"
             android:layout_weight="7"
             android:gravity="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textStyle="normal|bold" />
 
         <TextView
             android:text="You are able to edit almost any information of a recipe, from the type and category to the name of the ingredients, the new information is now saved in place!"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/editingInfoInfo"
