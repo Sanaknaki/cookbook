@@ -60,7 +60,6 @@
                     android:layout_height="match_parent"
                     android:id="@+id/addIngredientButton"
                     android:textColor="@android:color/white"
-                    android:onClick="clickAddIngredient (EditIngredients)"
                     android:layout_weight="1" />
 
                 <Button
@@ -70,8 +69,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/button_editSingleIngredient"
-                    android:layout_weight="1"
-                    android:onClick="clickEditIngredient" />
+                    android:layout_weight="1" />
 
                 <Button
                     android:text="Delete"
@@ -80,8 +78,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/button_deleteSingleIngredient"
-                    android:layout_weight="1"
-                    android:onClick="clickDeleteIngredient" />
+                    android:layout_weight="1" />
             </LinearLayout>
 
         </LinearLayout>
@@ -103,7 +100,7 @@
             android:id="@+id/finishedAddingButton"
             android:layout_weight="5"
             android:textColor="@android:color/white"
-            android:onClick="clickFinishedEditIngredient" />
+             />
     </LinearLayout>
 
 </RelativeLayout>

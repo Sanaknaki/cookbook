@@ -16,6 +16,8 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import static com.example.unaizrehmani.finalcookbook.R.id.finishedAddingButton;
+
 public class EditIngredients extends AppCompatActivity {
 
     private MainScreen cookBook;
@@ -38,6 +40,116 @@ public class EditIngredients extends AppCompatActivity {
         categoryList = (ArrayList<String>) getIntent().getExtras().getSerializable("categoryList");
 
         populateListView();
+
+        Button addButton = (Button)findViewById(R.id.addIngredientButton);
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText userInput = (EditText) findViewById(R.id.addIngredientInput);
+
+                String userInputString = userInput.getText().toString();
+                userInput.setText("");
+
+                if(!cookBook.get_cookBookIngredients().contains(new Ingredient(userInputString))) {
+
+                    if(userInputString != null && !userInputString.equals("")){
+                        cookBook.add_cookBookIngredient(userInputString);
+                        populateListView();
+
+                        Toast toast = Toast.makeText(getApplicationContext(), ("Ingredient Added: " + userInputString), Toast.LENGTH_SHORT);
+                        toast.show();
+                    } else {
+                        Toast toast = Toast.makeText(getApplicationContext(), "Must Enter an Ingredient to Add", Toast.LENGTH_SHORT);
+                        toast.show();
+                    }
+                } else {
+                    Toast toast = Toast.makeText(getApplicationContext(), "Ingredient Already stored", Toast.LENGTH_SHORT);
+                    toast.show();
+                }
+            }
+        });
+
+        Button deleteButton = (Button)findViewById(R.id.button_deleteSingleIngredient);
+        deleteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText userInput = (EditText) findViewById(R.id.addIngredientInput);
+
+                String userInputString = userInput.getText().toString();
+                userInput.setText("");
+
+                if(userInputString!= null || !userInputString.equals("")){
+                    if(cookBook.get_cookBookIngredients().contains(new Ingredient(userInputString))){
+                        cookBook.delete_cookBookIngredient(userInputString);
+
+                        for(int i = 0; i<cookBook.get_cookBookRecipes().size(); i++){
+                            if(cookBook.get_cookBookRecipes().get(i).getRecipeIngredients().contains(new Ingredient(userInputString))){
+                                cookBook.get_cookBookRecipes().remove(i);
+                            }
+                        }
+
+                        populateListView();
+
+                        Toast.makeText(getApplicationContext(),("Ingredient deleted: " + userInputString),Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getApplicationContext(),("No such Ingredient: " + userInputString),Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    Toast.makeText(getApplicationContext(),("Must Enter Ingredient to Delete"),Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        Button editButton = (Button)findViewById(R.id.button_editSingleIngredient);
+        editButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String ingredientToEdit = ((EditText)findViewById(R.id.addIngredientInput)).getText().toString();
+
+                if(!ingredientToEdit.equals("") && ingredientToEdit!=null){
+
+
+                    if(cookBook.get_cookBookIngredients().contains(new Ingredient(ingredientToEdit))){
+                        Intent intent = new Intent(EditIngredients.this,EditTextIngredient.class);
+
+                        Bundle b = new Bundle();
+                        b.putSerializable("ingredientToEdit",ingredientToEdit);
+                        b.putSerializable("cookBook",cookBook);
+                        b.putSerializable("typeList",typeList);
+                        b.putSerializable("categoryList",categoryList);
+
+                        intent.putExtras(b);
+                        startActivity(intent);
+
+                    }else{
+                        EditText userInput = (EditText) findViewById(R.id.addIngredientInput);
+                        userInput.setText("");
+                        Toast.makeText(getApplicationContext(), "No such Ingredient: " + ingredientToEdit, Toast.LENGTH_SHORT).show();
+                    }
+
+                }else{
+                    Toast.makeText(getApplicationContext(), "Type or click an Ingredient to Edit", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        Button finished = (Button)findViewById(finishedAddingButton);
+        finished.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(EditIngredients.this,MainScreen.class);
+
+                Bundle bundle = new Bundle();
+
+                bundle.putSerializable("cookBook",cookBook);
+                bundle.putSerializable("typeList",typeList);
+                bundle.putSerializable("categoryList",categoryList);
+
+                intent.putExtras(bundle);
+
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -89,6 +201,8 @@ public class EditIngredients extends AppCompatActivity {
                 }
             });
 
+            //comment
+
             //CheckBox ingredientSelected = (CheckBox) customView.findViewById(R.id.singleIngredientSelection);
             //ingredientSelected.setText("Include");
             //Need to double check to ensure that boxes stay ticked.
@@ -96,103 +210,6 @@ public class EditIngredients extends AppCompatActivity {
             return customView;
         }
 
-    }
-
-    public void clickAddIngredient(View view){
-        EditText userInput = (EditText) findViewById(R.id.addIngredientInput);
-
-        String userInputString = userInput.getText().toString();
-        userInput.setText("");
-
-        if(!cookBook.get_cookBookIngredients().contains(new Ingredient(userInputString))) {
-
-            if(userInputString != null && !userInputString.equals("")){
-                cookBook.add_cookBookIngredient(userInputString);
-                populateListView();
-
-                Toast toast = Toast.makeText(getApplicationContext(), ("Ingredient Added: " + userInputString), Toast.LENGTH_SHORT);
-                toast.show();
-            } else {
-                Toast toast = Toast.makeText(getApplicationContext(), "Must Enter an Ingredient to Add", Toast.LENGTH_SHORT);
-                toast.show();
-            }
-        } else {
-            Toast toast = Toast.makeText(getApplicationContext(), "Ingredient Already stored", Toast.LENGTH_SHORT);
-            toast.show();
-        }
-    }
-
-    public void clickDeleteIngredient(View view){
-        EditText userInput = (EditText) findViewById(R.id.addIngredientInput);
-
-        String userInputString = userInput.getText().toString();
-        userInput.setText("");
-
-        if(userInputString!= null || !userInputString.equals("")){
-            if(cookBook.get_cookBookIngredients().contains(new Ingredient(userInputString))){
-                cookBook.delete_cookBookIngredient(userInputString);
-
-                for(int i = 0; i<cookBook.get_cookBookRecipes().size(); i++){
-                    if(cookBook.get_cookBookRecipes().get(i).getRecipeIngredients().contains(new Ingredient(userInputString))){
-                        cookBook.get_cookBookRecipes().remove(i);
-                    }
-                }
-
-                populateListView();
-
-                Toast.makeText(getApplicationContext(),("Ingredient deleted: " + userInputString),Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(getApplicationContext(),("No such Ingredient: " + userInputString),Toast.LENGTH_SHORT).show();
-            }
-        } else {
-            Toast.makeText(getApplicationContext(),("Must Enter Ingredient to Delete"),Toast.LENGTH_SHORT).show();
-        }
-
-    }
-
-    public void clickEditIngredient(View view){
-
-        String ingredientToEdit = ((EditText)findViewById(R.id.addIngredientInput)).getText().toString();
-
-        if(!ingredientToEdit.equals("") && ingredientToEdit!=null){
-
-
-            if(cookBook.get_cookBookIngredients().contains(new Ingredient(ingredientToEdit))){
-                Intent intent = new Intent(EditIngredients.this,EditTextIngredient.class);
-
-                Bundle b = new Bundle();
-                b.putSerializable("ingredientToEdit",ingredientToEdit);
-                b.putSerializable("cookBook",cookBook);
-                b.putSerializable("typeList",typeList);
-                b.putSerializable("categoryList",categoryList);
-
-                intent.putExtras(b);
-                startActivity(intent);
-
-            }else{
-                EditText userInput = (EditText) findViewById(R.id.addIngredientInput);
-                userInput.setText("");
-                Toast.makeText(getApplicationContext(), "No such Ingredient: " + ingredientToEdit, Toast.LENGTH_SHORT).show();
-            }
-
-        }else{
-            Toast.makeText(getApplicationContext(), "Type or click an Ingredient to Edit", Toast.LENGTH_SHORT).show();
-        }
-
-    }
-
-    public void clickFinishedEditIngredient(View view){
-        Intent intent = new Intent(this,MainScreen.class);
-
-        Bundle bundle = new Bundle();
-
-        bundle.putSerializable("cookBook",cookBook);
-        bundle.putSerializable("typeList",typeList);
-        bundle.putSerializable("categoryList",categoryList);
-
-        intent.putExtras(bundle);
-
-        startActivity(intent);
     }
 
 
