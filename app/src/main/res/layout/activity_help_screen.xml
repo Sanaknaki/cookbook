@@ -8,6 +8,97 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.unaizrehmani.finalcookbook.HelpScreen">
+    tools:context="com.example.unaizrehmani.finalcookbook.HelpScreen"
+    android:background="@drawable/create_bg">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="HELP"
+            android:textColor="@android:color/white"
+
+            android:background="@drawable/button_white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textView16"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+        <Button
+            android:text="Button"
+            android:background="@drawable/button_white"
+            android:textColor="@android:color/white"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/button12"
+            android:layout_weight="1"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp" />
+
+        <Button
+            android:text="Button"
+            android:background="@drawable/button_white"
+            android:textColor="@android:color/white"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/button11"
+            android:layout_weight="1"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp" />
+
+        <Button
+            android:text="Button"
+            android:textColor="@android:color/white"
+
+            android:background="@drawable/button_white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/button10"
+            android:layout_weight="1"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp" />
+
+        <Button
+            android:text="Button"
+            android:textColor="@android:color/white"
+
+            android:background="@drawable/button_white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/button9"
+            android:layout_weight="1"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp" />
+
+        <Button
+            android:text="Button"
+            android:background="@drawable/button_white"
+            android:textColor="@android:color/white"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/button8"
+            android:layout_weight="1"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp" />
+
+        <Button
+            android:text="Button"
+            android:background="@drawable/button_white"
+            android:textColor="@android:color/white"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/button7"
+            android:layout_weight="1"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp" />
+
+    </LinearLayout>
 </RelativeLayout>
