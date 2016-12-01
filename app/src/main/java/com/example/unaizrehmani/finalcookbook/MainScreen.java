@@ -14,6 +14,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
 
 
     //Singleton Class Design. Modifies and passes reference to MainScreen called CookBook between Each Activity.
+    //comment
 
 
     //@param _cookBookIngredients : Contains all the Ingredients in the Cook Book Database.
