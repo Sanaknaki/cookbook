@@ -208,7 +208,7 @@
         </LinearLayout>
 
         <Button
-            android:text="Create"
+            android:text="NEXT"
             android:background="@drawable/button_white"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

@@ -9,96 +9,70 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.unaizrehmani.finalcookbook.HelpScreen"
-    android:background="@drawable/create_bg">
+    >
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_weight="1">
 
         <TextView
-            android:text="HELP"
-            android:textColor="@android:color/white"
-
-            android:background="@drawable/button_white"
+            android:text="FINDING RECIPE"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/textView16"
-            android:layout_weight="1"
+            android:id="@+id/findingRecipe"
+            android:layout_weight="7"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
-        <Button
-            android:text="Button"
-            android:background="@drawable/button_white"
-            android:textColor="@android:color/white"
+        <TextView
+            android:text="Select the ingredients you wish to have included and excluded in your recipe, select the type and category of the dish, and you will get a list of recipe results for your choosing!"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/findingRecipeInfo"
+            android:layout_weight="0"
+            android:textStyle="normal|bold" />
 
+
+            <TextView
+                android:text="CREATING RECIPE"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/creatingRecipe"
+                android:layout_weight="7"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+            <TextView
+                android:text="To create a recipe, select from a list of ingredients the ones found in your new recipe, give it a name, select the category and type and input some cooking directions, save it and you're done!"
+                android:textColor="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/creatingRecipeInfo"
+                android:layout_weight="0"
+                android:textStyle="normal|bold" />
+
+        <TextView
+            android:text="EDITING INFORMATION"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/button12"
-            android:layout_weight="1"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp" />
+            android:id="@+id/editingInfo"
+            android:layout_weight="7"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
-        <Button
-            android:text="Button"
-            android:background="@drawable/button_white"
-            android:textColor="@android:color/white"
-
+        <TextView
+            android:text="You are able to edit almost any information of a recipe, from the type and category to the name of the ingredients, the new information is now saved in place!"
+            android:textColor="@android:color/black"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/button11"
-            android:layout_weight="1"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp" />
-
-        <Button
-            android:text="Button"
-            android:textColor="@android:color/white"
-
-            android:background="@drawable/button_white"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/button10"
-            android:layout_weight="1"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp" />
-
-        <Button
-            android:text="Button"
-            android:textColor="@android:color/white"
-
-            android:background="@drawable/button_white"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/button9"
-            android:layout_weight="1"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp" />
-
-        <Button
-            android:text="Button"
-            android:background="@drawable/button_white"
-            android:textColor="@android:color/white"
-
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/button8"
-            android:layout_weight="1"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp" />
-
-        <Button
-            android:text="Button"
-            android:background="@drawable/button_white"
-            android:textColor="@android:color/white"
-
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/button7"
-            android:layout_weight="1"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp" />
+            android:layout_height="wrap_content"
+            android:id="@+id/editingInfoInfo"
+            android:layout_weight="0"
+            android:textStyle="normal|bold" />
 
     </LinearLayout>
 </RelativeLayout>

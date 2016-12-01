@@ -147,6 +147,9 @@ public class EditIngredients extends AppCompatActivity {
 
                 intent.putExtras(bundle);
 
+                intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(intent.FLAG_ACTIVITY_NEW_TASK);
+
                 startActivity(intent);
             }
         });

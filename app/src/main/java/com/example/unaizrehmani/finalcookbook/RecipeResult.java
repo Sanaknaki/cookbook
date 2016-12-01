@@ -46,6 +46,10 @@ public class RecipeResult extends AppCompatActivity {
                 bundle.putSerializable("categoryList",categoryList);
 
                 intent.putExtras(bundle);
+
+                intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(intent.FLAG_ACTIVITY_NEW_TASK);
+
                 startActivity(intent);
             }
         });

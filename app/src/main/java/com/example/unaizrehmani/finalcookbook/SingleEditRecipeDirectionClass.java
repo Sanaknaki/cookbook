@@ -51,6 +51,9 @@ public class SingleEditRecipeDirectionClass extends AppCompatActivity {
 
                 intent.putExtras(b);
 
+                intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(intent.FLAG_ACTIVITY_NEW_TASK);
+
                 startActivity(intent);
 
             }

@@ -96,7 +96,7 @@
             android:layout_marginTop="10dp" />
 
         <Button
-            android:text="Finished"
+            android:text="Finish"
             android:background="@drawable/button_white"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
