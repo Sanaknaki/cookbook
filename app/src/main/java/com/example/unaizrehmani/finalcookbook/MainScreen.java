@@ -107,6 +107,8 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         Bundle bundle = new Bundle();
 
         bundle.putSerializable("cookBook",this);
+        bundle.putSerializable("typeList",typeList);
+        bundle.putSerializable("categoryList",categoryList);
 
         intent.putExtras(bundle);
 

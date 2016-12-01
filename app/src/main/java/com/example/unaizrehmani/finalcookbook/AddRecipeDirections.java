@@ -24,6 +24,8 @@ public class AddRecipeDirections extends AppCompatActivity {
     private int prepIntTime;
     private int cookIntTime;
     private int caloriesIntTime;
+    private ArrayList<String> typeList = new ArrayList<String>();
+    private ArrayList<String> categoryList = new ArrayList<String>();
 
     private ArrayList<String> directions = new ArrayList<String>();
 
@@ -40,7 +42,11 @@ public class AddRecipeDirections extends AppCompatActivity {
         prepIntTime = (Integer) getIntent().getExtras().getSerializable("prepIntTime");
         cookIntTime = (Integer) getIntent().getExtras().getSerializable("cookIntTime");
         caloriesIntTime = (Integer) getIntent().getExtras().getSerializable("caloriesIntTime");
+        typeList = (ArrayList<String>) getIntent().getExtras().getSerializable("typeList");
+        categoryList = (ArrayList<String>) getIntent().getExtras().getSerializable("categoryList");
 
+        //categoryList.add("Add recipe works");
+        //typeList.add("Add recipe works");
 
         populateListView();
 
@@ -76,6 +82,8 @@ public class AddRecipeDirections extends AppCompatActivity {
                     Intent intent = new Intent(AddRecipeDirections.this,MainScreen.class);
                     Bundle bundle = new Bundle();
                     bundle.putSerializable("cookBook", cookBook);
+                    bundle.putSerializable("typeList",typeList);
+                    bundle.putSerializable("categoryList",categoryList);
                     intent.putExtras(bundle);
                     startActivity(intent);
                 }

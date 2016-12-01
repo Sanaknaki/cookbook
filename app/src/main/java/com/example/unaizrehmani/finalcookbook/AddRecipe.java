@@ -28,6 +28,8 @@ public class AddRecipe extends AppCompatActivity {
     String chosenCategory;
     Spinner typeSpinner;
     Spinner categorySpinner;
+    private ArrayList<String> typeList = new ArrayList<String>();
+    private ArrayList<String> categoryList = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,14 +37,17 @@ public class AddRecipe extends AppCompatActivity {
         setContentView(R.layout.activity_add_recipe);
 
         cookBook = (MainScreen) getIntent().getExtras().getSerializable("cookBook");
+        typeList = (ArrayList<String>) getIntent().getExtras().getSerializable("typeList");
+        categoryList = (ArrayList<String>) getIntent().getExtras().getSerializable("categoryList");
 
-        //String[] temp = getResources().getStringArray(R.array.categories);
+        String[] tempCategoryArray = categoryList.toArray(new String[categoryList.size()]);
+        String[] tempTypeArray = typeList.toArray(new String[typeList.size()]);
 
         ArrayAdapter<String> categoryAdapter = new ArrayAdapter<String>(AddRecipe.this,android.R.layout.simple_list_item_1,
-                getResources().getStringArray(R.array.categoriesRecipe));
+                tempCategoryArray);
 
         ArrayAdapter<String> typeAdapter = new ArrayAdapter<String>(AddRecipe.this,android.R.layout.simple_list_item_1,
-                getResources().getStringArray(R.array.typesRecipe));
+                tempTypeArray);
 
         categorySpinner = (Spinner) findViewById(R.id.getCreateRecipeCategorySpinner);
 
@@ -153,6 +158,8 @@ public class AddRecipe extends AppCompatActivity {
                 bundle.putSerializable("prepIntTime",prepIntTime);
                 bundle.putSerializable("cookIntTime",cookIntTime);
                 bundle.putSerializable("caloriesIntTime",caloriesIntTime);
+                bundle.putSerializable("typeList",typeList);
+                bundle.putSerializable("categoryList",categoryList);
 
                 intent.putExtras(bundle);
                 startActivity(intent);

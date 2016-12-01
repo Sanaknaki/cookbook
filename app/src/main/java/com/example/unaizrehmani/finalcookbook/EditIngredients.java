@@ -28,6 +28,7 @@ public class EditIngredients extends AppCompatActivity {
 
         cookBook = (MainScreen) bundle.getSerializable("cookBook");
 
+
         cookBookIngredients = cookBook.get_cookBookIngredients();
 
         for(int i = 0; i<cookBookIngredients.size(); i++){
