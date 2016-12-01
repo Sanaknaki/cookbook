@@ -83,6 +83,20 @@ public class MainScreen extends AppCompatActivity implements Serializable{
 
     }
 
+    public void clickAbout(View view){
+        Intent intent = new Intent (MainScreen.this,AboutScreen.class);
+
+        Bundle bundle = new Bundle();
+
+        bundle.putSerializable("cookBook",this);
+        bundle.putSerializable("typeList",typeList);
+        bundle.putSerializable("categoryList",categoryList);
+
+        intent.putExtras(bundle);
+
+        startActivity(intent);
+    }
+
     public void clickHelp(View view){
         Intent intent = new Intent (MainScreen.this,HelpScreen.class);
 

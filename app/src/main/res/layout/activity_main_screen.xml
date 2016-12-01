@@ -25,7 +25,7 @@
             android:layout_centerHorizontal="true" />
 
         <Button
-            android:text="FIND RECIPE"
+            android:text="COOK"
             android:background="@drawable/button_white"
             android:layout_width="150dp"
             android:layout_height="70dp"
@@ -39,7 +39,7 @@
             android:layout_marginTop="25dp" />
 
         <Button
-            android:text="EDIT INGREDIENTS"
+            android:text="FRIDGE"
             android:background="@drawable/button_white"
             android:layout_width="150dp"
             android:layout_height="70dp"
@@ -53,7 +53,7 @@
             android:layout_marginTop="25dp"/>
 
         <Button
-            android:text="EDIT RECIPE"
+            android:text="KITCHEN"
             android:background="@drawable/button_white"
             android:layout_height="70dp"
             android:id="@+id/editRecipesButton"
@@ -72,10 +72,22 @@
             android:layout_height="50dp"
             android:id="@+id/helpButton"
             android:textColor="@android:color/white"
+            android:onClick="clickHelp"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="25dp"
-            android:layout_centerHorizontal="true"
-            android:onClick="clickHelp" />
+            android:layout_alignLeft="@+id/editRecipesButton"
+            android:layout_alignStart="@+id/editRecipesButton" />
+
+        <Button
+            android:text=" ! "
+            android:background="@drawable/button_white"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/aboutButton"
+            android:textColor="@android:color/white"
+            android:onClick="clickAbout"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/editRecipesButton"
+            android:layout_alignEnd="@+id/editRecipesButton" />
 
     </RelativeLayout>
 

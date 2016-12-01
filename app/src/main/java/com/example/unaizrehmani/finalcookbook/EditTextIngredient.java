@@ -77,6 +77,9 @@ public class EditTextIngredient extends AppCompatActivity {
 
                         intent.putExtras(b);
 
+                        intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        intent.addFlags(intent.FLAG_ACTIVITY_NEW_TASK);
+
                         startActivity(intent);
                     } else {
                         Toast.makeText(getApplicationContext(), "This Ingredient Already Exists", Toast.LENGTH_SHORT).show();
