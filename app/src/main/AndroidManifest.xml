@@ -21,10 +21,18 @@
             android:windowSoftInputMode="adjustPan" />
         <activity android:name=".EditRecipes" />
         <activity android:name=".excludeRecipe" />
-        <activity android:name=".RecipeResult" />
-        <activity android:name=".singleRecipeScreen" />
-        <activity android:name=".SingleRecipeDirections" />
-        <activity android:name=".EditTextIngredient" />
+        <activity
+            android:name=".RecipeResult"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".singleRecipeScreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".SingleRecipeDirections"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".EditTextIngredient"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".AddRecipe"
             android:windowSoftInputMode="adjustPan" />
@@ -38,15 +46,25 @@
         <activity
             android:name=".SingleEditRecipeClass"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".SingleEditRecipeDirectionClass" />
+        <activity
+            android:name=".SingleEditRecipeDirectionClass"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ChangeSingleRecipeDirection"
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".EditCategoryType"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".EditType" />
-        <activity android:name=".EditCategoryName"></activity>
+        <activity
+            android:name=".EditType"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".EditCategoryName"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".EditTypeName"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".HelpScreen"></activity>
     </application>
 
 </manifest>
