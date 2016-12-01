@@ -25,6 +25,7 @@
             android:layout_height="match_parent"
             android:id="@+id/findingRecipe"
             android:layout_weight="7"
+            android:layout_marginTop="-20dp"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
             android:textStyle="normal|bold" />
@@ -36,13 +37,13 @@
             android:layout_height="wrap_content"
             android:id="@+id/findingRecipeInfo"
             android:layout_weight="0"
-            android:textStyle="normal|bold" />
+            android:textStyle="normal|bold"
+            android:textAlignment="center" />
 
 
             <TextView
                 android:text="CREATING RECIPE"
                 android:textColor="@android:color/white"
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/creatingRecipe"
@@ -58,19 +59,20 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/creatingRecipeInfo"
                 android:layout_weight="0"
-                android:textStyle="normal|bold" />
+                android:textStyle="normal|bold"
+                android:textAlignment="center" />
 
         <TextView
             android:text="EDITING INFORMATION"
             android:textColor="@android:color/white"
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/editingInfo"
             android:layout_weight="7"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-            android:textStyle="normal|bold" />
+            android:textStyle="normal|bold"
+            android:textAlignment="center" />
 
         <TextView
             android:text="You are able to edit almost any information of a recipe, from the type and category to the name of the ingredients, the new information is now saved in place!"
@@ -79,7 +81,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/editingInfoInfo"
             android:layout_weight="0"
-            android:textStyle="normal|bold" />
+            android:textStyle="normal|bold"
+            android:textAlignment="center" />
 
     </LinearLayout>
 </RelativeLayout>
