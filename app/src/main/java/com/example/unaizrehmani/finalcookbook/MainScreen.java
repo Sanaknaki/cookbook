@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Toast;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -30,7 +29,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
         setContentView(R.layout.activity_main_screen);
 
         try {
-            Toast.makeText(getApplicationContext(), "Load saved types and categories", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), "Load saved types and categories", Toast.LENGTH_SHORT).show();
 
             /*
                 If instantiates the first time, serializable keyword will instantiate CookBook and
@@ -45,7 +44,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
             _cookBookRecipes = mainScreen.get_cookBookRecipes();
             _cookBookIngredients = mainScreen.get_cookBookIngredients();
 
-            Toast.makeText(getApplicationContext(), "Successfully loaded cookBook reference", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), "Successfully loaded cookBook reference", Toast.LENGTH_SHORT).show();
 
 
             typeList = (ArrayList<String>) getIntent().getExtras().getSerializable("typeList");
@@ -53,12 +52,12 @@ public class MainScreen extends AppCompatActivity implements Serializable{
             Collections.sort(categoryList);
             Collections.sort(typeList);
 
-            Toast.makeText(getApplicationContext(), "Successfully loaded typeList and categoryList", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), "Successfully loaded typeList and categoryList", Toast.LENGTH_SHORT).show();
 
 
         } catch(Exception e){
 
-            Toast.makeText(getApplicationContext(), "Load default types and categories", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), "Load default types and categories", Toast.LENGTH_SHORT).show();
 
             typeList = new ArrayList<String>();
             categoryList = new ArrayList<String>();
@@ -89,7 +88,7 @@ public class MainScreen extends AppCompatActivity implements Serializable{
 
         Bundle bundle = new Bundle();
 
-        bundle.putSerializable("cookBook",MainScreen.this);
+        bundle.putSerializable("cookBook",this);
         bundle.putSerializable("typeList",typeList);
         bundle.putSerializable("categoryList",categoryList);
 
