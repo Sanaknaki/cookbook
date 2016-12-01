@@ -244,7 +244,6 @@ public class excludeRecipe extends AppCompatActivity {
                     }
                 }
 
-
             }
 
         }
