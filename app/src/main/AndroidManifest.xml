@@ -81,6 +81,7 @@
             android:name=".EditTypeName"
             android:windowSoftInputMode="adjustPan" />
         <activity android:name=".HelpScreen" android:screenOrientation="portrait"></activity>
+        <activity android:name=".AboutScreen" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

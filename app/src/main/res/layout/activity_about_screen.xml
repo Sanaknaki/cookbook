@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.example.unaizrehmani.finalcookbook.AboutScreen">
+
+    <TextView
+        android:text="Ali Sanaknaki"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/aliSanaknaki"
+        android:layout_weight="7"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+    <TextView
+        android:text="Unaiz Rehmani"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/unaizRehmani"
+        android:layout_weight="7"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+    <TextView
+        android:text="Natesh Kukreja"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/nateshKukreja"
+        android:layout_weight="7"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+    <TextView
+        android:text="Chaitanya Parekh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/chaitanyaParekh"
+        android:layout_weight="7"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+</LinearLayout>
