@@ -1,11 +1,16 @@
 package com.example.unaizrehmani.finalcookbook;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -40,7 +45,7 @@ public class EditIngredients extends AppCompatActivity {
     }
 
     public void populateListView(){
-        ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,cookBookStringIngredients);
+        ArrayAdapter<Ingredient> stringArrayAdapter = new IngredientAdapter(getApplicationContext(),cookBook.get_cookBookIngredients());
         final ListView ingredientListView = (ListView) findViewById(R.id.currentIngredientListView);
         ingredientListView.setAdapter(stringArrayAdapter);
         ingredientListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -62,6 +67,52 @@ public class EditIngredients extends AppCompatActivity {
         });
     }
 
+    private class IngredientAdapter extends ArrayAdapter<Ingredient>{
+
+
+        private Context context;
+
+        public IngredientAdapter(Context context, ArrayList<Ingredient> objects) {
+            super(context, R.layout.single_recipe_white, objects);
+            this.context = context;
+        }
+
+        //override this method.
+        public View getView(int position, View convertView, ViewGroup parent){
+            View customView = (LayoutInflater.from(getContext())).inflate(R.layout.single_recipe_white,parent,false);
+
+            final Ingredient curIngredient = getItem(position);
+
+            String currentIngredient = curIngredient.get_IngredientName();
+            //boolean selection = curIngredient.is_selected();
+
+            final int pos = position;
+
+            Button ingredientText = (Button) customView.findViewById(R.id.button_designWhite);
+            ingredientText.setText(currentIngredient);
+
+            ingredientText.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Ingredient currentRecipe = cookBook.get_cookBookIngredients().get(pos);
+
+                    EditText userInput = (EditText) findViewById(R.id.addIngredientInput);
+                    userInput.setTextColor(Color.WHITE);
+                    userInput.setText(currentRecipe.get_IngredientName());
+
+                    //Toast.makeText(getApplicationContext(), "Clicked: " + currentRecipe.get_IngredientName(), Toast.LENGTH_SHORT).show();
+                    //populateListView();
+                }
+            });
+
+            //CheckBox ingredientSelected = (CheckBox) customView.findViewById(R.id.singleIngredientSelection);
+            //ingredientSelected.setText("Include");
+            //Need to double check to ensure that boxes stay ticked.
+
+            return customView;
+        }
+
+    }
     public void clickAddIngredient(View view){
         EditText userInput = (EditText) findViewById(R.id.addIngredientInput);
 
@@ -72,7 +123,7 @@ public class EditIngredients extends AppCompatActivity {
 
             if(userInputString != null && !userInputString.equals("")){
                 cookBook.add_cookBookIngredient(userInputString);
-                updateCookBookIngredients();
+                populateListView();
 
                 Toast toast = Toast.makeText(getApplicationContext(), ("Ingredient Added: " + userInputString), Toast.LENGTH_SHORT);
                 toast.show();
@@ -102,7 +153,7 @@ public class EditIngredients extends AppCompatActivity {
                     }
                 }
 
-                updateCookBookIngredients();
+                populateListView();
 
                 Toast.makeText(getApplicationContext(),("Ingredient deleted: " + userInputString),Toast.LENGTH_SHORT).show();
             } else {
@@ -126,17 +177,6 @@ public class EditIngredients extends AppCompatActivity {
         intent.putExtras(bundle);
 
         startActivity(intent);
-    }
-
-    public void updateCookBookIngredients(){
-
-        cookBookStringIngredients = new ArrayList<String>();
-
-        for(int i = 0; i<cookBook.get_cookBookIngredients().size(); i++){
-            cookBookStringIngredients.add(cookBook.get_cookBookIngredients().get(i).get_IngredientName());
-        }
-
-        populateListView();
     }
 
 
