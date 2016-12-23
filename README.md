@@ -17,5 +17,5 @@ String Natesh_Kukreja = "http://github.com/NateshKukreja";
 <strong>Features :</strong>
 - [ ] Search for recipes using ingredients
 - [ ] Learn how to cook with directions
-- [ ] Rank recipes you find out of 5
-- [ ] Create your own recipes
+- [ ] Create your own recipes and save them onto the app
+- [ ] Edit categories/types of dishes
